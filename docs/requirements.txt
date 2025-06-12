@@ -1,0 +1,9 @@
+# Functional Requirements
+1. Users can create tasks
+2. Users can view all tasks
+3. Data persists after restart
+
+# Non-Functional
+- Response time < 300ms
+- MongoDB storage
+- Error handling for invalid inputs

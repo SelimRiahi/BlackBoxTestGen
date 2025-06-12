@@ -1,0 +1,20 @@
+# Technical Documentation
+Framework: Node.js + Express
+Database: MongoDB
+
+## API Endpoints
+### POST /tasks
+- Request: { "title": string }
+- Success: 201 + { "id": string, "title": string }
+- Error: 400 if invalid input
+
+### GET /tasks
+- Success: 200 + [ { "id": string, "title": string } ]
+
+## Database
+Collection: tasks
+Fields:
+- _id (auto)
+- title (string)
+- completed (boolean)
+- createdAt (date)
