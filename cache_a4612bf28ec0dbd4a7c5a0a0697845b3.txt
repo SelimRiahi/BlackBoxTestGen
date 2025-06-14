@@ -1,0 +1,17 @@
+# Exigences Fonctionnelles
+   - La plateforme doit permettre à la CCIC de communiquer efficacement sur ses activités en utilisant les nouvelles technologies de l'information.
+   - La plateforme doit faciliter les relations d'affaires des entreprises en fournissant des informations économiques et du conseil pour le développement des entreprises.
+   - La plateforme doit permettre aux adhérents de la CCIC de bénéficier de formations initiales, continues et de perfectionnement de leurs compétences.
+   - La plateforme doit aider les entreprises à développer et à promouvoir leurs exportations.
+   - La plateforme doit favoriser les opportunités d'investissement, de partenariat et développer les échanges commerciaux au profit des adhérents.
+   - La plateforme doit renforcer la coopération, impulser l'investissement et promouvoir les exportations.
+   - La plateforme doit permettre à la CCIC de conclure des protocoles d'accords avec les chambres de commerce à l'étranger.
+   - La plateforme doit entreprendre toute initiative de conciliation et d'arbitrage au niveau régional, national ou international.
+
+   # Exigences Non Fonctionnelles
+   - La CCIC est un établissement public d’intérêt économique doté de la personnalité morale et de l’autonomie financière.
+   - La CCIC intervient dans les secteurs de l'Industrie, du Commerce, des Services, de l'Artisanat, des Petits Métiers.
+   - La CCIC a pour mission de contribuer à la promotion du secteur privé, à la promotion du potentiel régional et des activités relevant de sa compétence, de fournir aux autorités publiques les propositions, avis et informations relatives au développement des secteurs de l'Industrie, du Commerce, des Services, de l'Artisanat, des Petits Métiers, de formuler les avis visant à simplifier les procédures administratives en rapport avec l'entreprise, de réaliser des études à caractère économique et de gérer un service public dans le cadre de contrat d’exploitation.
+   - La CCIC a pour mission de renforcer la coopération, impulser l'investissement et promouvoir les exportations en contribuant au renforcement des relations de coopération et de partenariat avec l’étranger, en concluant des protocoles d'accords avec les chambres de commerce à l'étranger, en favorisant les opportunités d'investissement, de partenariat et développant les échanges commerciaux au profit de ses adhérents, en impulsant l'initiative privée et l'investissement dans sa région et en encadrant et assister les entreprises pour développer et promouvoir leurs exportations.
+   - La CCIC a pour mission d'assurer la formation initiale pour la qualification professionnelle des Jeunes selon les besoins des PMEs de sa région, d'assurer la formation continue en inter et intra entreprises au profit des adhérents de la CCIC, de répondre aux demandes de perfectionnement des compétences de ses adhérents.
+   - La CCIC a pour mission d'accompagner et développer les Entreprises en fournissant les informations économiques et le conseil pour le développement des entreprises, en assurant le conseil personnalisé, les rencontres individuelles et les rendez-vous experts au profit de ses adhérents, en concluant des accords de partenariat avec les organismes nationaux d’appui et d’encadrement notamment les centres d'affaires, en entreprendre toute initiative de conciliation et d'arbitrage au niveau régional, national ou international.

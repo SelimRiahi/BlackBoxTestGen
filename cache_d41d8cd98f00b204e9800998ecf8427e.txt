@@ -1,0 +1,16 @@
+Nettoyage du texte de cahier des charges :
+
+- Suppression de noms propres, titres et éléments inutiles :
+
+Exigences Fonctionnelles :
+
+- (Contenu supprimé)
+
+Exigences Non Fonctionnelles :
+
+- (Contenu supprimé)
+
+Texte nettoyé et reformulé en phrases claires :
+
+- Les exigences fonctionnelles sont à définir.
+- Les exigences non fonctionnelles sont également à définir.

@@ -1,0 +1,30 @@
+Nettoyage du texte de cahier des charges :
+
+- Exigences Fonctionnelles :
+  - Contribuer à la promotion du secteur privé en général
+  - Promouvoir le potentiel régional et les activités relevant de compétence
+  - Fournir aux autorités publiques propositions, avis et informations relatives au développement des secteurs d'Industrie, Commerce, Services, Artisanat, Petits Métiers
+  - Simplifier les procédures administratives en rapport avec l'entreprise
+  - Réaliser des études à caractère économique
+  - Gérer un service public dans le cadre de contrat d'exploitation
+
+- Exigences Non Fonctionnelles :
+  - Renforcer la Coopération, Impulser l'investissement et Promouvoir les Exportations
+    - Contribuer au renforcement des relations de coopération et de partenariat avec l'étranger
+    - Conclure des protocoles d'accords avec les chambres de commerce à l'étranger
+    - Favoriser les opportunités d'investissement, de partenariat et développer les échanges commerciaux au profit de ses adhérents
+    - Impulser l'initiative privée et l'investissement dans sa région
+    - Encadrer et assister les entreprises pour développer et promouvoir leurs exportations
+
+- Exigences :
+  - Assurer la Formation
+    - Assurer la formation initiale pour la qualification professionnelle des Jeunes selon les besoins des PMEs de sa région,
+    - Assurer la formation continue en inter et intra entreprises au profit des adhérents de la CCIC,
+    - Répondre aux demandes de perfectionnement des compétences de ses adhérents,
+
+- Exigences :
+  - Accompagner et Développer les Entreprises
+    - Fournir les informations économiques et le conseil pour le développement des entreprises
+    - Assurer le conseil personnalisé, les rencontres individuelles et les rendez-vous experts au profit de ses adhérents
+    - Conclure des accords de partenariat avec les organismes nationaux d'appui et d'encadrement notamment les centres d'affaires,
+    - Entreprendre toute initiative de conciliation et d'arbitrage au niveau régional, national ou international,
