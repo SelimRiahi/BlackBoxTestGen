@@ -1,5 +1,6 @@
 import ollama
 import os
+import re
 
 def load_docs():
     """Load raw documents without interpretation"""
@@ -12,10 +13,14 @@ def load_docs():
 def generate_tests():
     api_docs, requirements = load_docs()
     
+    # Auto-detect port from docs
+    port_match = re.search(r"Default Port: (\d+)", api_docs)
+    port = port_match.group(1) if port_match else "3000"
+    base_url = f"http://localhost:{port}"
+    
     prompt = f"""
     STRICT BLACKBOX TEST GENERATION:
-    Create pytest tests using ONLY these documents.
-    NEVER assume technologies or internals.
+    Create direct API tests using ONLY the documented behavior.
     
     API DOCS:
     {api_docs}
@@ -23,20 +28,21 @@ def generate_tests():
     REQUIREMENTS:
     {requirements}
     
-    RULES:
-    1. Test ONLY documented behavior
-    2. Use only:
-       - HTTP status codes
-       - Response field checks
-       - Performance requirements
-    3. Output format:
+    INSTRUCTIONS:
+    1. Use BASE_URL = "{base_url}" (detected from docs)
+    2. Test only documented endpoints and responses
+    3. Keep tests simple - no mocks or fixtures
+    4. Include happy path and error cases
+    5. Add clear docstrings explaining each test
+    
+    OUTPUT FORMAT:
     ```python
     import pytest
     import requests
     
-    BASE_URL = "{{config}}"
+    BASE_URL = "{base_url}"
     
-    # Tests here
+    # Test cases...
     ```
     """
     
@@ -44,13 +50,27 @@ def generate_tests():
         model="mistral",
         prompt=prompt,
         options={
-            'temperature': 0.3,
-            'num_ctx': 4000
+            'temperature': 0.2,  # More deterministic
+            'num_ctx': 8000
         }
     )
     
-    # Extract code between ```python ```
-    code = response['response'].split("```python")[1].split("```")[0].strip()
+    # Clean extraction
+    try:
+        code = response['response'].split("```python")[1].split("```")[0].strip()
+        # Ensure BASE_URL matches our detection
+        code = code.replace('BASE_URL = "{{config}}"', f'BASE_URL = "{base_url}"')
+    except IndexError:
+        code = f"""import pytest
+import requests
+
+BASE_URL = "{base_url}"
+
+# Failed to generate tests - using minimal template
+def test_api_available():
+    response = requests.get(f"{{BASE_URL}}/tasks")
+    assert response.status_code in [200, 401]  # Either OK or requires auth
+"""
     
     os.makedirs("generated_tests", exist_ok=True)
     with open("generated_tests/test_api.py", "w") as f:

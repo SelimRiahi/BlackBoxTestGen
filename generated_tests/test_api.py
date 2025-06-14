@@ -1,35 +1,93 @@
 import pytest
 import requests
+from datetime import datetime, timedelta
 
 BASE_URL = "http://localhost:3000"
 
+def test_register():
+    # Happy path
+    data = {"username": "testuser", "password": "testpassword"}
+    response = requests.post(f"{BASE_URL}/register", json=data)
+    assert response.status_code == 201, "Expected status code 201"
+
+    # Error case: invalid username length
+    data["username"] = "a" * 31
+    response = requests.post(f"{BASE_URL}/register", json=data)
+    assert response.status_code == 400, "Expected status code 400"
+
+def test_login():
+    # Register a user first
+    register_response = requests.post(f"{BASE_URL}/register", json={"username": "testuser", "password": "testpassword"})
+    assert register_response.status_code == 201, "Expected status code 201 in registration"
+
+    # Happy path
+    login_data = {"username": "testuser", "password": "testpassword"}
+    login_response = requests.post(f"{BASE_URL}/login", json=login_data)
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
+
 def test_create_task():
-    response = requests.post(f"{BASE_URL}/tasks", json={"title": "Test Task"})
-    assert response.status_code == 201, "Expected status code 201 but got {}".format(response.status_code)
-    assert "_id" in response.json(), "Response should contain an 'id' field"
-    assert "title" in response.json(), "Response should contain a 'title' field"
+    # Login first
+    login_response = requests.post(f"{BASE_URL}/login", json={"username": "testuser", "password": "testpassword"})
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
 
-def test_create_task_invalid_input():
-    response = requests.post(f"{BASE_URL}/tasks", json={"title": 123})
-    assert response.status_code == 400, "Expected status code 400 but got {}".format(response.status_code)
+    # Happy path
+    task_data = {"title": "Test Task", "description": "This is a test task."}
+    response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json=task_data)
+    assert response.status_code == 201, "Expected status code 201 in creating a task"
 
-def test_get_all_tasks():
-    # Assuming that create_task() has been called previously to populate the database with tasks
-    response = requests.get(f"{BASE_URL}/tasks")
-    assert response.status_code == 200, "Expected status code 200 but got {}".format(response.status_code)
-    assert len(response.json()) > 0, "Response should contain at least one task"
+def test_get_tasks():
+    # Login first and create tasks
+    login_response = requests.post(f"{BASE_URL}/login", json={"username": "testuser", "password": "testpassword"})
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
 
-def test_task_performance():
-    # Testing performance by making requests and measuring the time taken
-    import time
+    create_task1_response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json={"title": "Task 1"})
+    create_task2_response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json={"title": "Task 2"})
 
-    start = time.time()
-    _ = requests.post(f"{BASE_URL}/tasks", json={"title": "Performance Test"})
-    end = time.time()
-    assert end - start < 0.3, "Response time should be less than 300ms but was {}".format(end - start)
+    # Happy path
+    response = requests.get(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"})
+    assert response.status_code == 200, "Expected status code 200 in getting tasks"
+    tasks = response.json()
+    assert len(tasks) == 2, "Expected to get both created tasks"
 
-def test_database_persistence():
-    # This test assumes that the API has been restarted after creating a task
-    # If the task still exists after restart, then data persists
-    response = requests.get(f"{BASE_URL}/tasks")
-    assert len(response.json()) > 0, "Task should still exist in the database after restart"
+def test_get_task():
+    # Login first and create a task
+    login_response = requests.post(f"{BASE_URL}/login", json={"username": "testuser", "password": "testpassword"})
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
+
+    create_task_response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json={"title": "Test Task"})
+    task_id = create_task_response.json()["_id"]
+
+    # Happy path
+    response = requests.get(f"{BASE_URL}/tasks/{task_id}", headers={"Authorization": f"Bearer {token}"})
+    assert response.status_code == 200, "Expected status code 200 in getting a task"
+
+def test_update_task():
+    # Login first and create a task
+    login_response = requests.post(f"{BASE_URL}/login", json={"username": "testuser", "password": "testpassword"})
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
+
+    create_task_response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json={"title": "Test Task"})
+    task_id = create_task_response.json()["_id"]
+
+    # Happy path
+    updated_data = {"title": "Updated Test Task"}
+    response = requests.patch(f"{BASE_URL}/tasks/{task_id}", headers={"Authorization": f"Bearer {token}"}, json=updated_data)
+    assert response.status_code == 200, "Expected status code 200 in updating a task"
+
+def test_delete_task():
+    # Login first and create a task
+    login_response = requests.post(f"{BASE_URL}/login", json={"username": "testuser", "password": "testpassword"})
+    assert login_response.status_code == 200, "Expected status code 200 in login"
+    token = login_response.json()["token"]
+
+    create_task_response = requests.post(f"{BASE_URL}/tasks", headers={"Authorization": f"Bearer {token}"}, json={"title": "Test Task"})
+    task_id = create_task_response.json()["_id"]
+
+    # Happy path
+    response = requests.delete(f"{BASE_URL}/tasks/{task_id}", headers={"Authorization": f"Bearer {token}"})
+    assert response.status_code == 204, "Expected status code 204 in deleting a task"

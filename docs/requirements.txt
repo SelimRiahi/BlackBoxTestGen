@@ -1,9 +1,18 @@
-# Functional Requirements
-1. Users can create tasks
-2. Users can view all tasks
-3. Data persists after restart
+Functional Requirements:
+1. User authentication (registration/login)
+2. Task management (CRUD)
+3. Category management
+4. Priority levels
+5. Search functionality
+6. Data validation
+7. Error handling
+8. Partial updates
+9. Ownership-based access control
 
-# Non-Functional
-- Response time < 300ms
-- MongoDB storage
-- Error handling for invalid inputs
+Non-Functional:
+1. Response time < 300ms
+2. Case-insensitive search
+3. Data persistence
+4. Input validation
+5. JWT authentication
+6. Password hashing

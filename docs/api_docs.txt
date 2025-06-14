@@ -1,20 +1,70 @@
-# Technical Documentation
+API Documentation:
 Framework: Node.js + Express
 Database: MongoDB
+Default Port: 3000
 
-## API Endpoints
-### POST /tasks
-- Request: { "title": string }
-- Success: 201 + { "id": string, "title": string }
-- Error: 400 if invalid input
+Authentication:
+- POST /register
+  Request: { "username": string (3-30 chars), "password": string (min 8 chars) }
+  Success: 201 + user object
+  Errors: 400 for validation errors
 
-### GET /tasks
-- Success: 200 + [ { "id": string, "title": string } ]
+- POST /login
+  Request: { "username": string, "password": string }
+  Success: 200 + { "token": string }
+  Errors: 401 for invalid credentials
 
-## Database
-Collection: tasks
-Fields:
-- _id (auto)
-- title (string)
-- completed (boolean)
-- createdAt (date)
+Endpoints (require Authorization header with Bearer token):
+
+Tasks:
+- POST /tasks
+  Request: { 
+    "title": string (required, 3-100 chars),
+    "description?": string (max 500 chars),
+    "priority?": "low"|"medium"|"high",
+    "dueDate?": ISO8601 date string,
+    "categoryId?": ObjectId
+  }
+  Success: 201 + task object
+  Errors:
+    - 400: Validation error
+    - 401: Unauthorized
+
+- GET /tasks
+  Success: 200 + [task objects] (only user's tasks)
+
+- GET /tasks/:id
+  Success: 200 + task object
+  Errors: 
+    - 404 if not found
+    - 403 if not owner
+
+- PATCH /tasks/:id
+  Request: Partial task fields
+  Success: 200 + updated task
+  Errors:
+    - 400: Validation error
+    - 403: Not owner
+    - 404: Not found
+
+- DELETE /tasks/:id
+  Success: 204
+  Errors: 
+    - 403: Not owner
+    - 404: Not found
+
+- GET /tasks/search?q=query
+  Success: 200 + [matching tasks] (only user's tasks)
+
+Categories:
+- POST /categories
+  Request: { "name": string (3-50 chars), "color?": hex string }
+  Success: 201 + category object
+  Errors: 400 for validation errors
+
+- GET /categories
+  Success: 200 + [category objects]
+
+Response Headers:
+- Content-Type: application/json
+- X-Response-Time: <milliseconds>
