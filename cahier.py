@@ -113,7 +113,7 @@ def traiter_chunk_avec_cache(text_chunk):
     Traite un chunk :
     - Vérifie le cache avant d'appeler Ollama
     - Envoie le prompt à Ollama avec le chunk
-    - Sauvegarde la réponse en cache
+    - Sauvegarde la réponse en cach
     """
     cached = load_from_cache(text_chunk)
     if cached is not None:
