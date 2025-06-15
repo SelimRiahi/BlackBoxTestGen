@@ -124,27 +124,49 @@ def traiter_chunk_avec_cache(text_chunk):
     print(f"⏱️ Démarrage à {datetime.now().strftime('%H:%M:%S.%f')[:-3]}")
 
     prompt = f"""
-Tu es un expert en analyse de cahiers des charges techniques. Ta tâche est d’extraire **toutes** les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu’elles soient concises, distinctes, non répétées, et facilement exploitables par une équipe de développement.
+Tu es un expert en analyse de cahiers des charges techniques. Ta tâche est d’extraire *Uniquement* les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu’elles soient concises, distinctes, non répétées, et facilement exploitables par une équipe de développement.
 
 ### Règles :
 
-- Ignore **tout contenu narratif**, descriptif, introductif ou stratégique **qui ne correspond pas directement à une exigence technique**.
-- Supprime les phrases génériques ou marketing (ex : “le logiciel sera performant”) si elles ne contiennent pas de critère mesurable.
+- Ignore *tout contenu narratif*, descriptif, introductif ou stratégique *qui ne correspond pas directement à une exigence technique précise*.
+- Supprime les phrases génériques, vagues ou marketing (ex : “le logiciel sera performant”, “interface intuitive”) si elles ne contiennent pas de critères mesurables ou d’indications claires.
+- Ne conserve pas d’exigences trop générales ou imprécises qui ne peuvent pas être traduites en tâches techniques concrètes.
 - Reformule les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
-- Découpe toute exigence composée en **plusieurs exigences unitaires**.
+- Découpe toute exigence composée en *plusieurs exigences unitaires*.
 - Chaque exigence doit pouvoir être transformée en tâche dans un backlog technique.
+- Si le texte ne contient que des informations vagues ou trop générales, ne génère pas d’exigences fonctionnelles ou non fonctionnelles pour ces passages.
+
+
+- Ne sois pas obligé de créer des exigences fonctionnelles si le texte ne contient pas d’informations précises, concrètes et observables selon une approche boîte noire.  
+- Il vaut mieux laisser la liste fonctionnelle vide plutôt que d’inclure des exigences vagues, imprécises, ou basées sur des suppositions internes.  
+- Priorise toujours la qualité et la précision des exigences plutôt que la quantité.
+---
+
+### Précisions sur les exigences fonctionnelles :
+
+- Les exigences fonctionnelles doivent décrire uniquement des actions, comportements ou fonctionnalités directement observables et réalisables par les utilisateurs finaux (approche boîte noire).
+- Ne jamais mentionner d’éléments techniques internes, comme base de données, architecture, systèmes, plateformes ou processus backend.
+- Évite les formulations vagues, générales ou passives telles que « assurer la communication », « permettre la gestion », « faciliter la collaboration ».
+- Chaque exigence fonctionnelle doit décrire précisément ce que fait l’utilisateur ou ce que le système affiche, en termes concrets, par exemple :  
+   • Un utilisateur peut envoyer un message à un autre utilisateur.  
+   • Un administrateur peut ajouter, modifier ou supprimer un compte utilisateur.  
+   • Le système affiche une notification lorsque l’utilisateur reçoit un nouveau message.
+- Si une exigence est trop générale, découpe-la en sous-exigences claires et concrètes ou ne la conserve pas si elle reste imprécise.
 
 ---
 
+
 Voici la distinction importante à garder en tête :
 
-1. Exigences Fonctionnelles : ce que le logiciel **doit faire**, c’est-à-dire les fonctionnalités, actions, processus ou comportements observables que l’utilisateur peut réaliser.  
+1.Exigences Fonctionnelles : ce que le logiciel doit faire, c’est-à-dire les fonctionnalités, actions, processus ou comportements observables que l’utilisateur peut réaliser, exclusivement selon une approche boîte noire (fonctionnalités visibles et utilisables par l’utilisateur, sans aucune information interne, technique ou d’architecture).
+Les exigences fonctionnelles doivent être formulées selon une approche boîte noire, sans mention d’éléments techniques internes, bases de données, ou architecture.
 Exemples :  
-- Authentification des utilisateurs (inscription, connexion)  
-- Gestion des tâches (création, modification, suppression)  
-- Envoi de notifications par email lors d’événements clés  
+- Un utilisateur peut s’inscrire et se connecter à son compte.  
+- Un administrateur peut gérer les utilisateurs (créer, modifier, supprimer des comptes).  
+- Un stagiaire peut consulter et postuler aux offres de stage disponibles.  
+- Le système envoie automatiquement un email de confirmation lors de l’inscription d’un utilisateur.  
 
-2. Exigences Non Fonctionnelles : les caractéristiques ou qualités du logiciel, c’est-à-dire **comment** il doit être (qualité, performance, sécurité, maintenance, accessibilité, etc.).  
+2. Exigences Non Fonctionnelles : les caractéristiques ou qualités du logiciel, c’est-à-dire *comment* il doit être (qualité, performance, sécurité, maintenance, accessibilité, etc.).  
 Exemples :  
 - Temps de réponse inférieur à 300 ms  
 - Sécurité par authentification multi-niveau (OAuth2, JWT)  
@@ -153,7 +175,7 @@ Exemples :
 Tu dois produire une réponse structurée en deux listes numérotées, une pour chaque type d’exigences, en évitant tout chevauchement.
 
 ### Consignes importantes :
-- Ne conserve **que** les exigences, en supprimant tout contexte, justification, historique, ou information superflue.
+- Ne conserve *que* les exigences, en supprimant tout contexte, justification, historique, ou information superflue.
 - Reformule les exigences pour qu’elles soient claires, concises, distinctes, et compréhensibles par une équipe de développement.
 - Assure-toi que chaque exigence soit unique. Si deux phrases expriment la même intention, conserve uniquement la version la plus claire.
 - Ne mélange pas exigences fonctionnelles et non fonctionnelles.
