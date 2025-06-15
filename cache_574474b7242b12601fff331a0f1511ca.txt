@@ -1,0 +1,17 @@
+Exigences Fonctionnelles :
+1. Gestion des stages (inscription, connexion)
+2. Création d'un profil utilisateur pour les étudiants et les entreprises
+3. Affectation de stagiaires à des entreprises
+4. Suivi des progrès du stage
+5. Communication entre étudiants et entreprises pendant le stage
+6. Évaluation des stages par les entreprises
+7. Envoi de notifications par email pour les événements clés (inscription, affectation, évaluation)
+
+   Exigences Non Fonctionnelles :
+1. Temps de réponse inférieur à 300 ms
+2. Sécurité par authentification multi-niveau (OAuth2, JWT)
+3. Conformité à la norme WCAG 2.1 pour l'accessibilité
+4. Résilience du système en cas de pannes ou d'échecs de connexion
+5. Scalabilité pour gérer un grand nombre d'utilisateurs et de stages
+6. Intégration avec les systèmes ERP des entreprises
+7. Interface utilisateur intuitive et user-friendly
