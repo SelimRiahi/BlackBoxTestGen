@@ -1,0 +1,318 @@
+API Documentation:
+Framework: [Not explicitly mentioned, assume RESTful API design principles]
+Database: Not explicitly mentioned, assume a suitable database for storing data
+Default Port: Not explicitly mentioned, assume default port 80 or 443 for HTTP and HTTPS respectively
+Authentication:
+- POST /auth/register
+Request: {
+"username": string (3-30 chars),
+"password": string (min 8 chars)
+}
+Success: 201 Created + user object
+Errors: 400 Bad Request (validation), 409 Conflict (user exists)
+Students:
+- GET /students
+Success: 200 OK + [student objects]
+Errors: 401 Unauthorized
+- POST /students
+"firstName": string,
+"lastName": string,
+"email": string (valid email format),
+"university": string (optional)
+Success: 201 Created + student object
+Errors: 400 Bad Request
+Companies:
+- GET /companies
+Success: 200 OK + [company objects]
+- POST /companies
+"name": string,
+"website": string (optional)
+Success: 201 Created + company object
+Internships:
+- GET /internships
+Success: 200 OK + [internship objects]
+- POST /internships
+"title": string,
+"description": string,
+"companyId": integer (required),
+"location": string (optional),
+"startDate": ISO8601 date,
+"endDate": ISO8601 date
+Success: 201 Created + internship object
+Applications:
+- POST /applications/{internshipId}
+"studentId": integer (required),
+"coverLetter": string (optional)
+Success: 201 Created + application object
+Errors: 400 Bad Request, 404 Not Found (if internship does not exist or student does not exist)
+Reports:
+- POST /reports/{applicationId}
+"report": string
+Success: 201 Created + report object
+Errors: 400 Bad Request, 404 Not Found (if application does not exist)
+Response Headers:
+- Content-Type: application/json
+- X-Response-Time: <milliseconds>
+Framework: Spring Boot (Based on the use of layers: controller, service, and repository)
+Database: Not explicitly mentioned, assume MongoDB or PostgreSQL as common with Spring Boot
+Default Port: 8080 (Not explicitly mentioned, assume default port for Spring Boot applications)
+Contracts:
+- POST /contracts
+"title": string (required),
+"description?": string,
+"status": "PENDING" | "SIGNED",
+"pdfBase64": base64-encoded PDF file (required)
+Success: 201 Created + contract object
+Errors: 400 Bad Request (validation), 409 Conflict (contract with same ID exists)
+- GET /contracts/{id}
+Success: 200 OK + contract object
+Errors: 401 Unauthorized, 404 Not Found
+- PUT /contracts/{id}
+"title?": string,
+"pdfBase64?": base64-encoded PDF file
+Success: 200 OK + updated contract object
+Errors: 401 Unauthorized, 404 Not Found, 409 Conflict (contract with same ID does not match provided ID)
+- DELETE /contracts/{id}
+Success: 204 No Content
+- POST /reports
+"contract_id": ObjectId (required),
+"status": "PENDING" | "VALIDATED",
+"report_text": string (required)
+Errors: 400 Bad Request (validation), 409 Conflict (report with same ID exists)
+- GET /reports/{id}
+Success: 200 OK + report object
+- PUT /reports/{id}
+"status?": "PENDING" | "VALIDATED",
+"report_text?": string
+Success: 200 OK + updated report object
+Errors: 401 Unauthorized, 404 Not Found, 409 Conflict (report with same ID does not match provided ID)
+- DELETE /reports/{id}
+SMS Notifications:
+- POST /sms_notifications
+"phone_number": string (E.164 format),
+"message": string (required)
+Success: 201 Created + SMS notification object
+Errors: 400 Bad Request (validation), 409 Conflict (SMS with same phone_number exists)
+Email Notifications:
+- POST /email_notifications
+"recipient_email": string (required),
+"subject": string,
+Success: 201 Created + email notification object
+Errors: 400 Bad Request (validation)
+Framework: Not explicitly mentioned, assume RESTful API design.
+Database: Not explicitly mentioned, assume appropriate database for data storage.
+Default Port: Not explicitly mentioned, assume default port 80 or 443 for HTTP/HTTPS respectively.
+Email Notification:
+- POST /reports/{reportId}/signatures/notification
+"recipientEmail": string (valid email address)
+Success: 200 OK + {}
+Errors: 400 Bad Request (invalid recipientEmail), 404 Not Found (report not found or invalid reportId)
+Report Generation:
+- GET /reports/{reportId}/download
+Success: 200 OK + {file: binary data}
+Errors: 400 Bad Request, 401 Unauthorized, 404 Not Found (report not found or invalid reportId)
+Response Headers: Content-Disposition: attachment; filename={filename}
+Report Search:
+- GET /reports/search
+"query": string (optional),
+"status": "validated" | "not_validated" | "all" (optional)
+Success: 200 OK + [report objects]
+Errors: 400 Bad Request, 401 Unauthorized
+Report Summary:
+- GET /reports/{reportId}/summary
+Success: 200 OK + {summary: string}
+Student Grade Prediction:
+- POST /students/{studentId}/grades/prediction
+Success: 200 OK + {predictedGrade: number}
+Errors: 400 Bad Request, 401 Unauthorized, 404 Not Found (student not found or invalid studentId)
+Messages:
+- GET /messages
+Success: 200 OK + [message objects]
+- POST /conversations/{conversationId}/messages
+"text": string,
+"attachments?": [{
+"type": "image" | "pdf" | "audio",
+"data": base64 (optional)
+}]
+Success: 201 Created + message object
+Errors: 400 Bad Request, 401 Unauthorized, 404 Not Found (conversation not found or invalid conversationId)
+- GET /conversations/{conversationId}/messages
+- PUT /conversations/{conversationId}/messages/{messageId}/read
+Errors: 400 Bad Request, 401 Unauthorized, 404 Not Found (conversation not found or invalid conversationId/messageId)
+- DELETE /conversations/{conversationId}
+Conversation Management:
+- GET /conversations
+Success: 200 OK + [conversation objects]
+- POST /conversations
+Success: 201 Created + conversation object
+Message Statistics:
+- GET /messages/stats
+Success: 200 OK + {totalMessagesSent: number, totalMessagesReceived: number, messageTypesByType: {type: string, count: number}[]}
+Notification for New Messages:
+- POST /notifications/new_message
+Framework: Spring Boot (based on the text)
+Database: Not explicitly mentioned, leave this field empty for now.
+Default Port: Not explicitly mentioned, leave this field empty for now.
+Conversations:
+Request: {}
+- POST /conversations/{participantId}/messages
+"content": string (required),
+"timestamp?": ISO8601 date,
+"isToxic?": boolean (optional)
+Errors: 400 Bad Request, 404 Not Found (participant not found), 503 Service Unavailable (toxicity detection failure)
+Errors: 401 Unauthorized, 404 Not Found (conversation not found)
+- PUT /conversations/{conversationId}/favorite
+Notifications:
+- PUT /notifications/{conversationId}
+Request: { "enabled": boolean }
+Statistics:
+- GET /statistics/conversations
+Success: 200 OK + { "averageMessagesPerConversation": number, "messagesTimeAverage": string (hours, minutes, seconds), ... }
+Demands:
+- GET /demands
+Success: 200 OK + [demand objects]
+- POST /demands
+"location": { "latitude": number, "longitude": number },
+"fieldOfStudy": string (required),
+"cvBase64": string (base64 encoded CV file)
+Success: 201 Created + demand object
+Errors: 400 Bad Request, 503 Service Unavailable (CV parsing failure)
+- GET /demands/{demandId}
+Success: 200 OK + demand object
+Errors: 401 Unauthorized, 404 Not Found (demand not found)
+- PUT /demands/{demandId}/status
+Request: { "status": "Pending" | "Reviewed" | "Accepted" | "Rejected" }
+Responses:
+- GET /responses
+Success: 200 OK + [response objects]
+- POST /responses
+"demandId": integer (required),
+"comment?": string,
+"rating?": number (1-5)
+Success: 201 Created + response object
+Errors: 400 Bad Request, 404 Not Found (demand not found)
+Moderation:
+- GET /moderation/responses
+Success: 200 OK + [response objects flagged for moderation]
+Notifications and SMS Alerts:
+- POST /notifications/alerts
+Request: { "recipient": string, "message": string }
+Success: 201 Created + alert object
+Errors: 503 Service Unavailable (SMS delivery failure)
+Response Statistics:
+- GET /statistics/responses
+Success: 200 OK + { "countByStatus": { "Pending": number, ... }, "countByKeyword": { "keyword1": number, ... } }
+Evaluation System for Demands:
+- GET /demands/evaluations/{studentId}
+Success: 200 OK + [evaluation object]
+Errors: 401 Unauthorized, 404 Not Found (student not found)
+AI-Powered CV Analysis:
+- POST /cv/analysis
+Request: { "base64CV": string (base64 encoded CV file) }
+Success: 200 OK + analysis object
+Errors: 503 Service Unavailable (CV parsing failure)
+Framework: Spring Boot (Explicitly mentioned)
+Database: Not explicitly mentioned, assume MySQL or PostgreSQL as common choices for Spring Boot
+Default Port: 8080 (Not explicitly mentioned but commonly used with Spring Boot)
+Offers:
+- GET /offers
+Request: None
+Success: 200 OK + [offer objects]
+- POST /offers
+"location": string,
+"phone": string,
+"website": string,
+"base64_cv": base64 encoded CV PDF
+Success: 201 Created + offer object
+- GET /offers/{id}
+"id": integer (required)
+Success: 200 OK + offer object
+- PUT /offers/{id}
+// Update any fields as needed
+Success: 200 OK
+- DELETE /offers/{id}
+- GET /applications
+Success: 200 OK + [application objects]
+- POST /applications
+"status": string,
+"cv": base64 encoded CV PDF,
+"motivation_letter": string,
+"post_date": ISO8601 date,
+"offer_id": integer (required),
+"user_id": integer (required)
+- GET /applications/{id}
+Success: 200 OK + application object
+- PUT /applications/{id}
+- DELETE /applications/{id}
+Comments:
+- GET /comments
+Success: 200 OK + [comment objects]
+- POST /comments
+"creation_date": ISO8601 date,
+"sentiment_label": "positive" | "neutral" | "negative",
+"report_count": integer,
+Success: 201 Created + comment object
+- GET /comments/{id}
+Success: 200 OK + comment object
+- PUT /comments/{id}
+- DELETE /comments/{id}
+Offer Statistics:
+- GET /offers/statistics
+Success: 200 OK + offer statistics object
+PDF Generation:
+- GET /offers/{id}/pdf
+Success: 200 OK + base64 encoded PDF
+Company Information Scraping:
+- GET /companies/scrape/{offer_id}
+"offer_id": integer (required)
+Success: 200 OK + company information object
+Pagination:
+- GET /offers?page={page}&size={size}
+"page": integer (required),
+"size": integer (required)
+Dynamic Keyword-based Search:
+- GET /offers/search?query={query}
+"query": string (required)
+Advanced Comment Moderation:
+- GET /comments/{id}/moderate
+Success: 200 OK + comment object with moderation options
+AI-powered Application Evaluation:
+- POST /applications/evaluate
+"application_id": integer (required),
+Success: 201 Created + evaluation object
+Framework: Not explicitly mentioned, but based on the use of AI and integration with Keycloak, it appears to be a technology stack that supports machine learning and authentication.
+Database: Not explicitly mentioned
+Default Port: Not explicitly mentioned
+Users:
+- POST /users/register (for new user registration)
+"password": string (min 8 chars),
+"location": geolocation object
+Errors: 400 Bad Request (validation), 409 Conflict (user with the same email or username exists)
+- GET /users/{userId} (retrieve a specific user by ID)
+Success: 200 OK + user object
+- PUT /users/{userId} (update a specific user's information)
+"location": geolocation object,
+"password?": string (min 8 chars)
+Success: 200 OK + updated user object
+- DELETE /users/{userId} (delete a specific user by ID)
+Reclamations:
+- POST /reclamations (create a new reclamation)
+"user_id": integer,
+"message": string,
+"response?": string
+Success: 201 Created + reclamation object
+- GET /reclamations (retrieve all reclamations)
+Success: 200 OK + [reclamation objects]
+- GET /reclamations/{reclamationId} (retrieve a specific reclamation by ID)
+Success: 200 OK + reclamation object
+- PUT /reclamations/{reclamationId}/response (respond to a specific reclamation)
+"response": string
+Success: 200 OK + updated reclamation object
+- DELETE /reclamations/{reclamationId} (delete a specific reclamation by ID)
+- POST /notifications (create a new notification)
+"message": string
+Success: 201 Created + notification object
+- GET /notifications (retrieve all notifications)
+Success: 200 OK + [notification objects]
+- GET /notifications/{notificationId} (retrieve a specific notification by ID)
+Success: 200 OK + notification object
