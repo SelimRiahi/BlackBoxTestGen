@@ -1,0 +1,193 @@
+Exigences Fonctionnelles :
+1. **
+2. Un utilisateur peut s'inscrire et se connecter à son compte.
+3. Un utilisateur peut envoyer un message à un autre utilisateur.
+4. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+5. Un utilisateur peut soumettre une candidature pour un stage.
+6. Le système permet aux utilisateurs de télécharger des documents liés à leur candidature.
+7. Un utilisateur peut consulter et modifier ses informations personnelles.  **
+8. Un utilisateur peut rechercher des opportunités d'entretien en fonction de son profil et de ses antécédents académiques.
+9. Le système affiche une liste des offres d'entretien disponibles pour chaque utilisateur.
+10. Le système permet aux administrateurs de gérer les offres d'entretien, y compris la création, la modification et la suppression des opportunités.
+11. Un utilisateur peut suivre le statut de son application pour un entretien.  **
+12. Un utilisateur peut afficher une liste de résultats de recherche avec les offres d'emploi correspondantes.
+13. Un utilisateur peut filtrer les résultats de recherche par localisation, salaire, domaine, etc.
+14. Un utilisateur peut postuler pour des emplois en suivant les étapes de l'application.  **
+15. Un utilisateur peut postuler pour une opportunité d'entretien en soumettant ses informations personnelles et professionnelles.
+16. Un utilisateur peut communiquer directement avec les entreprises via le système de messagerie intégré.
+17. Le système permet aux utilisateurs de suivre leur progression dans la recherche d'un stage.  **
+18. Un utilisateur peut créer un contrat.
+19. Un utilisateur peut lire les informations d'un contrat.
+20. Un utilisateur peut télécharger un PDF lié à un contrat.
+21. Un utilisateur peut modifier ou supprimer ses propres contrats.  **
+22. Un utilisateur peut modifier le statut d'un contrat.
+23. Un utilisateur peut suivre l'historique des modifications de statut d'un contrat.
+24. Le système permet à l'utilisateur de rechercher dynamiquement les contrats par ID et statut.  **
+25. Un utilisateur peut signer les rapports directement dans l'application.
+26. Un utilisateur peut télécharger un rapport avec la signature intégrée au coin inférieur droit de la page.
+27. Le système envoie une notification par email immédiatement après que le rapport est signé.
+28. Un utilisateur peut rechercher des rapports en fonction de leur ID ou de leur statut de validation.
+29. Un utilisateur peut recevoir une notification par email après avoir signé un rapport.
+30. Un utilisateur peut créer, visualiser, mettre à jour et supprimer des messages dans une conversation en temps réel.
+31. Le système affiche un indicateur de lecture (lisible/non lisible) pour chaque message qui se met à jour en temps réel lorsque le destinataire le consulte.
+32. Le système valide la forme et les tailles des pièces jointes avant de les envoyer.
+33. Un utilisateur peut enregistrer et envoyer des messages vocaux qui sont jouables directement dans l'interface de chat.
+34. Un utilisateur peut mettre un message en épinglé pour le souligner.  **
+35. Chaque message a un statut de lecture (lu/non lu) qui met à jour en temps réel lorsque le destinataire le consulte.
+36. Un utilisateur peut commencer une nouvelle conversation en entrant l'adresse email d'un autre utilisateur.
+37. Le système affiche un compteur en temps réel du nombre de messages envoyés et reçus par chaque utilisateur.
+38. Les conversations sont automatiquement triées en fonction des favoris et de la date de la dernière mise à jour.
+39. Un utilisateur peut supprimer toute conversation existante, ce qui la retire de leur vue en temps réel.
+40. Chaque conversation affiche un compteur en temps réel du nombre de messages non lus.
+41. Le système classe tous les messages par type (texte, image, audio, PDF) pour chaque conversation et utilisateur, et met à jour ces statistiques en temps réel.
+42. Le statut d'un utilisateur est mis à jour en temps réel dans la liste de tri.  ###
+43. Un utilisateur peut activer ou désactiver les notifications pour chaque conversation.
+44. Un utilisateur peut afficher le nombre moyen de messages échangés par conversation, basé sur des données en temps réel et leur type.
+45. Le système calcule et affiche le temps moyen entre les messages, en heures, minutes et secondes.
+46. Un utilisateur peut suggérer des profils d'utilisateurs basés sur leurs interactions passées, utilisant un modèle de Machine Learning entraîné.
+47. Un utilisateur peut créer, lire, mettre à jour et supprimer les demandes d'entretien.
+48. Le système permet l'upload de CVs en format Base64 et décrypte, analyse et extrait les compétences des CVs (PDF) uploadés.  **
+49. Un utilisateur peut saisir une latitude et une longitude pour afficher les offres de travail dans un rayon géographique spécifique.
+50. Le système affiche automatiquement les offres de travail correspondant aux compétences et au domaine de l'utilisateur.  **
+51. Le système suggère des profils d'utilisateurs les plus engageants basés sur les interactions passées.  **
+52. Un utilisateur peut filtrer les offres d'emploi en fonction de leur emplacement.  **
+53. Un utilisateur peut consulter les statistiques des demandes en fonction du domaine d'étude et du statut.  **
+54. 1. Un utilisateur peut télécharger son CV en format PDF ou Word.
+55. Le système analyse le CV téléchargé pour extraire les informations pertinentes.
+56. Un utilisateur peut saisir ses compétences et expériences professionnelles dans un formulaire.
+57. Le système compare les informations du CV avec celles saisies par l'utilisateur.
+58. Un utilisateur peut ajouter des commentaires sur les réponses.
+59. Le système permet aux entreprises de noter et commenter les demandes.  **
+60. Le système utilise des techniques de traitement automatique du langage naturel pour analyser les CVs.
+61. Le système extrait les niveaux de compétences techniques et non techniques à partir des CVs.
+62. Le système met en place un mécanisme de scoring pour quantifier la maîtrise des compétences.
+63. Un utilisateur peut visualiser ses scores de compétences après analyse.  ###
+64. Le système extrait les données structurées du CV envoyé.
+65. Le système envoie les caractéristiques de compétence extraites à un modèle de regroupement prédictif pour classifier les candidats d'entretiens en groupes basés sur la performance.
+66. Le système génère automatiquement un PDF contenant les informations clés d'une offre.  **
+67. 1. Un utilisateur peut extraire les informations de société d'une offre.
+68. Un utilisateur peut partager ou archiver des offres.  ###
+69. Un utilisateur peut créer, lire, mettre à jour et supprimer des applications.
+70. Un utilisateur peut effectuer une recherche dynamique de propositions en fonction de mots-clés tels que le titre ou la catégorie, offrant ainsi une expérience utilisateur rapide et fluide.
+71. Un utilisateur peut naviguer facilement entre les pages des propositions grâce à la pagination dynamique.
+72. Le système valide le format de l'adresse email lors de la saisie.
+73. Un utilisateur peut classer chaque commentaire comme positif, neutre ou négatif grâce à l'intégration de l'API Sentiment Analysis.
+74. Le système bloque un utilisateur pendant 3 jours s'il a posté un commentaire avec une classification de sentiment négative.
+75. 1. Un utilisateur peut soumettre son CV pour être évalué par le système.
+76. Le système compare les compétences du candidat avec celles requises dans l'offre d'emploi.
+77. Le système prédit la pertinence de chaque candidature en fonction des comparaisons effectuées.  ###
+78. Un utilisateur peut rechercher des offres en utilisant un mot-clé.
+79. Un utilisateur peut accéder à la page d'offre suivante ou précédente.
+80. Un utilisateur peut signaler un commentaire inapproprié.
+81. L'utilisateur est notifié lorsqu'une réponse est envoyée à sa réclamation.
+82. Un administrateur peut répondre à une réclamation avec trois options suggérées par l'IA.
+83. Un utilisateur peut consulter son tableau de bord pour suivre les reclamations en attente et celles qui sont déjà traitées.
+84. 1. Un utilisateur peut saisir des données dans un champ de texte en temps réel.
+85. Le système affiche les résultats instantanément tandis que l'utilisateur tape.  ###
+86. Un utilisateur peut soumettre une réclamation, qui sera gérée par le système.
+87. L'utilisateur peut consulter les réponses aux réclamations qu'il a soumises.
+88. Le système permet de vérifier l'authenticité d'un utilisateur via SMS ou email.  **
+89. Un utilisateur peut saisir des informations en temps réel et obtenir des résultats instantanément.
+90. Un utilisateur peut soumettre un formulaire avec vérification CAPTCHA pour authentifier l'utilisateur.
+91. Le système détecte les logins provenant d'agents utilisateur inconnus et flagge la session comme Anomalie 1.
+92. Lorsqu'une anomalie est détectée, le système demande à l'utilisateur de fournir une deuxième factor d'authentification pour confirmer son identité.  **
+93. Un utilisateur peut ajouter un watermark numérique à ses documents.
+94. Un utilisateur peut signer numériquement ses documents avec une signature digitale.
+
+Exigences Non Fonctionnelles :
+1. **
+2. La plateforme doit être accessible en ligne 24/7, avec une disponibilité supérieure à 99,9%.
+3. Le système doit garantir la confidentialité et l'intégrité des données utilisateurs.
+4. Les performances du système doivent permettre un chargement rapide de pages et d'applications.
+5. Le système doit respecter les normes d'accessibilité Web Content Accessibility Guidelines (WCAG 2.1).  **
+6. Le système doit être capable de gérer au moins 10 000 utilisateurs simultanément sans ralentissement significatif.
+7. Les données utilisateur doivent être stockées de manière sécurisée et protégées contre les accès non autorisés.
+8. Le système doit fournir une interface utilisateur intuitive et facile à utiliser pour les utilisateurs finaux.  **
+9. Le système doit afficher une grande base de données avec des milliers d'offres d'emploi.
+10. Le système doit permettre aux entreprises de publier facilement leurs offres d'emploi.
+11. Le système doit être accessible en ligne 24/7 sans interruption.
+12. Le système doit garantir la sécurité et l'intégrité des données utilisateur.  Note : J'ai supprimé les exigences liées à l'intégration universitaire, aux offres de qualité variable et à l'interface non adaptée pour le suivi d'applications, car elles ne correspondent pas directement à des exigences techniques précises. De même, j'ai évité les formulations vagues ou générales qui ne peuvent pas être traduites en tâches techniques concrètes.  **
+13. Le système est optimisé pour une grande base de données sur les grandes entreprises.
+14. La recherche d'offres d'emploi est très précise.
+15. Le système traite les applications avec efficacité.
+16. L'utilisateur peut interagir avec les entreprises via un système de messagerie directe.  Note : J'ai suivi les règles et consignes fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires, concises et précises. Les exigences ont été reformulées pour être facilement exploitable par une équipe de développement.  **
+17. Le système de messagerie doit permettre la communication instantanée entre les utilisateurs et les entreprises.
+18. La plateforme doit fournir une interface utilisateur intuitive et facile à utiliser, avec un temps de chargement des pages inférieur à 2 secondes.  Note : J'ai suivi les consignes pour extraire uniquement les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu'elles soient concises, distinctes, non répétées et facilement exploitables par une équipe de développement.  **
+19. Le système doit stocker les PDFs en tant que chaînes de base64 dans la base de données.
+20. Le système doit permettre aux utilisateurs de télécharger des fichiers PDF avec une taille maximale définie.
+21. Le système doit appliquer automatiquement un filigrane à chaque fichier PDF téléchargé pour améliorer la sécurité.  Note : J'ai suivi les règles et consignes fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires, concises et précises. Les exigences fonctionnelles décrivent les actions que peuvent effectuer les utilisateurs finaux, tandis que les exigences non fonctionnelles décrivent les qualités ou caractéristiques du logiciel.  **
+22. Le système doit garantir la sécurité et l'intégrité des données stockées, y compris les PDFs.  **
+23. La sécurité des documents doit être renforcée pour empêcher toute altération ou utilisation abusive.
+24. Le système de gestion de contrats doit permettre une meilleure surveillance et suivi du workflow.
+25. Les statistiques sur les contrats doivent être disponibles en temps réel pour faciliter la supervision.
+26. Un système de notification par SMS doit être intégré pour informer les parties concernées des mises à jour de statut des contrats.
+27. La recherche dynamique dans le module de gestion de contrats doit permettre aux utilisateurs de récupérer les données contractuelles en fonction d'un ID ou d'un statut spécifique.  Note : J'ai supprimé les exigences qui étaient trop générales, imprécises ou non observables, et reformulé les autres pour qu'elles soient claires, concises et distinctes.  **
+28. Le système doit fournir une traçabilité claire des modifications apportées aux documents.
+29. Les statistiques sur les contrats doivent être disponibles en temps réel pour faciliter la surveillance et l'analyse.
+30. Les notifications par SMS doivent être envoyées en temps réel lorsque le statut d'un contrat change.
+31. Le système doit permettre une recherche flexible des contrats en fonction de leur ID ou statut.  **
+32. Le système doit être capable de supporter les besoins futurs de reporting et de tableau de bord.
+33. La fonctionnalité de signature numérique doit être intégrée de manière à mettre à jour automatiquement le champ "validé par la société" lorsque le rapport est signé.  Notez que j'ai suivi les consignes pour reformuler les exigences en les rendant claires, concises et distinctes. J'ai également évité d'inclure des formulations vagues ou générales qui ne correspondent pas directement à une exigence technique précise.  **
+34. La validation du processus de rapport doit être efficace et rapide.  **
+35. La fonctionnalité doit permettre aux utilisateurs de comprendre rapidement les informations clés sans avoir besoin de lire tout le contenu.
+36. Le système doit fournir des performances optimales et une expérience utilisateur fluide.
+37. 1. La vitesse de chargement du site web doit être inférieure à 2 secondes pour les utilisateurs connectés.
+38. Les formulaires doivent valider automatiquement les champs obligatoires avant la soumission.  Note : J'ai supprimé le contenu narratif et reformulé les exigences en fonction des règles fournies pour obtenir ces listes d'exigences claires et concises.  **
+39. La précision du modèle de prédiction des notes finales doit être améliorée en fine-tournant les paramètres pour maximiser l'exactitude.  Notez que j'ai supprimé les exigences qui ne correspondaient pas directement à une exigence technique précise, telles que la description du système de prédiction des notes finales. J'ai également reformulé les exigences fonctionnelles en utilisant un vocabulaire technique clair et précis, et j'ai commencé chaque exigence par "Un utilisateur peut..." suivi d'un verbe à l'infinitif décrivant l'action.  ###
+40. Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.  **
+41. Le système doit afficher les notifications en temps réel lorsque de nouveaux messages sont reçus dans n'importe quelle conversation.
+42. Les résultats de la recherche doivent mettre à jour instantanément lorsqu'un utilisateur effectue une recherche dynamique par mot-clé ou date.  **Remarques :**  * J'ai supprimé les exigences qui étaient trop générales ou imprécises, comme "le système gère les données utilisateurs" ou "le système assure la sécurité des accès". * J'ai reformulé les exigences pour qu'elles soient claires, concises et uniques. * J'ai évité de mentionner d'éléments techniques internes, comme base de données, architecture, systèmes backend ou plateformes.  ###
+43. Le système met à jour les statistiques de classification des messages par type en temps réel.
+44. Le système affiche un comptage en temps réel du nombre de messages envoyés et reçus par chaque utilisateur, mis à jour dynamiquement.
+45. Les conversations sont supprimées instantanément lorsque l'utilisateur supprime une conversation.  Remarque : Certaines exigences initiales ont été considérées comme trop générales ou imprécises et n'ont pas été incluses dans les listes finales.  ###
+46. La fonctionnalité de recommandation d'amis suggère les profils d'utilisateurs les plus engageants basé sur des interactions passées.
+47. Le système détecte automatiquement les messages inappropriés ou toxiques et bloque ceux-ci avant qu'ils ne soient envoyés.  **Remarques :**  * Les exigences fonctionnelles ont été reformulées pour être claires, concises et distinctes. * Les exigences non fonctionnelles sont précises et mesurables. * Aucune exigence liée aux actions ou droits des administrateurs ou gestionnaires n'a été conservée.  Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :  **
+48. La recherche d'offres de travail doit être effectuée en temps réel.
+49. Les résultats de la recherche doivent être affichés dans un délai inférieur à 2 secondes.
+50. L'utilisateur doit pouvoir consulter les informations détaillées d'une offre de travail en quelques clics.  Notez que j'ai supprimé les exigences trop générales ou imprécises, comme "utiliser la géolocalisation" ou "permettre la gestion des offres". J'ai également reformulé les exigences pour qu'elles soient claires, concises et uniques.  **
+51. La fonctionnalité de recommandation d'amis doit être précise et pertinente.
+52. Les opérations CRUD pour les demandes doivent être sécurisées et robustes.
+53. Le système doit gérer efficacement la charge de travail liée à l'analyse des CVs.
+54. La recherche et le tri des demandes doivent être rapides et fiables.  **Remarques :**  * Les exigences fonctionnelles ont été reformulées pour suivre les règles d'écriture précises, concises et distinctes. * Les exigences non fonctionnelles ont été identifiées comme nécessitant des caractéristiques spécifiques (précision, pertinence, sécurité, efficacité). * Aucune exigence liée aux actions ou droits des administrateurs ou gestionnaires n'a été conservée.  Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :  **
+55. Le système doit être accessible en temps réel pour envoyer des notifications par email, in-app et SMS.
+56. Le système doit permettre aux entreprises de noter et commenter les demandes d'internship.  J'ai suivi les règles pour extraire les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu'elles soient concises, distinctes, non répétées et facilement exploitables par une équipe de développement.  ###
+57. 1. La plateforme doit être capable de traiter jusqu'à 10 000 utilisateurs simultanément sans ralentissement significatif.
+58. Les informations saisies par l'utilisateur doivent être stockées dans une base de données sécurisée et protégée contre les attaques de type SQL injection.
+59. La plateforme doit être accessible sur différents navigateurs web (Google Chrome, Mozilla Firefox, Safari) sans nécessiter de mise à jour ou de configuration spécifique.  Note : J'ai suivi les règles fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires et précises du texte fourni. Les exigences fonctionnelles décrivent les actions réalisables par l'utilisateur, tandis que les exigences non fonctionnelles concernent les qualités ou caractéristiques de la plateforme.  **
+60. La disponibilité et la fiabilité du système doivent être garanties à 99,9 %.
+61. Les données utilisateur doivent être protégées en utilisant des méthodes de cryptage sécurisées.
+62. Les statistiques fournies par le système doivent être précises et à jour en temps réel.  ###
+63. 1. La plateforme doit être capable d'analyser au moins 500 CVs par heure sans ralentissement significatif.
+64. L'interface utilisateur doit être accessible sur les navigateurs web les plus courants (Google Chrome, Mozilla Firefox, Safari) et répondre aux normes d'accessibilité WCAG 2.1.  Note : J'ai suivi les règles pour extraire uniquement les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu'elles soient concises, distinctes, non répétées et facilement exploitables par une équipe de développement.  **
+65. Le système doit être capable de traiter et d'extraire des données structurées de fichiers PDF.
+66. Le système doit pouvoir classifier efficacement les candidats en fonction de leurs compétences.
+67. Le système doit fournir des informations claires et précises sur les offres d'emploi.
+68. Le système doit être capable de gérer et de stocker les commentaires de manière efficace.
+69. Le système doit garantir la suppression automatique des offres expirées pour maintenir une base de données claire et pertinente.  ###
+70. Le système doit permettre la classification prédictive des candidats en fonction de leurs performances.  Remarque : Les exigences 7 et 10 ne sont pas directement applicables car elles mentionnent une notification qui n'est pas décrite dans le texte, et l'exigence 8 est déjà couverte par l'exigence fonctionnelle 1.  ###
+71. La recherche dynamique des propositions doit être rapide et fluide.
+72. L'intégration de l'API Sentiment Analysis doit être précise et fiable.
+73. 1. La pertinence des candidatures doit être prédite avec une précision supérieure à 80%.
+74. Le système doit être capable d'évaluer rapidement les candidatures, sans ralentir la vitesse de navigation globale du site.
+75. L'interface utilisateur doit fournir clairement les informations sur le statut de chaque candidature (par exemple, "en attente d'évaluation", "accepté", "refusé").  **
+76. La recherche de mots-clés doit être dynamique et rapide.
+77. L'interface utilisateur doit être intuitive et facile à utiliser.
+78. Le système doit détecter automatiquement les commentaires inappropriés.
+79. La fonction de signalisation des commentaires doit être accessible et visible pour tous les utilisateurs.  Note : J'ai suivi les règles fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires, précises et concises. Les exigences fonctionnelles décrivent ce que peuvent faire les utilisateurs finaux, tandis que les exigences non fonctionnelles décrivent les qualités ou caractéristiques du logiciel.  ###
+80. 1. La pertinence des applications est prédite avec précision par le système.
+81. Le système utilise un modèle de machine learning pour évaluer les candidatures.
+82. Les compétences du candidat sont correctement comparées avec celles requises dans l'offre d'emploi.  Note : J'ai suivi les consignes et reformulé les exigences en fonction des règles fournies, en gardant à l'esprit que les exigences non fonctionnelles doivent être précises et mesurables.  **
+83. La sécurité des accès est assurée grâce à l'intégration de Keycloak, permettant un contrôle d'accès basé sur les rôles.
+84. La performance du système est améliorée grâce aux fonctionnalités CRUD pour les entités Utilisateur et Reclamation, permettant une gestion efficace des données.
+85. Le système garantit la disponibilité en affichant une notification lorsque l'utilisateur reçoit un nouveau message, ce qui maintient l'utilisateur informé et engagé.  ###
+86. 1. La vérification d'authenticité des utilisateurs est effectuée en temps réel.
+87. Le système empêche les soumissions automatiques pendant la validation de formulaire.  **
+88. La performance du système doit être optimale pour garantir un temps de réponse rapide.
+89. Le système doit être sécurisé et protéger les données des utilisateurs contre toute intrusion.
+90. Les données du système doivent être stockées de manière sécurisée et protégée contre toute perte ou corruption.  Note : J'ai supprimé les exigences qui étaient trop générales, imprécises ou non fonctionnelles, et reformulé les autres pour qu'elles soient claires, concises et uniques.  **
+91. Le traitement en temps réel doit être réalisé avec des WebSockets ou une architecture basée sur les événements.
+92. Toutes les communications et transactions de documents doivent être chiffrées pour protéger les données sensibles.
+93. La plateforme doit exiger l'authentification à deux facteurs pour prévenir l'accès non autorisé.
+94. Les documents doivent être marqués d'un filigrane numérique et signerés numériquement.  **
+95. La plateforme doit être capable d'éliminer complètement l'utilisation du papier dans les processus de gestion de stages.
+96. La plateforme doit permettre une expérience utilisateur plus inclusive et plus conviviale.

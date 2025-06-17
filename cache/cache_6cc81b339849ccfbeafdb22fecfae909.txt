@@ -1,0 +1,14 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut rechercher des offres d'emploi dans une zone géographique spécifique en utilisant la latitude et la longitude.
+2. Un utilisateur peut consulter les offres d'emploi filtrées par localisation.
+3. Le système affiche les offres d'emploi correspondantes à la recherche de l'utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. La fonctionnalité de recherche géographique doit être précise et donner des résultats pertinents.
+2. L'algorithme de matching automatique doit être efficace et rapide pour fournir les offres d'emploi correspondantes.
+
+Notez que j'ai reformulé les exigences pour qu'elles soient claires, concises, distinctes et uniques, en utilisant un vocabulaire technique clair et précis. J'ai également évité de mentionner des éléments techniques internes ou des formulations vagues.

@@ -1,0 +1,25 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter le statut d'un contrat.
+2. Un utilisateur peut mettre à jour le statut d'un contrat.
+3. Le système affiche une notification par SMS lorsque le statut d'un contrat change.
+4. Un utilisateur peut rechercher des contrats en fonction de leur ID et/ou de leur statut.
+5. Un utilisateur peut consulter les statistiques sur la distribution des statuts de contrats.
+
+**Exigences Non Fonctionnelles :**
+
+1. La sécurité des documents est améliorée pour empêcher toute altération ou utilisation abusive.
+2. Le système permet une meilleure gestion et suivi du workflow des contrats.
+3. Les parties concernées sont informées en temps réel de tout changement de statut de contrat.
+
+J'ai appliqué les règles suivantes :
+
+* J'ai ignoré le contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* Je n'ai conservé que les phrases qui contiennent des critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
+* J'ai commencé chaque exigence fonctionnelle par "Un utilisateur peut..." suivi d'un verbe à l'infinitif décrivant l'action.
+* J'ai découpé les exigences composées en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.

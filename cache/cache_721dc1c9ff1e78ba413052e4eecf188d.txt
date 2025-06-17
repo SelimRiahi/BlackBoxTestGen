@@ -1,0 +1,19 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un message à un autre utilisateur.
+2. Un utilisateur peut s'inscrire et se connecter à son compte.
+3. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+4. Un utilisateur peut consulter les réclamations qu'il a envoyées ou reçues.
+5. Un administrateur peut répondre aux réclamations avec des suggestions de réponse automatiques.
+6. Un utilisateur peut modifier ses informations personnelles, y compris son adresse e-mail et mot de passe.
+7. Le système permet à un utilisateur de rechercher d'autres utilisateurs par leur nom d'utilisateur ou adresse e-mail.
+
+**Exigences Non Fonctionnelles :**
+
+1. La sécurité des accès est assurée grâce à l'intégration de Keycloak.
+2. L'application est accessible et peut être utilisée par les personnes ayant des besoins spécifiques.
+3. Les données utilisateur sont gérées de manière sécurisée et efficace.
+
+J'ai suivi les règles énoncées pour extraire ces exigences, en me concentrant sur les actions directement observables et réalisables par les utilisateurs finaux, ainsi que sur les caractéristiques du logiciel qui doivent être précises et mesurables.

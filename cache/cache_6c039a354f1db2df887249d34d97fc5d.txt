@@ -1,0 +1,17 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut télécharger son CV.
+2. Le système détecte les compétences techniques dans le CV.
+3. Le système détecte les compétences en soft skills dans le CV.
+4. Le système attribue un score de compétence technique à l'utilisateur.
+5. Le système attribue un score de compétence en soft skills à l'utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. La détection des compétences doit être précise et fiable.
+2. Le système doit être capable d'analyser les CVs de manière efficace.
+3. Les scores attribués doivent être clairs et compréhensibles pour l'utilisateur.
+
+J'ai suivi les règles énoncées pour extraire ces exigences, en me concentrant sur les actions ou effets observables par l'utilisateur final, en évitant les formulations vagues ou techniques internes.

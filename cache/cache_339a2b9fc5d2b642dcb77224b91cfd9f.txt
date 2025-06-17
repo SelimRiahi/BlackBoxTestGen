@@ -1,0 +1,17 @@
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un CV en format PDF.
+2. Un utilisateur peut consulter les compétences détectées dans son CV.
+3. Un utilisateur peut s'inscrire et se connecter à son compte.
+4. Un utilisateur peut envoyer une candidature pour un offre d'emploi.
+5. Un utilisateur peut consulter les offres d'emploi disponibles.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit permettre la gestion efficace des CV en format PDF.
+2. Le système doit fournir des informations précises sur les compétences détectées dans les CV.
+3. Le système doit garantir une sécurité et une confidentialité des données utilisateurs.
+4. Le système doit être capable de gérer un grand nombre d'utilisateurs et d'offres d'emploi.
+5. Le système doit fournir des notifications aux utilisateurs pour les mises à jour importantes.
+
+Note : J'ai reformulé les exigences fonctionnelles en suivant la structure "Un utilisateur peut..." et j'ai supprimé les formulations vagues ou générales. Les exigences non fonctionnelles décrivent les qualités ou caractéristiques du logiciel, telles que la sécurité, la confidentialité, etc.

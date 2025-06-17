@@ -1,0 +1,19 @@
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut rechercher des opportunités d'internat en fonction de son profil et de ses antécédents académiques.
+2. Un utilisateur peut consulter les offres d'internat ciblées sur sa profile et ses antécédents académiques.
+3. Un utilisateur peut s'inscrire pour des opportunités d'internat via une plateforme collaborative intégrée avec les institutions éducatives.
+4. Un utilisateur peut consulter son profil et les informations relatives à ses candidatures en ligne.
+5. Un administrateur peut gérer les offres d'internat, y compris la création, la modification et la suppression des opportunités.
+6. Un administrateur peut suivre le statut des candidatures et des internes.
+7. Un utilisateur peut envoyer un message à un autre utilisateur ou à un administrateur pour demander plus d'informations sur une opportunité d'internat.
+
+### Exigences Non Fonctionnelles :
+
+1. La plateforme doit être accessible en ligne 24/7, avec une disponibilité de 99,9 %.
+2. La plateforme doit être sécurisée et protégée contre les attaques de piratage et les virus.
+3. La plateforme doit être compatible avec les différents navigateurs web et les systèmes d'exploitation.
+4. La plateforme doit être accessible sur plusieurs appareils, y compris les ordinateurs de bureau, les tablettes et les smartphones.
+5. La plateforme doit permettre aux utilisateurs de se connecter en toute sécurité via un système d'authentification robuste.
+
+Note : J'ai supprimé les exigences qui ne correspondaient pas directement à des fonctionnalités techniques précises ou qui étaient trop générales ou imprécises. J'ai également reformulé les exigences pour qu'elles soient claires, concises et distinctes.

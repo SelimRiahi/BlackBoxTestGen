@@ -1,0 +1,9 @@
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter les offres de manière facile.
+2. Un utilisateur peut partager ou archiver des offres avec facilité.
+
+### Exigences Non Fonctionnelles : 
+
+1. Le système doit permettre une extraction automatique d'informations de sociétés à partir des descriptions d'offres.
+2. Le système doit extraire les informations suivantes pour chaque société : nom, localisation, téléphone et description.

@@ -1,0 +1,20 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut s'inscrire via son université.
+2. Un utilisateur peut cibler des partenariats via une plateforme de suivi.
+3. Un utilisateur peut consulter les offres d'emploi de grandes entreprises.
+4. Un utilisateur peut filtrer les offres d'emploi en utilisant des filtres avancés.
+5. Un utilisateur peut effectuer des recherches très précises sur les offres d'emploi.
+6. Le système permet à un utilisateur de suivre ses applications.
+7. Le système permet à un utilisateur de gérer ses applications de manière partielle.
+8. Un utilisateur peut interagir avec les entreprises via un système de messagerie.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être optimisée pour une grande base d'utilisateurs.
+2. La plateforme doit permettre à l'utilisateur de consulter des offres d'emploi très nombreuses.
+3. La plateforme doit garantir la sécurité et la confidentialité des données utilisateurs.
+
+Notez que certaines exigences ont été reformulées pour les rendre plus claires, concises et distinctes. Les exigences fonctionnelles décrivent les actions ou comportements observables par l'utilisateur final, tandis que les exigences non fonctionnelles décrivent les qualités ou caractéristiques de la plateforme.

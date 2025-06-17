@@ -1,0 +1,19 @@
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut rechercher et consulter les offres d'internat disponibles sur la plateforme.
+2. Un utilisateur peut s'inscrire et se connecter à son compte pour accéder aux fonctionnalités de la plateforme.
+3. Un utilisateur peut postuler pour un internat en soumettant sa candidature avec les documents requis.
+4. Un utilisateur peut suivre l'état de ses demandes d'internat et recevoir des mises à jour en temps réel.
+5. Une entreprise peut publier des offres d'emploi sur la plateforme.
+6. Une entreprise peut consulter et gérer les candidatures reçues pour un internat.
+7. Un utilisateur peut envoyer et recevoir des messages directement avec les autres utilisateurs de la plateforme.
+
+### Exigences Non Fonctionnelles :
+
+1. La plateforme doit être accessible en ligne 24/7, sans interruption ni défaillance majeure.
+2. Les données personnelles des utilisateurs doivent être protégées et sécurisées conformément aux normes de confidentialité applicables.
+3. La plateforme doit être compatible avec les principaux navigateurs web et dispositifs mobiles courants.
+4. Les performances de la plateforme doivent permettre un chargement rapide des pages et une réponse instantanée aux requêtes utilisateur.
+5. La plateforme doit inclure des fonctionnalités d'authentification et d'autorisation pour garantir l'accès sécurisé aux données sensibles.
+
+Note : J'ai suivi les consignes fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires, concises et précises. Les exigences ont été reformulées pour être facilement exploitable par une équipe de développement.

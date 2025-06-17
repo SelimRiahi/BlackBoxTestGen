@@ -1,0 +1,29 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut créer des contrats en utilisant la fonctionnalité CRUD.
+2. Un utilisateur peut lire les informations relatives à un contrat.
+3. Un utilisateur peut mettre à jour les informations d'un contrat.
+4. Un utilisateur peut supprimer un contrat.
+5. Un utilisateur peut télécharger le PDF d'un contrat.
+6. Un utilisateur peut uploader un PDF lié à un contrat.
+7. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message (pas mentionné explicitement dans le texte, mais il est possible qu'il s'agisse d'une fonctionnalité déjà existante).
+8. Un utilisateur peut consulter les documents PDF associés à chaque contrat.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit permettre la gestion de contrats avec une architecture consistante et réutilisable.
+2. Le système doit garantir la compatibilité des données transmises, en évitant la nécessité d'un système de fichiers séparé.
+
+**Remarques :**
+
+* Les exigences fonctionnelles 1 à 8 sont directement liées aux actions que les utilisateurs peuvent effectuer sur les contrats.
+* L'exigence non fonctionnelle 1 est liée à l'architecture du système et à la réutilisabilité des codes.
+* L'exigence non fonctionnelle 2 est liée à la compatibilité des données transmises.
+
+**Conformité aux règles :**
+
+* Les exigences sont reformulées pour être claires, concises, distinctes et uniques.
+* Les exigences fonctionnelles décrivent uniquement les actions réalisables par les utilisateurs finaux (approche boîte noire).
+* Les exigences non fonctionnelles décrivent des qualités ou caractéristiques du logiciel qui doivent être précises et mesurables.

@@ -1,0 +1,14 @@
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut saisir des informations en temps réel et visualiser les résultats instantanément.
+2. Un utilisateur peut passer un test CAPTCHA pour vérifier son authenticité avant de soumettre un formulaire.
+3. Un utilisateur peut être invité à fournir une deuxième factor d'authentification (2FA) lorsqu'un système AI détecte un accès non familier.
+
+**Exigences Non Fonctionnelles :**
+
+1. **Performance & Scalabilité** :
+   * Toutes les interactions doivent être traitées en temps réel avec des WebSockets ou une architecture basée sur des événements pour fournir des mises à jour en temps réel.
+2. **Sécurité & Conformité** :
+   * Chaque communication et transaction de document doit être chiffrée pour protéger les données sensibles.
+   * L'authentification à plusieurs facteurs (MFA) doit être appliquée pour prévenir l'accès non autorisé.
+   * Les documents doivent être marqués d'un filigrane numérique et signés électroniquement.

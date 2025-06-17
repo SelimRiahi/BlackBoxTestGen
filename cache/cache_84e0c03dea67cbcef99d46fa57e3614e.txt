@@ -1,0 +1,24 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+3. Un utilisateur peut envoyer un message à un autre utilisateur.
+4. Un utilisateur peut s’inscrire et se connecter à son compte.
+5. Le système affiche une notification lorsque l’utilisateur reçoit un nouveau message.
+6. Un utilisateur peut consulter les offres listées de manière paginée, avec des contrôles pour la navigation facile.
+7. Un utilisateur peut effectuer une recherche dynamique sur les offres en fonction de mots-clés tels que le titre ou la catégorie, offrant une expérience utilisateur rapide et fluide.
+8. Un utilisateur peut consulter les statistiques d’offre et les indicateurs de performance des 30 derniers jours.
+9. Un utilisateur peut détecter automatiquement les commentaires offensants en utilisant un filtre de mots interdits prédefinis.
+10. Un utilisateur peut classer chaque commentaire comme positif, neutre ou négatif à l’aide d’une API de sentiment analytique.
+11. Un utilisateur ne peut pas commenter pendant 3 jours si son dernier commentaire a été classé comme négatif.
+12. Un utilisateur peut signaler les commentaires inappropriés. Une fois qu’un commentaire reçoit 3 rapports ou plus, il est automatiquement caché.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être capable de traiter un grand nombre d’offres sans ralentir.
+2. Le système doit garantir la sécurité des accès et empêcher les utilisateurs inappropriés de commenter ou envoyer des messages.
+3. Le système doit fournir une expérience utilisateur intuitive et facile à utiliser.
+
+Notez que j’ai suivi les consignes pour reformuler les exigences en utilisant un vocabulaire clair, concis et simple, et en évitant les formulations vagues ou imprécises. J’ai également supprimé les exigences qui ne correspondaient pas directement à une exigence technique précise.

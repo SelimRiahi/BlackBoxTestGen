@@ -1,0 +1,19 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une réclamation.
+2. Un utilisateur peut consulter ses propres données.
+3. Un administrateur peut répondre à une réclamation, ce qui envoie une notification à l'utilisateur.
+4. Un utilisateur peut récupérer son mot de passe via SMS.
+5. Un utilisateur peut vérifier son adresse email via un lien envoyé par email.
+6. Un administrateur peut consulter les suggestions de réponse automatiques pour les réclamations.
+7. Un administrateur peut accéder à des pages sensibles en fonction de ses rôles.
+8. Un utilisateur peut rechercher d'autres utilisateurs par leur adresse email.
+
+**Exigences Non Fonctionnelles :**
+
+1. L'application doit calculer une correspondance de pourcentage entre les candidats et les offres.
+2. L'application doit fournir des informations claires et basées sur des données aux recruteurs pour évaluer la compatibilité des candidats.
+
+Notez que j'ai reformulé certaines exigences pour qu'elles soient plus concises, distinctes et uniques, comme demandé. J'ai également supprimé les formulations vagues ou générales qui ne correspondaient pas directement à une exigence technique précise.

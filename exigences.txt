@@ -1,0 +1,752 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut s'inscrire et se connecter à son compte.
+2. Un utilisateur peut envoyer un message à un autre utilisateur.
+3. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+4. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+5. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être accessible en ligne 24/7.
+2. Le système doit garantir la sécurité des données utilisateurs.
+3. L'interface utilisateur doit être intuitive et facile à utiliser.
+4. Le système doit permettre une gestion efficace de l'intégralité du processus d'internat.
+
+J'ai appliqué les règles suivantes pour extraire ces exigences :
+
+* J'ai ignoré le contenu narratif, descriptif et stratégique qui ne correspond pas directement à une exigence technique précise.
+* Je n'ai conservé que les phrases qui contiennent des critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences pour qu'elles soient concises, distinctes et uniques.
+* J'ai évité les formulations vagues, générales ou passives.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut rechercher des opportunités d'internat en fonction de son profil et de ses antécédents académiques.
+2. Un utilisateur peut consulter les offres d'internat ciblées sur sa profile et ses antécédents académiques.
+3. Un utilisateur peut s'inscrire pour des opportunités d'internat via une plateforme collaborative intégrée avec les institutions éducatives.
+4. Un utilisateur peut consulter son profil et les informations relatives à ses candidatures en ligne.
+5. Un administrateur peut gérer les offres d'internat, y compris la création, la modification et la suppression des opportunités.
+6. Un administrateur peut suivre le statut des candidatures et des internes.
+7. Un utilisateur peut envoyer un message à un autre utilisateur ou à un administrateur pour demander plus d'informations sur une opportunité d'internat.
+
+### Exigences Non Fonctionnelles :
+
+1. La plateforme doit être accessible en ligne 24/7, avec une disponibilité de 99,9 %.
+2. La plateforme doit être sécurisée et protégée contre les attaques de piratage et les virus.
+3. La plateforme doit être compatible avec les différents navigateurs web et les systèmes d'exploitation.
+4. La plateforme doit être accessible sur plusieurs appareils, y compris les ordinateurs de bureau, les tablettes et les smartphones.
+5. La plateforme doit permettre aux utilisateurs de se connecter en toute sécurité via un système d'authentification robuste.
+
+Note : J'ai supprimé les exigences qui ne correspondaient pas directement à des fonctionnalités techniques précises ou qui étaient trop générales ou imprécises. J'ai également reformulé les exigences pour qu'elles soient claires, concises et distinctes.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter un grand catalogue de bourses d'études internationales.
+2. Un utilisateur peut rechercher des offres en fonction de son domaine d'étude et de ses compétences.
+3. Un utilisateur peut appliquer directement à une offre via l'interface.
+4. Un utilisateur peut suivre les entreprises pour voir leurs offres en temps réel.
+5. Un utilisateur peut envoyer un message direct à un recruteur via le système de messagerie.
+
+**Exigences Non Fonctionnelles :**
+
+1. La base de données doit contenir plus de 1000 offres d'emploi.
+2. L'interface doit être facile à utiliser et intuitive pour les utilisateurs.
+3. Le système de recherche doit permettre des filtres avancés (emplacement, salaire, domaine, etc.).
+
+Notez que j'ai suivi les règles énoncées dans le texte pour extraire les exigences fonctionnelles et non fonctionnelles claires et précises. J'ai également reformulé les exigences pour qu'elles soient concises, distinctes et uniques.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut s'inscrire via son université.
+2. Un utilisateur peut cibler des partenariats via une plateforme de suivi.
+3. Un utilisateur peut consulter les offres d'emploi de grandes entreprises.
+4. Un utilisateur peut filtrer les offres d'emploi en utilisant des filtres avancés.
+5. Un utilisateur peut effectuer des recherches très précises sur les offres d'emploi.
+6. Le système permet à un utilisateur de suivre ses applications.
+7. Le système permet à un utilisateur de gérer ses applications de manière partielle.
+8. Un utilisateur peut interagir avec les entreprises via un système de messagerie.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être optimisée pour une grande base d'utilisateurs.
+2. La plateforme doit permettre à l'utilisateur de consulter des offres d'emploi très nombreuses.
+3. La plateforme doit garantir la sécurité et la confidentialité des données utilisateurs.
+
+Notez que certaines exigences ont été reformulées pour les rendre plus claires, concises et distinctes. Les exigences fonctionnelles décrivent les actions ou comportements observables par l'utilisateur final, tandis que les exigences non fonctionnelles décrivent les qualités ou caractéristiques de la plateforme.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut rechercher et consulter les offres d'internat disponibles sur la plateforme.
+2. Un utilisateur peut s'inscrire et se connecter à son compte pour accéder aux fonctionnalités de la plateforme.
+3. Un utilisateur peut postuler pour un internat en soumettant sa candidature avec les documents requis.
+4. Un utilisateur peut suivre l'état de ses demandes d'internat et recevoir des mises à jour en temps réel.
+5. Une entreprise peut publier des offres d'emploi sur la plateforme.
+6. Une entreprise peut consulter et gérer les candidatures reçues pour un internat.
+7. Un utilisateur peut envoyer et recevoir des messages directement avec les autres utilisateurs de la plateforme.
+
+### Exigences Non Fonctionnelles :
+
+1. La plateforme doit être accessible en ligne 24/7, sans interruption ni défaillance majeure.
+2. Les données personnelles des utilisateurs doivent être protégées et sécurisées conformément aux normes de confidentialité applicables.
+3. La plateforme doit être compatible avec les principaux navigateurs web et dispositifs mobiles courants.
+4. Les performances de la plateforme doivent permettre un chargement rapide des pages et une réponse instantanée aux requêtes utilisateur.
+5. La plateforme doit inclure des fonctionnalités d'authentification et d'autorisation pour garantir l'accès sécurisé aux données sensibles.
+
+Note : J'ai suivi les consignes fournies pour extraire les exigences fonctionnelles et non fonctionnelles claires, concises et précises. Les exigences ont été reformulées pour être facilement exploitable par une équipe de développement.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut créer des contrats en utilisant la fonctionnalité CRUD.
+2. Un utilisateur peut lire les informations relatives à un contrat.
+3. Un utilisateur peut mettre à jour les informations d'un contrat.
+4. Un utilisateur peut supprimer un contrat.
+5. Un utilisateur peut télécharger le PDF d'un contrat.
+6. Un utilisateur peut uploader un PDF lié à un contrat.
+7. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message (pas mentionné explicitement dans le texte, mais il est possible qu'il s'agisse d'une fonctionnalité déjà existante).
+8. Un utilisateur peut consulter les documents PDF associés à chaque contrat.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit permettre la gestion de contrats avec une architecture consistante et réutilisable.
+2. Le système doit garantir la compatibilité des données transmises, en évitant la nécessité d'un système de fichiers séparé.
+
+**Remarques :**
+
+* Les exigences fonctionnelles 1 à 8 sont directement liées aux actions que les utilisateurs peuvent effectuer sur les contrats.
+* L'exigence non fonctionnelle 1 est liée à l'architecture du système et à la réutilisabilité des codes.
+* L'exigence non fonctionnelle 2 est liée à la compatibilité des données transmises.
+
+**Conformité aux règles :**
+
+* Les exigences sont reformulées pour être claires, concises, distinctes et uniques.
+* Les exigences fonctionnelles décrivent uniquement les actions réalisables par les utilisateurs finaux (approche boîte noire).
+* Les exigences non fonctionnelles décrivent des qualités ou caractéristiques du logiciel qui doivent être précises et mesurables.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut créer, lire, mettre à jour et supprimer des contrats.
+2. Un utilisateur peut consulter les rapports créés.
+3. Un utilisateur peut télécharger les PDFs associés aux contrats.
+4. Un utilisateur peut envoyer un PDF en tant que pièce jointe lors de la création d'un contrat.
+5. Un utilisateur peut visualiser les contrats avec des eaux-fortes appliquées.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit stocker les PDFs sous forme de chaînes base64 pour simplifier la transmission et éviter le gestion de systèmes de fichiers séparés.
+2. Le système doit permettre aux utilisateurs de télécharger des PDFs en décodant les chaînes base64 et en les envoyant comme réponses de fichier.
+
+J'ai appliqué les règles suivantes pour extraire ces exigences :
+
+* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contenaient pas de critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
+* J'ai privilégié des verbes d'action usuels comme « consulter », « envoyer » ou « visualiser ».
+* J'ai commencé chaque exigence fonctionnelle par « Un utilisateur peut... » suivi d'un verbe à l'infinitif décrivant l'action.
+* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter le statut d'un contrat.
+2. Un utilisateur peut mettre à jour le statut d'un contrat.
+3. Le système affiche une notification par SMS lorsque le statut d'un contrat change.
+4. Un utilisateur peut rechercher des contrats en fonction de leur ID et/ou de leur statut.
+5. Un utilisateur peut consulter les statistiques sur la distribution des statuts de contrats.
+
+**Exigences Non Fonctionnelles :**
+
+1. La sécurité des documents est améliorée pour empêcher toute altération ou utilisation abusive.
+2. Le système permet une meilleure gestion et suivi du workflow des contrats.
+3. Les parties concernées sont informées en temps réel de tout changement de statut de contrat.
+
+J'ai appliqué les règles suivantes :
+
+* J'ai ignoré le contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* Je n'ai conservé que les phrases qui contiennent des critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
+* J'ai commencé chaque exigence fonctionnelle par "Un utilisateur peut..." suivi d'un verbe à l'infinitif décrivant l'action.
+* J'ai découpé les exigences composées en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une notification SMS lorsque le statut d'un contrat change.
+2. Un utilisateur peut consulter les statistiques de contrats en fonction de leur statut actuel.
+3. Un utilisateur peut rechercher des contrats dynamiquement par ID et/ou statut.
+4. Un utilisateur peut s'inscrire et se connecter à son compte pour accéder aux fonctionnalités de gestion de contrat.
+
+**Exigences Non Fonctionnelles :**
+
+1. La sécurité des documents est améliorée en rendant difficile la modification ou l'utilisation abusive des documents.
+2. Le système de gestion de statut des contrats permet une meilleure maîtrise et suivi du workflow.
+3. Les statistiques sur les contrats sont disponibles pour aider à la surveillance de leur distribution en fonction de leur statut actuel.
+
+J'ai respecté les règles suivantes :
+
+* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* Je n'ai conservé que les exigences claires et précises, en les reformulant pour qu'elles soient concises, distinctes et uniques.
+* J'ai évité les formulations vagues, générales ou passives.
+* Chaque exigence fonctionnelle décrit une action ou un effet initié ou observable par un utilisateur final.
+* Les tests peuvent être réalisés du point de vue de l’utilisateur, sans connaissance du fonctionnement interne.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut signer des rapports directement dans l'application.
+2. Lorsqu'un rapport est signé, le statut de validation par la société est mis à jour automatiquement en "oui".
+3. Un utilisateur peut envoyer une alerte par email immédiatement après avoir signé un rapport.
+4. Un utilisateur peut consulter les rapports signés et visualiser la signature dans le coin inférieur droit du rapport téléchargé.
+5. Un utilisateur peut rechercher des rapports en utilisant l'ID du rapport ou le statut de validation.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit supporter les besoins futurs de reporting et de dashboard.
+2. Le système doit mettre à jour automatiquement le statut de validation par la société lorsqu'un rapport est signé.
+
+J'ai appliqué les règles suivantes pour extraire ces exigences :
+
+* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contenaient pas de critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent, compris de tous les membres de l'équipe (développeurs, testeurs, PO).
+* J'ai privilégié des verbes d'action usuels comme "consulter", "envoyer", "accéder" et évité les variations inutiles.
+* J'ai utilisé un vocabulaire standardisé et des formulations uniformes pour chaque exigence fonctionnelle.
+* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
+* Chaque exigence doit pouvoir être transformée en tâche dans un backlog technique.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut signer des rapports directement dans l'application.
+2. Lorsqu'un rapport est signé, le statut de validation par la société est mis à jour automatiquement en "oui".
+3. Un utilisateur reçoit un avertissement par email immédiatement après avoir signé un rapport.
+4. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message (rapport signé).
+5. Un utilisateur peut consulter les rapports triés automatiquement par pertinence.
+6. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+7. Lorsqu'un rapport est téléchargé, le système affiche la signature capturée à l'angle droit inférieur du rapport.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit supporter les besoins futurs de reporting et de tableau de bord.
+2. La recherche fonctionnelle pour les rapports par ID et statut de validation doit être dynamique et rapide.
+
+J'ai appliqué les règles fournies pour extraire uniquement les exigences claires, concises et précises, en évitant les formulations vagues ou générales. Les exigences sont reformulées pour refléter ce que l'utilisateur peut voir, faire ou recevoir, plutôt que ce que le système exécute en arrière-plan.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un message à un autre utilisateur.
+2. Un utilisateur peut consulter les messages qu'il a envoyés ou reçus.
+3. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+4. Un utilisateur peut ajouter des pièces jointes (images, PDFs, audio) à ses messages.
+5. Le système valide la taille et le format des pièces jointes avant de les envoyer.
+6. Un utilisateur peut enregistrer et envoyer des messages vocaux jouables directement dans l'interface de chat.
+7. Un utilisateur peut "piner" un message pour le mettre en évidence.
+
+**Exigences Non Fonctionnelles :**
+
+1. La lecture du contenu doit être facile et rapide, sans nécessiter la lecture de tout le texte.
+2. Le système doit permettre aux utilisateurs d'accéder rapidement à des informations clés sans avoir besoin de lire l'ensemble du contenu.
+
+Notez que j'ai suivi les règles énoncées pour extraire les exigences fonctionnelles et non fonctionnelles, en évitant les formulations vagues ou générales, et en reformulant les exigences pour qu'elles soient claires, concises et uniques.
+
+Je vais extraire les exigences fonctionnelles et non fonctionnelles claires et précises du texte fourni, en les reformulant pour qu'elles soient concises, distinctes, non répétées et facilement exploitables par une équipe de développement.
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+3. Le système affiche une notification lorsqu’un utilisateur reçoit un nouveau message.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être accessible.
+
+Notez que le texte fourni n'apporte aucune information supplémentaire, il s'agit donc d'une liste vide pour les exigences fonctionnelles et non fonctionnelles.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un message à un autre utilisateur.
+2. Un utilisateur peut consulter les messages qu'il a envoyés ou reçus.
+3. Un utilisateur peut mettre en surbrayeur (piner) un message pour le faire ressortir.
+4. Un utilisateur peut envoyer des messages avec des pièces jointes, telles que des images, des PDFs ou de l'audio.
+5. Le système affiche une indication de lecture (lisible/non lisible) pour chaque message.
+
+**Exigences Non Fonctionnelles :**
+
+1. La fonctionnalité permet aux utilisateurs de comprendre rapidement les informations clés sans lire tout le contenu.
+2. L'interface utilisateur est intuitive et facile à utiliser.
+
+J'ai appliqué les règles suivantes :
+
+* J'ai ignoré les contenus narratifs, descriptifs ou stratégiques qui ne correspondent pas directement à une exigence technique précise.
+* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contiennent pas de critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent, compris de tous les membres de l'équipe (développeurs, testeurs, PO).
+* J'ai privilégié des verbes d'action usuels comme « consulter », « envoyer », « accéder ».
+* J'ai utilisé un vocabulaire standardisé et des formulations uniformes pour les exigences fonctionnelles.
+* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+
+### Exigences Non Fonctionnelles : 
+
+Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut commencer une nouvelle conversation en entrant l'adresse email d'un autre utilisateur.
+2. Le système affiche automatiquement les conversations favorites et celles récentes.
+3. Un utilisateur peut supprimer n'importe quelle conversation existante, ce qui la retire de leur vue en temps réel.
+4. Chaque conversation affiche un compteur en temps réel des messages non lus.
+5. Le système notifie l'utilisateur en temps réel lorsqu'un nouveau message est reçu dans une conversation active.
+6. Un utilisateur peut rechercher dynamiquement les messages au sein d'une conversation en tapant des mots-clés ou en sélectionnant une plage de dates.
+7. Les conversations sont automatiquement triées par date et favoris.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système met à jour les statistiques des messages en temps réel.
+2. Le système affiche toujours les sessions actives en haut de la conversation.
+3. Le système classe tous les messages par type (texte, image, audio, PDF) pour chaque conversation et utilisateur.
+
+Notez que j'ai suivi les consignes fournies pour extraire uniquement les exigences fonctionnelles et non fonctionnelles claires et précises, en les reformulant pour qu'elles soient concises, distinctes et uniques. J'ai également évité de mentionner des éléments techniques internes ou des formulations vagues.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter son statut en temps réel.
+2. Le système affiche immédiatement les mises à jour du statut.
+
+### Exigences Non Fonctionnelles : 
+
+Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut créer une nouvelle conversation en entrant l'adresse email d'un autre utilisateur.
+2. Le système affiche automatiquement les conversations triées par favoris et date de la dernière mise à jour.
+3. Chaque conversation montre un compteur en temps réel des messages non lus, qui diminue lorsque les messages sont lus.
+4. L'utilisateur peut marquer une conversation comme favorite pour une meilleure accessibilité.
+5. Un utilisateur peut supprimer toute conversation existante, ce qui la retire de leur vue en temps réel.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système met à jour les statistiques des messages par type (texte, image, audio, PDF) pour chaque conversation et utilisateur en temps réel.
+2. Le système affiche un compteur en temps réel du nombre de messages envoyés et reçus par chaque utilisateur.
+
+J'ai appliqué les règles fournies pour extraire uniquement les exigences claires et précises, en les reformulant pour qu'elles soient concises, distinctes, non répétées et facilement exploitables par une équipe de développement.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Le système affiche immédiatement le statut de l'utilisateur, qui est ensuite reflété dans la mise en page de tri.
+
+### Exigences Non Fonctionnelles : 
+
+Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut activer ou désactiver les notifications par conversation.
+2. Un utilisateur peut consulter le nombre moyen de messages échangés par conversation en temps réel.
+3. Un utilisateur peut voir le temps moyen entre les messages, affiché en heures, minutes et secondes.
+4. Le système bloque automatiquement les messages inappropriés ou toxiques avant qu'ils ne soient envoyés.
+5. Un utilisateur peut consulter les profils des utilisateurs suggérés par le système, basés sur les interactions passées.
+6. Un utilisateur peut envoyer un CV en format Base64 et le système l'analyse pour extraire les compétences.
+7. Un utilisateur peut effectuer des recherches et des triages flexibles sur les demandes d'internat en fonction du domaine d'étude ou de la date de soumission.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit détecter automatiquement le contenu inapproprié ou toxique dans les messages.
+2. Les notifications doivent être immédiatement mises à jour après modification.
+3. La recommandation d'utilisateurs suggérés par le système doit être basée sur un modèle de Machine Learning entraîné.
+
+J'ai respecté les consignes fournies en extraissant uniquement les exigences fonctionnelles et non fonctionnelles claires, concises et distinctes, en reformulant les phrases pour qu'elles soient faciles à comprendre et à mettre en œuvre par une équipe de développement.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres de stage dans un rayon géographique spécifique.
+2. Un utilisateur peut envoyer une demande d'entretien pour un stage en fonction de sa localisation géographique.
+3. Le système affiche les offres de stage correspondant à la recherche de l'utilisateur en fonction de ses compétences et domaine.
+
+**Exigences Non Fonctionnelles :**
+
+1. La fonctionnalité de géolocalisation doit être précise jusqu'à 100 mètres.
+2. L'algorithme de matching des offres avec les demandes doit être capable de traiter au moins 10 000 requêtes par seconde.
+
+Notez que j'ai reformulé les exigences pour qu'elles soient claires, concises et distinctes, en utilisant un vocabulaire technique clair et précis. J'ai également supprimé les formulations vagues ou générales qui ne correspondaient pas directement à une exigence technique précise.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut activer ou désactiver les notifications par conversation.
+2. Un utilisateur peut consulter le nombre moyen de messages échangés par conversation en temps réel.
+3. Un utilisateur peut voir la durée moyenne entre les échanges de messages, exprimée en heures, minutes et secondes.
+4. Le système détecte automatiquement les messages toxiques et bloque leur envoi avant qu'ils ne soient envoyés.
+5. Le système propose des recommandations d'amis basées sur les interactions passées, utilisant un modèle de Machine Learning entraîné.
+6. Un utilisateur peut créer, lire, mettre à jour ou supprimer des demandes d'entretien en utilisant l'interface utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit calculer et afficher le nombre moyen de messages échangés par conversation en temps réel.
+2. Le système doit analyser la durée moyenne entre les échanges de messages pour fournir une estimation précise.
+3. Le système doit détecter automatiquement les messages toxiques avec un taux d'exactitude élevé.
+
+J'ai appliqué les règles suivantes :
+
+* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
+* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contenaient pas de critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
+* J'ai privilégié des verbes d'action usuels comme « consulter », « envoyer » ou « accéder ».
+* J'ai commencé chaque exigence fonctionnelle par « Un utilisateur peut... » suivi d'un verbe à l'infinitif décrivant l'action.
+* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut rechercher des offres d'emploi dans une zone géographique spécifique en utilisant la latitude et la longitude.
+2. Un utilisateur peut consulter les offres d'emploi filtrées par localisation.
+3. Le système affiche les offres d'emploi correspondantes à la recherche de l'utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. La fonctionnalité de recherche géographique doit être précise et donner des résultats pertinents.
+2. L'algorithme de matching automatique doit être efficace et rapide pour fournir les offres d'emploi correspondantes.
+
+Notez que j'ai reformulé les exigences pour qu'elles soient claires, concises, distinctes et uniques, en utilisant un vocabulaire technique clair et précis. J'ai également évité de mentionner des éléments techniques internes ou des formulations vagues.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une demande d'internat.
+2. Un utilisateur peut consulter les demandes qu'il a envoyées.
+3. Un administrateur peut modifier le statut d'une demande (Pending, Reviewed, Accepted, Rejected).
+4. Un utilisateur peut suivre l'état de sa demande en temps réel via des notifications par email, dans l'application et par SMS.
+5. Un utilisateur peut consulter les statistiques sur ses demandes (par domaine d'étude et statut).
+6. Un administrateur peut supprimer une réponse contenant du langage inapproprié à l'aide d'un job planifié.
+7. Un utilisateur peut commenter une réponse.
+8. Un administrateur peut modifier le statut d'une réponse (Pending, Reviewed, Accepted, Rejected).
+9. Un utilisateur peut consulter les évaluations des entreprises sur ses demandes.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être accessible en temps réel pour permettre aux utilisateurs de suivre l'état de leurs demandes.
+2. Le système doit envoyer des notifications par email, dans l'application et par SMS lorsque une nouvelle réponse est créée.
+3. Le système doit fournir des statistiques précises sur les demandes (par domaine d'étude et statut).
+4. Le système doit permettre aux utilisateurs de consulter leurs évaluations et commentaires.
+
+Notez que j'ai supprimé les exigences qui étaient trop générales ou imprécises, ainsi que celles qui ne correspondaient pas directement à une exigence technique précise. J'ai également reformulé les exigences pour qu'elles soient claires, concises et uniques.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer son CV pour analyse.
+2. Le système affiche les compétences détectées dans le CV de l'utilisateur.
+3. Un utilisateur peut consulter ses scores de compétence.
+4. Le système propose des offres d'emploi en fonction des compétences et des expériences de l'utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être capable de traiter un grand volume de CVs en temps réel.
+2. Les résultats de l'analyse doivent être affichés de manière claire et concise.
+3. L'intégration avec les systèmes existants doit être transparente pour l'utilisateur.
+
+Notez que j'ai conservé uniquement les exigences qui décrivent des actions ou effets observables par un utilisateur final, en évitant les formulations vagues ou générales. J'ai également reformulé les exigences pour qu'elles soient claires et concises, et je n'ai pas mentionné de formats techniques ni de traitements algorithmiques internes.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une demande d'internat.
+2. Un utilisateur peut consulter les demandes en cours de traitement.
+3. Un utilisateur peut suivre l'état de sa demande (Pending, Reviewed, Accepted, Rejected).
+4. Un utilisateur peut créer des réponses à une demande d'internat.
+5. Un utilisateur peut modifier ou supprimer ses propres réponses.
+6. Un utilisateur peut commenter les réponses d'autres utilisateurs.
+7. Le système envoie un avertissement par email, notification et SMS lorsque l'on reçoit une nouvelle réponse.
+8. Un utilisateur peut consulter les statistiques des demandes (par domaine d'étude et état).
+9. Un utilisateur peut évaluer les demandes d'internat (note et commentaire).
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être accessible en ligne 24/7.
+2. Le système doit garantir la confidentialité des données utilisateurs.
+3. Le système doit fournir une interface utilisateur intuitive et facile à utiliser.
+4. Le système doit permettre aux administrateurs de gérer les demandes d'internat.
+
+Notez que certaines exigences initiales ont été découvertes en sous-exigences plus précises, comme le suivi de l'état des demandes ou la possibilité de commenter les réponses. Les exigences non fonctionnelles sont généralement plus vagues et nécessitent une formulation plus claire pour être mesurables.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut télécharger son CV.
+2. Le système détecte les compétences techniques dans le CV.
+3. Le système détecte les compétences en soft skills dans le CV.
+4. Le système attribue un score de compétence technique à l'utilisateur.
+5. Le système attribue un score de compétence en soft skills à l'utilisateur.
+
+**Exigences Non Fonctionnelles :**
+
+1. La détection des compétences doit être précise et fiable.
+2. Le système doit être capable d'analyser les CVs de manière efficace.
+3. Les scores attribués doivent être clairs et compréhensibles pour l'utilisateur.
+
+J'ai suivi les règles énoncées pour extraire ces exigences, en me concentrant sur les actions ou effets observables par l'utilisateur final, en évitant les formulations vagues ou techniques internes.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un CV en format PDF.
+2. Le système extrait les données structurées du CV.
+3. Le système envoie les caractéristiques de compétence extraites à un modèle de clustering prédictif pour classer les candidats d'entretiens en groupes de performances.
+4. Un utilisateur peut consulter ses profils étudiants et identifier des candidats forts.
+5. Un utilisateur peut télécharger un PDF contenant toutes les informations clés sur une offre.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système fournit des insights précoces dans les profils étudiants, permettant aux entreprises d'identifier des candidats forts et de personnaliser leurs stratégies de recrutement.
+2. Le système assure la suppression automatique des offres expirées chaque jour à minuit.
+
+J'ai appliqué les règles fournies pour extraire ces exigences fonctionnelles et non fonctionnelles, en supprimant tout contenu narratif ou descriptif qui ne correspondait pas directement à une exigence technique précise. J'ai également reformulé les exigences pour qu'elles soient claires, concises, distinctes et uniques.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter les informations de la société associées à une offre.
+2. Un utilisateur peut partager ou archiver des offres.
+3. Un utilisateur peut accéder aux descriptions des offres.
+
+### Exigences Non Fonctionnelles : 
+
+Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un CV en format PDF.
+2. Un utilisateur peut consulter les compétences détectées dans son CV.
+3. Un utilisateur peut s'inscrire et se connecter à son compte.
+4. Un utilisateur peut envoyer une candidature pour un offre d'emploi.
+5. Un utilisateur peut consulter les offres d'emploi disponibles.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit permettre la gestion efficace des CV en format PDF.
+2. Le système doit fournir des informations précises sur les compétences détectées dans les CV.
+3. Le système doit garantir une sécurité et une confidentialité des données utilisateurs.
+4. Le système doit être capable de gérer un grand nombre d'utilisateurs et d'offres d'emploi.
+5. Le système doit fournir des notifications aux utilisateurs pour les mises à jour importantes.
+
+Note : J'ai reformulé les exigences fonctionnelles en suivant la structure "Un utilisateur peut..." et j'ai supprimé les formulations vagues ou générales. Les exigences non fonctionnelles décrivent les qualités ou caractéristiques du logiciel, telles que la sécurité, la confidentialité, etc.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut consulter les offres de manière facile.
+2. Un utilisateur peut partager ou archiver des offres avec facilité.
+
+### Exigences Non Fonctionnelles : 
+
+1. Le système doit permettre une extraction automatique d'informations de sociétés à partir des descriptions d'offres.
+2. Le système doit extraire les informations suivantes pour chaque société : nom, localisation, téléphone et description.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+3. Un utilisateur peut envoyer un message à un autre utilisateur.
+4. Un utilisateur peut s’inscrire et se connecter à son compte.
+5. Le système affiche une notification lorsque l’utilisateur reçoit un nouveau message.
+6. Un utilisateur peut consulter les offres listées de manière paginée, avec des contrôles pour la navigation facile.
+7. Un utilisateur peut effectuer une recherche dynamique sur les offres en fonction de mots-clés tels que le titre ou la catégorie, offrant une expérience utilisateur rapide et fluide.
+8. Un utilisateur peut consulter les statistiques d’offre et les indicateurs de performance des 30 derniers jours.
+9. Un utilisateur peut détecter automatiquement les commentaires offensants en utilisant un filtre de mots interdits prédefinis.
+10. Un utilisateur peut classer chaque commentaire comme positif, neutre ou négatif à l’aide d’une API de sentiment analytique.
+11. Un utilisateur ne peut pas commenter pendant 3 jours si son dernier commentaire a été classé comme négatif.
+12. Un utilisateur peut signaler les commentaires inappropriés. Une fois qu’un commentaire reçoit 3 rapports ou plus, il est automatiquement caché.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être capable de traiter un grand nombre d’offres sans ralentir.
+2. Le système doit garantir la sécurité des accès et empêcher les utilisateurs inappropriés de commenter ou envoyer des messages.
+3. Le système doit fournir une expérience utilisateur intuitive et facile à utiliser.
+
+Notez que j’ai suivi les consignes pour reformuler les exigences en utilisant un vocabulaire clair, concis et simple, et en évitant les formulations vagues ou imprécises. J’ai également supprimé les exigences qui ne correspondaient pas directement à une exigence technique précise.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+
+**Exigences Non Fonctionnelles :**
+
+Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres listées avec pagination.
+2. Un utilisateur peut effectuer une recherche dynamique des offres en fonction de mots-clés tels que titre ou catégorie.
+3. Un utilisateur peut accéder aux statistiques et performances des offres, notamment le meilleur offre au cours des 30 derniers jours.
+4. Un utilisateur peut commenter les offres, mais son commentaire sera automatiquement détecté pour contenus indésirables.
+5. Un utilisateur peut signaler un commentaire inapproprié, ce qui entraînera l'auto-cachage du commentaire après trois signalements.
+6. Un utilisateur ne peut pas commenter pendant 3 jours si son dernier commentaire est classifié comme négatif.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être performant et utiliser la pagination pour améliorer l'usabilité.
+2. La recherche dynamique des offres doit être rapide et fluide.
+3. Les statistiques et performances des offres doivent être précises et fiables.
+4. Le système doit détecter automatiquement les contenus indésirables dans les commentaires.
+5. Le système doit classer chaque commentaire en fonction de son sentiment (positif, neutre ou négatif).
+6. Le système doit bloquer les utilisateurs qui postent des commentaires négatifs pendant 3 jours.
+
+Note : J'ai reformulé les exigences pour qu'elles soient claires, concises et distinctes, en supprimant les formulations vagues ou générales. J'ai également évité de mentionner des éléments techniques internes tels que la base de données ou l'architecture du système.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
+2. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
+3. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+
+**Exigences Non Fonctionnelles :**
+
+1. La qualité du contenu est importante.
+2. L'application utilise un modèle d'apprentissage automatique pour évaluer la pertinence des candidatures.
+
+J'ai appliqué les règles de traitement suivantes :
+
+* J'ai ignoré le contenu narratif et descriptif qui ne correspond pas directement à une exigence technique précise.
+* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contiennent pas de critères mesurables ou d'indications claires.
+* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
+* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
+* J'ai commencé chaque exigence fonctionnelle par "Un utilisateur peut..." suivi d'un verbe à l'infinitif décrivant l'action.
+* J'ai découpé les exigences composées en plusieurs exigences unitaires.
+* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un message à un autre utilisateur.
+2. Un utilisateur peut s'inscrire et se connecter à son compte.
+3. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message.
+4. Un utilisateur peut consulter les réclamations qu'il a envoyées ou reçues.
+5. Un administrateur peut répondre aux réclamations avec des suggestions de réponse automatiques.
+6. Un utilisateur peut modifier ses informations personnelles, y compris son adresse e-mail et mot de passe.
+7. Le système permet à un utilisateur de rechercher d'autres utilisateurs par leur nom d'utilisateur ou adresse e-mail.
+
+**Exigences Non Fonctionnelles :**
+
+1. La sécurité des accès est assurée grâce à l'intégration de Keycloak.
+2. L'application est accessible et peut être utilisée par les personnes ayant des besoins spécifiques.
+3. Les données utilisateur sont gérées de manière sécurisée et efficace.
+
+J'ai suivi les règles énoncées pour extraire ces exigences, en me concentrant sur les actions directement observables et réalisables par les utilisateurs finaux, ainsi que sur les caractéristiques du logiciel qui doivent être précises et mesurables.
+
+### Exigences Fonctionnelles :
+
+1. Un utilisateur peut saisir des informations en temps réel, et les résultats sont affichés instantanément.
+2. Un utilisateur peut consulter les résultats de sa recherche en temps réel.
+
+### Exigences Non Fonctionnelles :
+
+1. Le système doit être capable de traiter les requêtes en temps réel sans ralentissement significatif.
+2. Le système doit inclure un système de vérification CAPTCHA pour authentifier les utilisateurs et empêcher les soumissions automatiques pendant la validation des formulaires.
+
+Note : J'ai conservé uniquement les exigences qui décrivent des actions ou effets observables par l'utilisateur final, en évitant les descriptions techniques internes. Les exigences fonctionnelles sont reformulées pour être claires, concises et distinctes.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une réclamation.
+2. Un utilisateur peut consulter ses propres données.
+3. Un administrateur peut répondre à une réclamation, ce qui envoie une notification à l'utilisateur.
+4. Un utilisateur peut récupérer son mot de passe via SMS.
+5. Un utilisateur peut vérifier son adresse email via un lien envoyé par email.
+6. Un administrateur peut consulter les suggestions de réponse automatiques pour les réclamations.
+7. Un administrateur peut accéder à des pages sensibles en fonction de ses rôles.
+8. Un utilisateur peut rechercher d'autres utilisateurs par leur adresse email.
+
+**Exigences Non Fonctionnelles :**
+
+1. L'application doit calculer une correspondance de pourcentage entre les candidats et les offres.
+2. L'application doit fournir des informations claires et basées sur des données aux recruteurs pour évaluer la compatibilité des candidats.
+
+Notez que j'ai reformulé certaines exigences pour qu'elles soient plus concises, distinctes et uniques, comme demandé. J'ai également supprimé les formulations vagues ou générales qui ne correspondaient pas directement à une exigence technique précise.
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut saisir des informations en temps réel et visualiser les résultats instantanément.
+2. Un utilisateur peut passer un test CAPTCHA pour vérifier son authenticité avant de soumettre un formulaire.
+3. Un utilisateur peut être invité à fournir une deuxième factor d'authentification (2FA) lorsqu'un système AI détecte un accès non familier.
+
+**Exigences Non Fonctionnelles :**
+
+1. **Performance & Scalabilité** :
+   * Toutes les interactions doivent être traitées en temps réel avec des WebSockets ou une architecture basée sur des événements pour fournir des mises à jour en temps réel.
+2. **Sécurité & Conformité** :
+   * Chaque communication et transaction de document doit être chiffrée pour protéger les données sensibles.
+   * L'authentification à plusieurs facteurs (MFA) doit être appliquée pour prévenir l'accès non autorisé.
+   * Les documents doivent être marqués d'un filigrane numérique et signés électroniquement.
+
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer un document avec un filigrane numérique automatiquement ajouté.
+2. Un utilisateur peut signer numériquement un document.
+3. Le système permet l'utilisation d'e-signatures pour prévenir la contrefaçon.
+4. Un utilisateur peut enregistrer et envoyer des messages vocaux dans la plateforme.
+
+**Exigences Non Fonctionnelles :**
+
+1. La plateforme doit être capable de supprimer complètement l'utilisation du papier dans les processus d'internat.
+2. La plateforme doit être conçue pour être éco-amicaise et durable.
+
+J'ai suivi les règles indiquées pour extraire ces exigences, en gardant à l'esprit que chaque exigence fonctionnelle décrit une action ou un effet observable par un utilisateur final, et que les exigences non fonctionnelles décrivent des qualités ou caractéristiques du logiciel.

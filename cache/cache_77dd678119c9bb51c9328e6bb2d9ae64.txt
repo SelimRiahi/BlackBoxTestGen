@@ -1,0 +1,22 @@
+Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
+
+**Exigences Fonctionnelles :**
+
+1. Un utilisateur peut envoyer une demande d'internat.
+2. Un utilisateur peut consulter les demandes qu'il a envoyées.
+3. Un administrateur peut modifier le statut d'une demande (Pending, Reviewed, Accepted, Rejected).
+4. Un utilisateur peut suivre l'état de sa demande en temps réel via des notifications par email, dans l'application et par SMS.
+5. Un utilisateur peut consulter les statistiques sur ses demandes (par domaine d'étude et statut).
+6. Un administrateur peut supprimer une réponse contenant du langage inapproprié à l'aide d'un job planifié.
+7. Un utilisateur peut commenter une réponse.
+8. Un administrateur peut modifier le statut d'une réponse (Pending, Reviewed, Accepted, Rejected).
+9. Un utilisateur peut consulter les évaluations des entreprises sur ses demandes.
+
+**Exigences Non Fonctionnelles :**
+
+1. Le système doit être accessible en temps réel pour permettre aux utilisateurs de suivre l'état de leurs demandes.
+2. Le système doit envoyer des notifications par email, dans l'application et par SMS lorsque une nouvelle réponse est créée.
+3. Le système doit fournir des statistiques précises sur les demandes (par domaine d'étude et statut).
+4. Le système doit permettre aux utilisateurs de consulter leurs évaluations et commentaires.
+
+Notez que j'ai supprimé les exigences qui étaient trop générales ou imprécises, ainsi que celles qui ne correspondaient pas directement à une exigence technique précise. J'ai également reformulé les exigences pour qu'elles soient claires, concises et uniques.
