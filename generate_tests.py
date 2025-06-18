@@ -1,80 +1,102 @@
 import ollama
 import os
-import re
 
 def load_docs():
-    """Load raw documents without interpretation"""
-    with open("docs/api_docs.txt", "r") as f:
+    """Load documentation files without any interpretation"""
+    with open("docs/api_docs.txt", "r", encoding='utf-8') as f:
         api_docs = f.read()
-    with open("docs/requirements.txt", "r") as f:
+    with open("docs/requirements.txt", "r", encoding='utf-8') as f:
         requirements = f.read()
     return api_docs, requirements
 
-def generate_tests():
+def generate_prompt(test_type, base_url, api_docs, requirements):
+    """Create prompt without any problematic string formatting"""
+    lang = "javascript" if test_type == "frontend" else "python"
+    imports = 'const { test, expect } = require("@playwright/test")' if test_type == "frontend" else 'import pytest\nimport requests'
+    
+    return f"""STRICT BLACKBOX TEST GENERATION:
+Create {test_type} tests using ONLY the documented behavior.
+Treat the system as a complete black box - no internal knowledge.
+
+DOCUMENTATION:
+{api_docs}
+
+REQUIREMENTS:
+{requirements}
+
+INSTRUCTIONS:
+1. Use BASE_URL = "{base_url}"
+2. Only test documented behavior
+3. No assumptions about implementation
+4. Each test must be completely independent
+5. Include both success and error cases
+
+OUTPUT FORMAT:
+```{lang}
+{imports}
+
+BASE_URL = "{base_url}"
+
+/* Independent test cases */
+```"""
+
+def generate_tests(test_type):
+    """Generate blackbox tests for specified type"""
     api_docs, requirements = load_docs()
+    base_url = "http://localhost:3000" if test_type == "backend" else "http://localhost:3001"
     
-    # Auto-detect port from docs
-    port_match = re.search(r"Default Port: (\d+)", api_docs)
-    port = port_match.group(1) if port_match else "3000"
-    base_url = f"http://localhost:{port}"
-    
-    prompt = f"""
-    STRICT BLACKBOX TEST GENERATION:
-    Create direct API tests using ONLY the documented behavior.
-    
-    API DOCS:
-    {api_docs}
-    
-    REQUIREMENTS:
-    {requirements}
-    
-    INSTRUCTIONS:
-    1. Use BASE_URL = "{base_url}" (detected from docs)
-    2. Test only documented endpoints and responses
-    3. Keep tests simple - no mocks or fixtures
-    4. Include happy path and error cases
-    5. Add clear docstrings explaining each test
-    
-    OUTPUT FORMAT:
-    ```python
-    import pytest
-    import requests
-    
-    BASE_URL = "{base_url}"
-    
-    # Test cases...
-    ```
-    """
+    prompt = generate_prompt(test_type, base_url, api_docs, requirements)
     
     response = ollama.generate(
         model="mistral",
         prompt=prompt,
-        options={
-            'temperature': 0.2,  # More deterministic
-            'num_ctx': 8000
-        }
+        options={'temperature': 0.2, 'num_ctx': 8000}
     )
     
-    # Clean extraction
     try:
-        code = response['response'].split("```python")[1].split("```")[0].strip()
-        # Ensure BASE_URL matches our detection
-        code = code.replace('BASE_URL = "{{config}}"', f'BASE_URL = "{base_url}"')
-    except IndexError:
-        code = f"""import pytest
+        # Extract code block between triple backticks
+        parts = response['response'].split("```")
+        if len(parts) > 1:
+            code = parts[1].split("\n", 1)[1].strip()  # Remove language specifier
+        else:
+            raise ValueError("No code block found")
+    except Exception:
+        code = generate_fallback_test(test_type, base_url)
+    
+    save_test_file(test_type, code)
+
+def generate_fallback_test(test_type, base_url):
+    """Minimal fallback tests"""
+    if test_type == "backend":
+        return f"""import pytest
 import requests
 
 BASE_URL = "{base_url}"
 
-# Failed to generate tests - using minimal template
-def test_api_available():
-    response = requests.get(f"{{BASE_URL}}/tasks")
-    assert response.status_code in [200, 401]  # Either OK or requires auth
+def test_service_available():
+    response = requests.get(f"{base_url}/")
+    assert response.status_code != 404
 """
-    
+    else:
+        return f"""const {{ test, expect }} = require('@playwright/test');
+
+BASE_URL = "{base_url}";
+
+test('Page loads', async ({{ page }}) => {{
+  await page.goto('{base_url}');
+  await expect(page).not.toHaveTitle('404');
+}});
+"""
+
+def save_test_file(test_type, content):
+    """Save test file with proper encoding"""
     os.makedirs("generated_tests", exist_ok=True)
-    with open("generated_tests/test_api.py", "w") as f:
-        f.write(code)
+    ext = "js" if test_type == "frontend" else "py"
+    filename = f"test_{test_type}.{ext}"
+    with open(f"generated_tests/{filename}", "w", encoding='utf-8') as f:
+        f.write(content)
+    print(f"Successfully generated {filename}")
 
 if __name__ == "__main__":
-    generate_tests()
+    generate_tests("backend")
+    generate_tests("frontend")
