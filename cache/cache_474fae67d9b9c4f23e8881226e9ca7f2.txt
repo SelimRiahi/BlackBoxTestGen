@@ -1,0 +1,16 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Étudiant rechercher offres d'emploi
+3. Étudiant appliquer à une offre
+4. Étudiant suivre ses applications
+5. Entreprise publier des offres
+6. Entreprise filtrer les candidatures
+7. Entreprise communiquer avec les candidats
+
+**Exigences Non Fonctionnelles :**
+
+1. Plateforme intuitive et facile d'utilisation
+2. Données de l'entreprise disponibles en masse
+3. Recherche avancée des offres d'emploi
+4. Suivi des applications en temps réel

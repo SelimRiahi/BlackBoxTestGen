@@ -1,8 +1,0 @@
-### Exigences Fonctionnelles :
-
-1. Un utilisateur peut consulter les offres triées automatiquement par pertinence.
-2. Le système affiche immédiatement le statut de l'utilisateur, qui est ensuite reflété dans la mise en page de tri.
-
-### Exigences Non Fonctionnelles : 
-
-Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.

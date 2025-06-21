@@ -24,26 +24,22 @@ def write_file(filepath, content):
 
 def verify_exigences(text):
     prompt = f"""
-Tu es un expert en analyse de cahiers des charges techniques. Je vais te fournir un long texte contenant des exigences fonctionnelles et non fonctionnelles (parfois mélangées, parfois redondantes).
+Tu es un expert en analyse de cahiers des charges fonctionnels.
 
-Ta mission est de **supprimer uniquement les vraies doublons** (deux phrases qui expriment exactement la même intention, avec les mêmes mots ou quasi les mêmes mots, sans distinction d’action ou de perspective). Ne touche à rien d’autre.
+Je vais te donner une liste d'exigences (fonctionnelles ou non) déjà nettoyées. Certaines peuvent néanmoins exprimer la même idée avec des formulations différentes.
 
-### Règles à suivre strictement :
+Ta tâche est la suivante :
 
-1. ❌ **Ne reformule aucune exigence.**
-2. ❌ **Ne supprime pas une exigence parce qu’elle te semble "redondante" s’il y a une nuance** (exemple : "l’utilisateur peut signer" ≠ "le rapport affiche la signature").
-3. ✅ **Supprime seulement les phrases réellement identiques ou disant exactement la même chose.**
-4. ✅ **Préserve toutes les différences d’actions, d’acteurs, de cibles ou de contextes.**
-5. ❌ **Ne classe pas, ne trie pas, ne résume pas.**
-6. ❌ **Ne fusionne pas des phrases ensemble.**
-7. ✅ **Garde la structure et l’ordre d’origine.**
+1. Compare toutes les phrases entre elles.
+2. Si plusieurs phrases expriment la **même idée** ou **même intention**, **garde uniquement celle qui est la plus claire, précise et testable**.
+3. Supprime celles qui disent **exactement la même chose**, même si elles utilisent d'autres mots.
+4. Ne touche pas aux autres.
 
-### Exemple de cas à garder tous les deux :
-- "L’utilisateur peut déposer un document."
-- "Le système affiche le document déposé dans l’interface admin."
-👉 Ce sont deux comportements différents et testables, donc à garder.
-
-À la fin, rends-moi le texte nettoyé uniquement des doublons exacts, sans toucher à tout le reste.
+### Attention :
+- ❌ Ne reformule rien.
+- ❌ Ne modifie pas l’ordre.
+- ✅ Supprime uniquement les doublons sémantiques.
+- ✅ Préserve toutes les différences de sens, de contexte ou d’action.
 
 
 **Exigences Fonctionnelles :**  
@@ -54,9 +50,9 @@ Ta mission est de **supprimer uniquement les vraies doublons** (deux phrases qui
 1. ...  
 2. ...  
 
-Voici le texte à traiter :  
-{text}
+Voici les exigences à traiter :  
 
+{text}
 """
 
     print(f"⏱️ Starting verification at {datetime.now().strftime('%H:%M:%S.%f')[:-3]}")

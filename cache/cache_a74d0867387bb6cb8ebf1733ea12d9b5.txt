@@ -1,0 +1,15 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir messages
+3. Étudiant recevoir notifications
+4. Utilisateur créer réponse
+5. Étudiant voir statistiques demandes
+6. Utilisateur voir statistiques réponses
+7. Étudiant voir évaluation demande
+8. Utilisateur commenter réponse
+
+**Exigences Non Fonctionnelles :**
+
+1. Système rapide et disponible
+2. Processus de sélection simplifié

@@ -1,0 +1,15 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir messages
+3. Utilisateur recevoir alertes par email
+4. Utilisateur recevoir alertes SMS
+5. Étudiant soumettre demande
+6. Utilisateur suivre statut de demande
+7. Utilisateur consulter statistiques demandes
+8. Utilisateur créer, lire, mettre à jour et supprimer réponse
+9. Moderateur flaguer réponse inappropriée
+10. Utilisateur recevoir notification création réponse
+11. Administrateur consulter statistiques réponses
+12. Entreprise évaluer demande
+13. Système analyser CV étudiant

@@ -1,0 +1,8 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir messages
+3. Utilisateur créer offre
+4. Utilisateur supprimer offre
+5. Utilisateur exporter offre en PDF
+6. Système supprimer offres obsolètes

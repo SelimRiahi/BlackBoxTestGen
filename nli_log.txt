@@ -1,0 +1,220 @@
+NLI 'Étudiant s'inscrire' ↔ 'Étudiant soumettre demande d'internat' = entail1=0.922, entail2=0.982, → max=0.982
+NLI 'Étudiant s'inscrire' ↔ 'Étudiant suivre les entreprises et les offres d'emploi' = entail1=0.005, entail2=0.262, → max=0.262
+NLI 'Étudiant s'inscrire' ↔ 'Étudiant rechercher offres d'emploi' = entail1=0.003, entail2=0.009, → max=0.009
+NLI 'Recruteur publier offre d'internat' ↔ 'Étudiant soumettre demande d'internat' = entail1=0.204, entail2=0.053, → max=0.204
+NLI 'Recruteur publier offre d'internat' ↔ 'Recruteur recevoir demandes d'internat' = entail1=0.878, entail2=0.162, → max=0.878
+NLI 'Recruteur publier offre d'internat' ↔ 'Étudiant rechercher offres en fonction de ses compétences' = entail1=0.007, entail2=0.107, → max=0.107
+NLI 'Recruteur publier offre d'internat' ↔ 'Utilisateur postuler pour un emploi' = entail1=0.998, entail2=0.519, → max=0.998
+NLI 'Recruteur publier offre d'internat' ↔ 'Étudiant suivre les entreprises et les offres d'emploi' = entail1=0.709, entail2=0.494, → max=0.709
+NLI 'Recruteur publier offre d'internat' ↔ 'Étudiant rechercher offres d'emploi' = entail1=0.995, entail2=0.155, → max=0.995
+NLI 'Administrateur gérer candidatures' ↔ 'Administrateur approuver/ rejeter candidature' = entail1=0.012, entail2=0.999, → max=0.999
+NLI 'Administrateur gérer candidatures' ↔ 'Entreprise filtrer les candidatures' = entail1=0.171, entail2=0.995, → max=0.995
+NLI 'Administrateur gérer candidatures' ↔ 'Administrateur gérer reclamations' = entail1=0.003, entail2=0.006, → max=0.006
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Recruteur recevoir demandes d'internat' = entail1=0.765, entail2=0.381, → max=0.765
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant rechercher offres en fonction de ses compétences' = entail1=0.002, entail2=0.010, → max=0.010
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur postuler pour un emploi' = entail1=0.998, entail2=0.359, → max=0.998
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant suivre les entreprises et les offres d'emploi' = entail1=0.004, entail2=0.006, → max=0.006
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant rechercher offres d'emploi' = entail1=0.990, entail2=0.055, → max=0.990
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant appliquer à une offre' = entail1=0.996, entail2=0.025, → max=0.996
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Entreprise publier des offres' = entail1=0.048, entail2=0.007, → max=0.048
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur voir contrat' = entail1=0.228, entail2=0.245, → max=0.245
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur voir contrat avec filigrane' = entail1=0.332, entail2=0.428, → max=0.428
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur rechercher contrats par ID et statut' = entail1=0.033, entail2=0.242, → max=0.242
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant trouver demandes d'internat dans un rayon géographique spécifique' = entail1=0.367, entail2=0.010, → max=0.367
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur mettre à jour demande d'internat' = entail1=0.979, entail2=0.906, → max=0.979
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Utilisateur rechercher demande par champ' = entail1=0.676, entail2=0.189, → max=0.676
+NLI 'Étudiant soumettre demande d'internat' ↔ 'Étudiant soumettre demande' = entail1=0.999, entail2=0.004, → max=0.999
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Étudiant rechercher offres en fonction de ses compétences' = entail1=0.007, entail2=0.856, → max=0.856
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Étudiant suivre les entreprises et les offres d'emploi' = entail1=0.694, entail2=0.855, → max=0.855
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Utilisateur recevoir des recommandations professionnelles' = entail1=0.808, entail2=0.051, → max=0.808
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Utilisateur voir contrat' = entail1=0.273, entail2=0.095, → max=0.273
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Utilisateur rechercher contrats par ID et statut' = entail1=0.004, entail2=0.958, → max=0.958
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Utilisateur mettre à jour demande d'internat' = entail1=0.882, entail2=0.787, → max=0.882
+NLI 'Recruteur recevoir demandes d'internat' ↔ 'Utilisateur rechercher demande par champ' = entail1=0.369, entail2=0.093, → max=0.369
+NLI 'Administrateur approuver/ rejeter candidature' ↔ 'Administrateur gérer reclamations' = entail1=0.022, entail2=0.039, → max=0.039
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Étudiant suivre les entreprises et les offres d'emploi' = entail1=0.024, entail2=0.000, → max=0.024
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur recevoir des recommandations professionnelles' = entail1=0.977, entail2=0.045, → max=0.977
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Entreprise publier des offres' = entail1=0.118, entail2=0.024, → max=0.118
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur rechercher contrats par ID et statut' = entail1=0.005, entail2=0.062, → max=0.062
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Étudiant voir évaluation demande' = entail1=0.493, entail2=0.004, → max=0.493
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur créer offre' = entail1=0.785, entail2=0.014, → max=0.785
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur supprimer offre' = entail1=0.003, entail2=0.015, → max=0.015
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.316, entail2=0.311, → max=0.316
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur rechercher offre par mot-clé' = entail1=0.902, entail2=0.003, → max=0.902
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Entreprise publier des offres' = entail1=0.998, entail2=0.241, → max=0.998
+NLI 'Étudiant rechercher offres en fonction de ses compétences' ↔ 'Utilisateur recevoir authentification à deux facteurs' = entail1=0.485, entail2=0.008, → max=0.485
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Utilisateur créer offre' = entail1=0.005, entail2=0.040, → max=0.040
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Utilisateur mettre à jour demande d'internat' = entail1=0.977, entail2=0.298, → max=0.977
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Utilisateur supprimer offre' = entail1=0.001, entail2=0.147, → max=0.147
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.380, entail2=0.015, → max=0.380
+NLI 'Étudiant suivre les entreprises et les offres d'emploi' ↔ 'Utilisateur accéder au contenu' = entail1=0.993, entail2=0.001, → max=0.993
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Entreprise communiquer avec les candidats' = entail1=0.997, entail2=0.020, → max=0.997
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur voir messages' = entail1=0.986, entail2=0.001, → max=0.986
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Signature est affichée dans le rapport téléchargé.' = entail1=0.038, entail2=0.009, → max=0.038
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Système afficher résumé de rapport.' = entail1=0.012, entail2=0.002, → max=0.012
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur envoyer messages avec pièces jointes' = entail1=0.001, entail2=0.001, → max=0.001
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur enregistrer et envoyer des messages vocaux' = entail1=0.620, entail2=0.000, → max=0.620
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Système afficher compteur de messages' = entail1=0.051, entail2=0.001, → max=0.051
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Système recommander amis en fonction des interactions passées' = entail1=0.009, entail2=0.001, → max=0.009
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur recevoir alertes par email' = entail1=0.031, entail2=0.001, → max=0.031
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Étudiant recevoir notifications' = entail1=0.980, entail2=0.001, → max=0.980
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur signaler commentaire inapproprié' = entail1=0.004, entail2=0.032, → max=0.032
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Recruteur voir compatibilité' = entail1=0.002, entail2=0.083, → max=0.083
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.024, entail2=0.322, → max=0.322
+NLI 'Étudiant communiquer avec les recruteurs via le système de messagerie' ↔ 'Utilisateur recevoir SMS de récupération mot de passe' = entail1=0.014, entail2=0.001, → max=0.014
+NLI 'Utilisateur télécharger PDF' ↔ 'Utilisateur télécharger fichier' = entail1=0.997, entail2=0.017, → max=0.997
+NLI 'Utilisateur télécharger PDF' ↔ 'Utilisateur télécharger contrat' = entail1=0.065, entail2=0.114, → max=0.114
+NLI 'Utilisateur télécharger PDF' ↔ 'Utilisateur télécharger rapport' = entail1=0.026, entail2=0.105, → max=0.105
+NLI 'Utilisateur télécharger fichier' ↔ 'Utilisateur télécharger contrat' = entail1=0.014, entail2=0.641, → max=0.641
+NLI 'Utilisateur télécharger fichier' ↔ 'Utilisateur télécharger rapport' = entail1=0.011, entail2=0.906, → max=0.906
+NLI 'Utilisateur télécharger fichier' ↔ 'Utilisateur télécharger fichier PDF' = entail1=0.003, entail2=0.996, → max=0.996
+NLI 'Utilisateur voir contrat' ↔ 'Utilisateur voir contrat avec filigrane' = entail1=0.008, entail2=0.998, → max=0.998
+NLI 'Utilisateur voir contrat' ↔ 'Utilisateur afficher contrat' = entail1=0.985, entail2=0.998, → max=0.998
+NLI 'Utilisateur voir contrat' ↔ 'Utilisateur ajouter contrat' = entail1=0.012, entail2=0.528, → max=0.528
+NLI 'Utilisateur télécharger contrat' ↔ 'Utilisateur télécharger fichier PDF' = entail1=0.045, entail2=0.037, → max=0.045
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur afficher contrat' = entail1=0.993, entail2=0.006, → max=0.993
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur supprimer contrat' = entail1=0.003, entail2=0.128, → max=0.128
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur suivre statut de demande' = entail1=0.558, entail2=0.331, → max=0.558
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur rechercher demande par champ' = entail1=0.296, entail2=0.232, → max=0.296
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur créer réponse' = entail1=0.898, entail2=0.308, → max=0.898
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur créer, lire, mettre à jour et supprimer réponse' = entail1=0.013, entail2=0.456, → max=0.456
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur créer offre' = entail1=0.737, entail2=0.306, → max=0.737
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Étudiant voir évaluation demande' = entail1=0.262, entail2=0.260, → max=0.262
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur supprimer offre' = entail1=0.015, entail2=0.396, → max=0.396
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Recruteur voir compatibilité' = entail1=0.976, entail2=0.292, → max=0.976
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.009, entail2=0.563, → max=0.563
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur créer compte' = entail1=0.950, entail2=0.520, → max=0.950
+NLI 'Utilisateur afficher rapport' ↔ 'Rapport est validé automatiquement.' = entail1=0.017, entail2=0.567, → max=0.567
+NLI 'Utilisateur voir contrat avec filigrane' ↔ 'Utilisateur recevoir authentification à deux facteurs' = entail1=0.748, entail2=0.236, → max=0.748
+NLI 'Utilisateur afficher rapport' ↔ 'Utilisateur signer rapport.' = entail1=0.090, entail2=0.960, → max=0.960
+NLI 'Utilisateur afficher rapport' ↔ 'Signature est affichée dans le rapport téléchargé.' = entail1=0.928, entail2=0.731, → max=0.928
+NLI 'Utilisateur afficher rapport' ↔ 'Rapport inclure signature numérique.' = entail1=0.150, entail2=0.770, → max=0.770
+NLI 'Utilisateur afficher rapport' ↔ 'Utilisateur rechercher rapport par ID.' = entail1=0.010, entail2=0.489, → max=0.489
+NLI 'Utilisateur ajouter contrat' ↔ 'Utilisateur modifier contrat' = entail1=0.940, entail2=0.071, → max=0.940
+NLI 'Utilisateur ajouter contrat' ↔ 'Utilisateur supprimer contrat' = entail1=0.000, entail2=0.000, → max=0.000
+NLI 'Utilisateur ajouter contrat' ↔ 'Utilisateur rechercher contrats par ID et statut' = entail1=0.003, entail2=0.051, → max=0.051
+NLI 'Utilisateur modifier contrat' ↔ 'Utilisateur supprimer contrat' = entail1=0.011, entail2=0.996, → max=0.996
+NLI 'Utilisateur modifier contrat' ↔ 'Utilisateur modifier profil' = entail1=0.095, entail2=0.008, → max=0.095
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur rechercher contrats par ID et statut' = entail1=0.009, entail2=0.000, → max=0.009
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur supprimer conversation' = entail1=0.544, entail2=0.137, → max=0.544
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur rechercher demande par champ' = entail1=0.174, entail2=0.005, → max=0.174
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur trier demandes par date' = entail1=0.127, entail2=0.002, → max=0.127
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur suivre statut de demande' = entail1=0.097, entail2=0.001, → max=0.097
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur créer, lire, mettre à jour et supprimer réponse' = entail1=0.759, entail2=0.863, → max=0.863
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur créer réponse' = entail1=0.974, entail2=0.015, → max=0.974
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur créer offre' = entail1=0.039, entail2=0.003, → max=0.039
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur supprimer offre' = entail1=0.971, entail2=0.984, → max=0.984
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur effectuer recherche clé' = entail1=0.734, entail2=0.034, → max=0.734
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.016, entail2=0.002, → max=0.016
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.016, entail2=0.002, → max=0.016
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.031, entail2=0.002, → max=0.031
+NLI 'Utilisateur supprimer contrat' ↔ 'Utilisateur recevoir authentification à deux facteurs' = entail1=0.401, entail2=0.004, → max=0.401
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Système envoyer notification par email.' = entail1=0.002, entail2=0.005, → max=0.005
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Utilisateur activer/désactiver notifications' = entail1=0.002, entail2=0.018, → max=0.018
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Utilisateur recevoir alertes par email' = entail1=0.001, entail2=0.000, → max=0.001
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Utilisateur recevoir notification création réponse' = entail1=0.127, entail2=0.012, → max=0.127
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Utilisateur recevoir SMS de récupération mot de passe' = entail1=0.000, entail2=0.995, → max=0.995
+NLI 'Utilisateur recevoir notifications SMS' ↔ 'Utilisateur recevoir email de vérifications' = entail1=0.001, entail2=0.000, → max=0.001
+NLI 'Utilisateur rechercher contrats par ID et statut' ↔ 'Utilisateur consulter statistiques de contrats' = entail1=0.497, entail2=0.002, → max=0.497
+NLI 'Utilisateur rechercher contrats par ID et statut' ↔ 'Utilisateur recherche rapports par ID ou statut de validation.' = entail1=0.107, entail2=0.996, → max=0.996
+NLI 'Utilisateur rechercher contrats par ID et statut' ↔ 'Utilisateur rechercher rapport par ID.' = entail1=0.996, entail2=0.005, → max=0.996
+NLI 'Utilisateur rechercher contrats par ID et statut' ↔ 'Utilisateur rechercher demande par champ' = entail1=0.037, entail2=0.002, → max=0.037
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Utilisateur consulter rapport de société validé' = entail1=0.830, entail2=0.038, → max=0.830
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Administrateur consulter statistiques réponses' = entail1=0.004, entail2=0.002, → max=0.004
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Étudiant voir statistiques demandes' = entail1=0.915, entail2=0.187, → max=0.915
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Utilisateur voir statistiques réponses' = entail1=0.085, entail2=0.003, → max=0.085
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Utilisateur afficher statistiques offre' = entail1=0.847, entail2=0.936, → max=0.936
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Utilisateur visualiser statistiques' = entail1=0.999, entail2=0.000, → max=0.999
+NLI 'Utilisateur consulter statistiques de contrats' ↔ 'Utilisateur consulter tableau de bord' = entail1=0.545, entail2=0.017, → max=0.545
+NLI 'Utilisateur consulter rapport de société validé' ↔ 'Utilisateur recherche rapports par ID ou statut de validation.' = entail1=0.122, entail2=0.546, → max=0.546
+NLI 'Utilisateur consulter rapport de société validé' ↔ 'Étudiant voir évaluation demande' = entail1=0.549, entail2=0.583, → max=0.583
+NLI 'Utilisateur consulter rapport de société validé' ↔ 'Utilisateur consulter tableau de bord' = entail1=0.979, entail2=0.719, → max=0.979
+NLI 'Rapport est validé automatiquement.' ↔ 'Signature est affichée dans le rapport téléchargé.' = entail1=0.020, entail2=0.016, → max=0.020
+NLI 'Rapport est validé automatiquement.' ↔ 'Utilisateur recherche rapports par ID ou statut de validation.' = entail1=0.004, entail2=0.000, → max=0.004
+NLI 'Rapport est validé automatiquement.' ↔ 'Rapport inclure signature numérique.' = entail1=0.006, entail2=0.070, → max=0.070
+NLI 'Email est envoyé après signature.' ↔ 'Signature est affichée dans le rapport téléchargé.' = entail1=0.283, entail2=0.004, → max=0.283
+NLI 'Email est envoyé après signature.' ↔ 'Système envoyer notification par email.' = entail1=0.989, entail2=0.004, → max=0.989
+NLI 'Email est envoyé après signature.' ↔ 'Utilisateur enregistrer et envoyer des messages vocaux' = entail1=0.565, entail2=0.453, → max=0.565
+NLI 'Email est envoyé après signature.' ↔ 'Utilisateur recevoir alertes par email' = entail1=0.620, entail2=0.002, → max=0.620
+NLI 'Signature est affichée dans le rapport téléchargé.' ↔ 'Utilisateur recherche rapports par ID ou statut de validation.' = entail1=0.593, entail2=0.458, → max=0.593
+NLI 'Signature est affichée dans le rapport téléchargé.' ↔ 'Système génère un résumé des rapports.' = entail1=0.996, entail2=0.913, → max=0.996
+NLI 'Signature est affichée dans le rapport téléchargé.' ↔ 'Rapport inclure signature numérique.' = entail1=0.999, entail2=0.948, → max=0.999
+NLI 'Signature est affichée dans le rapport téléchargé.' ↔ 'Utilisateur envoyer messages avec pièces jointes' = entail1=0.904, entail2=0.009, → max=0.904
+NLI 'Signature est affichée dans le rapport téléchargé.' ↔ 'Utilisateur enregistrer et envoyer des messages vocaux' = entail1=0.463, entail2=0.014, → max=0.463
+NLI 'Utilisateur recherche rapports par ID ou statut de validation.' ↔ 'Utilisateur voir statistiques réponses' = entail1=0.826, entail2=0.003, → max=0.826
+NLI 'Utilisateur recherche rapports par ID ou statut de validation.' ↔ 'Utilisateur recevoir authentification à deux facteurs' = entail1=0.993, entail2=0.289, → max=0.993
+NLI 'Système envoyer notification par email.' ↔ 'Utilisateur enregistrer et envoyer des messages vocaux' = entail1=0.172, entail2=0.006, → max=0.172
+NLI 'Système envoyer notification par email.' ↔ 'Utilisateur envoyer message vocal' = entail1=0.005, entail2=0.002, → max=0.005
+NLI 'Système envoyer notification par email.' ↔ 'Utilisateur envoyer message' = entail1=0.991, entail2=0.859, → max=0.991
+NLI 'Système envoyer notification par email.' ↔ 'Système afficher compteur de messages' = entail1=0.012, entail2=0.016, → max=0.016
+NLI 'Système envoyer notification par email.' ↔ 'Utilisateur recevoir alertes par email' = entail1=0.999, entail2=0.998, → max=0.999
+NLI 'Système envoyer notification par email.' ↔ 'Utilisateur recevoir email de vérifications' = entail1=0.993, entail2=0.998, → max=0.998
+NLI 'Système afficher résumé de rapport.' ↔ 'Système recommander amis en fonction des interactions passées' = entail1=0.004, entail2=0.911, → max=0.911
+NLI 'Système afficher résumé de rapport.' ↔ 'Système recommander amis' = entail1=0.051, entail2=0.197, → max=0.197
+NLI 'Utilisateur enregistrer et envoyer des messages vocaux' ↔ 'Utilisateur envoyer message vocal' = entail1=0.894, entail2=0.327, → max=0.894
+NLI 'Utilisateur enregistrer et envoyer des messages vocaux' ↔ 'Système afficher compteur de messages' = entail1=0.070, entail2=0.118, → max=0.118
+NLI 'Utilisateur enregistrer et envoyer des messages vocaux' ↔ 'Utilisateur signaler commentaire inapproprié' = entail1=0.001, entail2=0.194, → max=0.194
+NLI 'Utilisateur enregistrer et envoyer des messages vocaux' ↔ 'Utilisateur recevoir SMS de récupération mot de passe' = entail1=0.004, entail2=0.817, → max=0.817
+NLI 'Utilisateur pinser un message' ↔ 'Utilisateur pinner message' = entail1=0.998, entail2=0.999, → max=0.999
+NLI 'Utilisateur créer message' ↔ 'Utilisateur créer, lire, mettre à jour et supprimer réponse' = entail1=0.003, entail2=0.997, → max=0.997
+NLI 'Utilisateur créer message' ↔ 'Utilisateur créer offre' = entail1=0.062, entail2=0.568, → max=0.568
+NLI 'Utilisateur commencer conversation' ↔ 'Utilisateur supprimer conversation' = entail1=0.000, entail2=0.000, → max=0.000
+NLI 'Utilisateur commencer conversation' ↔ 'Utilisateur marquer conversation favori' = entail1=0.006, entail2=0.028, → max=0.028
+NLI 'Utilisateur supprimer conversation' ↔ 'Utilisateur marquer conversation favori' = entail1=0.002, entail2=0.000, → max=0.002
+NLI 'Utilisateur supprimer conversation' ↔ 'Utilisateur signaler commentaire inapproprié' = entail1=0.006, entail2=0.002, → max=0.006
+NLI 'Utilisateur rechercher messages' ↔ 'Utilisateur rechercher offres' = entail1=0.007, entail2=0.025, → max=0.025
+NLI 'Utilisateur rechercher messages' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.375, entail2=0.074, → max=0.375
+NLI 'Étudiant trouver demandes d'internat dans un rayon géographique spécifique' ↔ 'Système localiser demande géographiquement' = entail1=0.999, entail2=0.014, → max=0.999
+NLI 'Système recommander amis en fonction des interactions passées' ↔ 'Système recommander amis' = entail1=0.998, entail2=0.002, → max=0.998
+NLI 'Système recommander amis en fonction des interactions passées' ↔ 'Système extraire données structurées' = entail1=0.996, entail2=0.000, → max=0.996
+NLI 'Système recommander amis en fonction des interactions passées' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.027, entail2=0.030, → max=0.030
+NLI 'Utilisateur activer/désactiver notifications' ↔ 'Utilisateur recevoir notification création réponse' = entail1=0.372, entail2=0.001, → max=0.372
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur trier demandes par date' = entail1=0.004, entail2=0.119, → max=0.119
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur suivre statut de demande' = entail1=0.259, entail2=0.044, → max=0.259
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur créer, lire, mettre à jour et supprimer réponse' = entail1=0.018, entail2=0.119, → max=0.119
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Étudiant voir évaluation demande' = entail1=0.229, entail2=0.588, → max=0.588
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur créer offre' = entail1=0.155, entail2=0.270, → max=0.270
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur effectuer recherche clé' = entail1=0.990, entail2=0.605, → max=0.990
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.054, entail2=0.045, → max=0.054
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.425, entail2=0.099, → max=0.425
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Recruteur répondre à reclamation' = entail1=0.664, entail2=0.491, → max=0.664
+NLI 'Utilisateur rechercher demande par champ' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.860, entail2=0.134, → max=0.860
+NLI 'Utilisateur suivre statut de demande' ↔ 'Étudiant voir évaluation demande' = entail1=0.985, entail2=0.993, → max=0.993
+NLI 'Utilisateur suivre statut de demande' ↔ 'Utilisateur créer, lire, mettre à jour et supprimer réponse' = entail1=0.010, entail2=0.680, → max=0.680
+NLI 'Utilisateur suivre statut de demande' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.006, entail2=0.383, → max=0.383
+NLI 'Utilisateur créer, lire, mettre à jour et supprimer réponse' ↔ 'Utilisateur créer offre' = entail1=0.286, entail2=0.009, → max=0.286
+NLI 'Utilisateur créer, lire, mettre à jour et supprimer réponse' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.005, entail2=0.139, → max=0.139
+NLI 'Utilisateur créer, lire, mettre à jour et supprimer réponse' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.006, entail2=0.003, → max=0.006
+NLI 'Utilisateur recevoir notification création réponse' ↔ 'Utilisateur signaler commentaire inapproprié' = entail1=0.002, entail2=0.080, → max=0.080
+NLI 'Utilisateur recevoir notification création réponse' ↔ 'Utilisateur recevoir SMS de récupération mot de passe' = entail1=0.016, entail2=0.946, → max=0.946
+NLI 'Utilisateur recevoir notification création réponse' ↔ 'Utilisateur recevoir email de vérifications' = entail1=0.086, entail2=0.373, → max=0.373
+NLI 'Administrateur consulter statistiques réponses' ↔ 'Utilisateur voir statistiques réponses' = entail1=0.211, entail2=0.003, → max=0.211
+NLI 'Administrateur consulter statistiques réponses' ↔ 'Administrateur gérer reclamations' = entail1=0.040, entail2=0.098, → max=0.098
+NLI 'Utilisateur commenter réponse' ↔ 'Utilisateur classer commentaires' = entail1=0.027, entail2=0.106, → max=0.106
+NLI 'Utilisateur commenter réponse' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.008, entail2=0.010, → max=0.010
+NLI 'Utilisateur créer offre' ↔ 'Utilisateur rechercher offres' = entail1=0.070, entail2=0.002, → max=0.070
+NLI 'Utilisateur créer offre' ↔ 'Utilisateur récupérer mot de passe' = entail1=0.156, entail2=0.393, → max=0.393
+NLI 'Offre expirer automatiquement' ↔ 'Utilisateur rechercher offres' = entail1=0.528, entail2=0.001, → max=0.528
+NLI 'Système supprimer offres obsolètes' ↔ 'Système détecter langage offensif' = entail1=0.965, entail2=0.024, → max=0.965
+NLI 'Utilisateur rechercher offres' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.146, entail2=0.005, → max=0.146
+NLI 'Utilisateur rechercher offres' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.032, entail2=0.090, → max=0.090
+NLI 'Utilisateur classer commentaires' ↔ 'Utilisateur signaler commentaire inapproprié' = entail1=0.004, entail2=0.756, → max=0.756
+NLI 'Utilisateur classer commentaires' ↔ 'Système classer commentaires' = entail1=0.884, entail2=0.545, → max=0.884
+NLI 'Utilisateur classer commentaires' ↔ 'Système masquer commentaire inapproprié' = entail1=0.044, entail2=0.998, → max=0.998
+NLI 'Système bloquer utilisateur' ↔ 'Système bloquer utilisateurs négatifs' = entail1=0.001, entail2=0.998, → max=0.998
+NLI 'Système analyser sentiment commentaire' ↔ 'Système masquer commentaire inapproprié' = entail1=0.003, entail2=0.022, → max=0.022
+NLI 'Système masquer commentaire inapproprié' ↔ 'Système classer commentaires' = entail1=0.997, entail2=0.006, → max=0.997
+NLI 'Utilisateur signaler commentaire inapproprié' ↔ 'Système masquer commentaire inapproprié' = entail1=0.943, entail2=0.544, → max=0.943
+NLI 'Utilisateur récupérer mot de passe' ↔ 'Utilisateur rechercher utilisateur' = entail1=0.025, entail2=0.045, → max=0.045
+NLI 'Système masquer commentaire inapproprié' ↔ 'Système cacher commentaires inappropriés' = entail1=0.999, entail2=0.999, → max=0.999
+NLI 'Utilisateur récupérer mot de passe' ↔ 'Recruteur répondre à reclamation' = entail1=0.355, entail2=0.046, → max=0.355
+NLI 'Utilisateur récupérer mot de passe' ↔ 'Utilisateur recevoir SMS de récupération mot de passe' = entail1=0.002, entail2=0.999, → max=0.999
+NLI 'Utilisateur récupérer mot de passe' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.051, entail2=0.010, → max=0.051
+NLI 'Admin répondre à réclamation' ↔ 'Administrateur gérer reclamations' = entail1=0.999, entail2=0.999, → max=0.999
+NLI 'Admin répondre à réclamation' ↔ 'Recruteur répondre à reclamation' = entail1=0.077, entail2=0.126, → max=0.126
+NLI 'Utilisateur rechercher utilisateur' ↔ 'Recruteur répondre à reclamation' = entail1=0.152, entail2=0.017, → max=0.152
+NLI 'Administrateur gérer reclamations' ↔ 'Recruteur répondre à reclamation' = entail1=0.988, entail2=0.905, → max=0.988
+NLI 'Utilisateur rechercher utilisateur' ↔ 'Utilisateur rechercher utilisateur dynamiquement' = entail1=0.012, entail2=0.999, → max=0.999
+NLI 'Administrateur gérer reclamations' ↔ 'Administrateur voir dashboard reclamations' = entail1=0.342, entail2=0.998, → max=0.998
+NLI 'Utilisateur recevoir SMS de récupération mot de passe' ↔ 'Utilisateur recevoir email de vérifications' = entail1=0.001, entail2=0.002, → max=0.002
+NLI 'Document être numérisé' ↔ 'Étudiant signer document électroniquement' = entail1=0.038, entail2=0.997, → max=0.997

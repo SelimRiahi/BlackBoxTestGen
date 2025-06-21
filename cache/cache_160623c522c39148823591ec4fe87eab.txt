@@ -1,0 +1,18 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir messages
+3. Système détecter anomalie
+4. Utilisateur recevoir authentification à deux facteurs
+5. Document être numérisé
+6. Étudiant signer document électroniquement
+7. Utilisateur envoyer message vocal
+
+**Exigences Non Fonctionnelles :**
+
+1. Traitement instantané des interactions
+2. Chiffrement end-to-end des communications et documents
+3. Authentification à plusieurs facteurs
+4. Marquage numérique et signatures électroniques
+5. Élimination du papier dans la gestion de stages
+6. Expérience utilisateur accessible

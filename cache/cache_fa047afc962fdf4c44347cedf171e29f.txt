@@ -1,0 +1,7 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur s'inscrire
+2. Étudiant s'inscrire
+3. Utilisateur voir messages
+4. Étudiant trouver demandes d'internat dans un rayon géographique spécifique
+5. Système recommander amis en fonction des interactions passées

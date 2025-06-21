@@ -1,8 +1,0 @@
-### Exigences Fonctionnelles :
-
-1. Un utilisateur peut consulter son statut en temps réel.
-2. Le système affiche immédiatement les mises à jour du statut.
-
-### Exigences Non Fonctionnelles : 
-
-Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.

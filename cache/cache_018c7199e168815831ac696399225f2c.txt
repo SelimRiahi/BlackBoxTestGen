@@ -1,0 +1,11 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur s'inscrire
+2. Recruteur voir compatibilité
+3. Utilisateur recevoir notification
+4. Utilisateur récupérer mot de passe
+5. Admin répondre à réclamation
+6. Utilisateur accéder au contenu
+7. Utilisateur consulter tableau de bord
+8. Utilisateur rechercher utilisateur
+9. Système vérifier authenticité

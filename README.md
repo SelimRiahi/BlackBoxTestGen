@@ -1,54 +1,61 @@
-# 📄 Cahier des Charges Cleaner with Ollama + Mistral
+# 📄 Cahier des Charges Cleaner with Ollama + LLAMA
 
-This Python project processes a **cahier des charges** (requirements document) PDF by extracting, cleaning, and organizing functional and non-functional requirements using AI models like Mistral (via Ollama) and transformer-based NLP tools.
+This Python project helps clean up a **cahier des charges** (a project requirements document). It uses AI to find and organize the FUNCTIONAL requirements from a PDF file.
 
-It splits the document into chunks, sends each to AI for extraction, caches results, merges all parts, then cleans and deduplicates the requirements for a clear, concise final output.
 
 ---
 
 ## 🧠 What this Project Does
 
-- 📥 **Loads a PDF file** containing functional and technical specifications.  
-- ✂️ **Splits the text into smaller chunks** for easier AI processing.  
-- 🤖 **Uses Llama3 (via Ollama)** to extract functional and non-functional requirements from each chunk.  
-- 💾 **Caches results locally** to avoid reprocessing the same chunks repeatedly.  
-- 🔄 **Merges all extracted chunks** into one organized file named `exigences_organisees.txt`.  
-- 🔍 **Runs NLP and paraphrase models** to clean, simplify, and remove duplicate or very similar requirements from the merged file.  
-  - Uses a French NLP model (`fr_core_news_lg`) to parse and simplify sentences by focusing on core grammatical parts.  
-  - Uses a paraphrase detection model (`paraphrase-mpnet-base-v2`) to identify and remove redundant requirements.  
+- 📥 **Reads a PDF file** that contains project requirements.
+- ✂️ **Splits the PDF into smaller parts** (chunks) to make AI processing easier.
+- 🤖 **Uses llama via Ollama** to extract both **functional** and **non-functional** requirements.
+- 💾 **Saves (caches) the results locally**, so you don’t have to repeat extractions.
+- 📝 **Merges all parts into one file** called `exigences_organisees.txt`.
+- 🧠 **Cleans and filters the final file** using smart AI tools:
+  - ✅ **Uses Sentence Transformers** to compare every requirement with the others and detect duplicates or very similar ideas.
+  - 🔍 **Uses NLI (Natural Language Inference)** to check if one sentence means the same thing as another, even if it's written differently.
+  - 🧹 **Removes duplicates or repeated ideas** to keep only the clearest version.
 
 ---
 
 ## 🗂️ Files and What They Do
 
 - `generate_cahier.py`  
-  Splits the input PDF into chunks, processes each chunk with the AI extraction model, and merges all outputs into one organized requirements file.
+  Splits the PDF, sends each part to AI, and merges the results.
 
 - `transformer.py`  
-  Cleans the merged requirements using NLP parsing and paraphrase detection to simplify sentences and remove duplicates or redundancies.
-
+  Uses NLP and NLI models to clean and remove duplicate or repeated requirements.
+- `similarity_log.txt`  (related to `transformer.py`  )
+This is a log from the **Sentence Transformer model** (`paraphrase-mpnet-base-v2`).  
+It compares all the sentences to check how similar they are.  
+If two sentences are **more than 90% similar** (score > 0.9), the **shorter one is removed**.  
+This helps reduce repeated or duplicate ideas.
+- `nli_log.txt`  (related to `transformer.py`  )
+  This is a log from the **NLI model** (`joeddav/xlm-roberta-large-xnli`).  
+  It checks if one sentence **means the same thing** as another.  
+  If the model is very sure (score > 0.9), the **shorter sentence is removed**.  
+  This helps keep only the most complete version of each requirement.)
 - `multithread.py`  
-  Finds the best number of threads to send parallel requests to the AI model to optimize speed.
+  Helps speed up the process by running tasks in parallel using multiple threads.
 
 ---
 
-## ⚠️ Known Issues
--the result has improved but:
-- 🔄 **Précision partielle : Le modèle NLP utilisé est précis à environ 85 %, ce qui signifie qu’il reste une marge d'amélioration.
-🧹 Détails hors-sujet : Des informations peu pertinentes ou secondaires peuvent parfois être conservées à tort.
+## ⚠️ IIIIIIIIIIssues
+
+- 🧾 **After the LLaMA model step**: Some content is kept even though it’s **not really a functional ** (this is likely due to prompt limitations).
+- ❗ **In the cleaning phase (`transformer.py`)**:  
+  The use of **Sentence Transformers + NLI** is **sometimes too aggressive** — it can wrongly delete a sentence that has **a different meaning**, thinking it's a duplicate.
 ---
 
 ## 📂 Test Document
 
-The project was tested with `cahier1.pdf`, a 20-page real-world cahier des charges with rich formatting and detailed project specifications.
+This tool was tested on `cahier1.pdf`, a real-world 20-page document with complex structure and formatting.
 
 ---
 
-# Usage
+## 🚀 How to Use
 
+-Run `GenerateCahier.py`
 
-2. Run `generate_cahier.py` to extract and merge requirements.  
-ignore verifier_exigences.py
----
-
-
+> ℹ️ Ignore `verifier_exigences.py` — it’s not needed for now.

@@ -1,0 +1,7 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir messages
+3. Utilisateur envoyer messages avec pièces jointes
+4. Utilisateur enregistrer et envoyer des messages vocaux
+5. Utilisateur pinser un message

@@ -1,18 +1,11 @@
-Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
-
 **Exigences Fonctionnelles :**
 
-1. Un utilisateur peut signer des rapports directement dans l'application.
-2. Lorsqu'un rapport est signé, le statut de validation par la société est mis à jour automatiquement en "oui".
-3. Un utilisateur reçoit un avertissement par email immédiatement après avoir signé un rapport.
-4. Le système affiche une notification lorsque l'utilisateur reçoit un nouveau message (rapport signé).
-5. Un utilisateur peut consulter les rapports triés automatiquement par pertinence.
-6. Un utilisateur ne peut pas envoyer de pièce jointe trop volumineuse.
-7. Lorsqu'un rapport est téléchargé, le système affiche la signature capturée à l'angle droit inférieur du rapport.
+1. Utilisateur signer rapport.
+2. Système envoyer notification par email.
+3. Rapport inclure signature numérique.
+4. Utilisateur rechercher rapport par ID.
+5. Système afficher résumé de rapport.
 
 **Exigences Non Fonctionnelles :**
 
-1. Le système doit supporter les besoins futurs de reporting et de tableau de bord.
-2. La recherche fonctionnelle pour les rapports par ID et statut de validation doit être dynamique et rapide.
-
-J'ai appliqué les règles fournies pour extraire uniquement les exigences claires, concises et précises, en évitant les formulations vagues ou générales. Les exigences sont reformulées pour refléter ce que l'utilisateur peut voir, faire ou recevoir, plutôt que ce que le système exécute en arrière-plan.
+( Pas d'exigences non fonctionnelles dans le texte fourni )

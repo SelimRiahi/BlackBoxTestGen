@@ -1,0 +1,13 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Recruteur publier offre d'internat
+3. Administrateur gérer candidatures
+4. Étudiant soumettre demande d'internat
+5. Recruteur recevoir demandes d'internat
+6. Administrateur approuver/ rejeter candidature
+
+**Exigences Non Fonctionnelles :**
+
+1. Système répondre en temps réel
+2. Données stockées de manière sécurisée

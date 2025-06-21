@@ -1,9 +1,0 @@
-### Exigences Fonctionnelles :
-
-1. Un utilisateur peut consulter les informations de la société associées à une offre.
-2. Un utilisateur peut partager ou archiver des offres.
-3. Un utilisateur peut accéder aux descriptions des offres.
-
-### Exigences Non Fonctionnelles : 
-
-Aucune exigence non fonctionnelle claire n'est trouvée dans le texte fourni.

@@ -1,0 +1,13 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur s'inscrire
+2. Recruteur voir compatibilité
+3. Utilisateur créer compte
+4. Utilisateur modifier profil
+5. Administrateur gérer reclamations
+6. Utilisateur recevoir notification
+7. Utilisateur recevoir SMS de récupération mot de passe
+8. Utilisateur recevoir email de vérification
+9. Recruteur répondre à reclamation
+10. Administrateur voir dashboard reclamations
+11. Utilisateur rechercher utilisateur dynamiquement

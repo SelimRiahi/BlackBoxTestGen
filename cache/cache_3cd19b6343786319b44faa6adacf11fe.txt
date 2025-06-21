@@ -1,0 +1,16 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur s'inscrire
+2. Étudiant s'inscrire
+3. Utilisateur voir messages
+4. Utilisateur rechercher offres
+5. Utilisateur naviguer pagination
+6. Utilisateur rechercher offre par mot-clé
+7. Utilisateur afficher statistiques offre
+8. Utilisateur classer commentaires
+9. Système détecter langage offensif
+10. Système bloquer utilisateur
+11. Système analyser sentiment commentaire
+12. Utilisateur signaler commentaire inapproprié
+13. Système masquer commentaire inapproprié
+14. Système prédire pertinence application

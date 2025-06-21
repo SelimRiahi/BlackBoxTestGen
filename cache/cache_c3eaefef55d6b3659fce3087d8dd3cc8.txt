@@ -1,25 +1,15 @@
-Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
-
 **Exigences Fonctionnelles :**
 
-1. Un utilisateur peut créer, lire, mettre à jour et supprimer des contrats.
-2. Un utilisateur peut consulter les rapports créés.
-3. Un utilisateur peut télécharger les PDFs associés aux contrats.
-4. Un utilisateur peut envoyer un PDF en tant que pièce jointe lors de la création d'un contrat.
-5. Un utilisateur peut visualiser les contrats avec des eaux-fortes appliquées.
+1. Utilisateur télécharger contrat
+2. Utilisateur télécharger rapport
+3. Utilisateur télécharger fichier PDF
+4. Utilisateur afficher rapport
+5. Utilisateur afficher contrat
+6. Utilisateur ajouter contrat
+7. Utilisateur modifier contrat
+8. Utilisateur supprimer contrat
 
 **Exigences Non Fonctionnelles :**
 
-1. Le système doit stocker les PDFs sous forme de chaînes base64 pour simplifier la transmission et éviter le gestion de systèmes de fichiers séparés.
-2. Le système doit permettre aux utilisateurs de télécharger des PDFs en décodant les chaînes base64 et en les envoyant comme réponses de fichier.
-
-J'ai appliqué les règles suivantes pour extraire ces exigences :
-
-* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
-* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contenaient pas de critères mesurables ou d'indications claires.
-* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
-* J'ai utilisé un vocabulaire simple, standard et cohérent pour faciliter la détection des doublons.
-* J'ai privilégié des verbes d'action usuels comme « consulter », « envoyer » ou « visualiser ».
-* J'ai commencé chaque exigence fonctionnelle par « Un utilisateur peut... » suivi d'un verbe à l'infinitif décrivant l'action.
-* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
-* J'ai conservé uniquement les effets ou interactions directement visibles ou compréhensibles par un utilisateur final.
+1. Système gérer base64-encodage
+2. Système garantir compatibilité fichier

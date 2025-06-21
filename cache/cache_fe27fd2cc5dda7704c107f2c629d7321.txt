@@ -1,0 +1,20 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur activer/désactiver notifications
+2. Étudiant s'inscrire
+3. Utilisateur voir messages
+4. Utilisateur bloquer message toxique
+5. Système recommander amis
+6. Utilisateur créer demande d'internat
+7. Utilisateur lire demande d'internat
+8. Utilisateur mettre à jour demande d'internat
+9. Utilisateur supprimer demande d'internat
+10. Utilisateur rechercher demande par champ
+11. Utilisateur trier demandes par date
+12. Système localiser demande géographiquement
+
+**Exigences Non Fonctionnelles :**
+
+1. Calculer moyenne messages par conversation
+2. Analyser temps entre échanges de message
+3. Détection toxicité dans messages

@@ -1,0 +1,8 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur créer message
+3. Utilisateur voir message
+4. Utilisateur envoyer message avec pièce jointe
+5. Utilisateur envoyer message vocal
+6. Utilisateur pinner message

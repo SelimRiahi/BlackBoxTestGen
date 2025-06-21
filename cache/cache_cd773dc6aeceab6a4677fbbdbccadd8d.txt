@@ -1,0 +1,14 @@
+**Exigences Fonctionnelles :**
+
+1. Utilisateur s'inscrire
+2. Utilisateur voir messages
+3. Utilisateur envoyer message
+4. Utilisateur supprimer conversation
+5. Utilisateur marquer conversation favori
+6. Utilisateur rechercher message
+7. Système afficher compteur de messages
+
+**Exigences Non Fonctionnelles :**
+
+1. Système mettre à jour stats en temps réel
+2. Système notififier utilisateur en temps réel

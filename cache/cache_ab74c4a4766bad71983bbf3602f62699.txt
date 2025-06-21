@@ -1,22 +1,14 @@
-Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
-
 **Exigences Fonctionnelles :**
 
-1. Un utilisateur peut envoyer une notification SMS lorsque le statut d'un contrat change.
-2. Un utilisateur peut consulter les statistiques de contrats en fonction de leur statut actuel.
-3. Un utilisateur peut rechercher des contrats dynamiquement par ID et/ou statut.
-4. Un utilisateur peut s'inscrire et se connecter à son compte pour accéder aux fonctionnalités de gestion de contrat.
+1. Utilisateur s'inscrire
+2. Étudiant s'inscrire
+3. Utilisateur voir messages
+4. Utilisateur recevoir notifications SMS
+5. Utilisateur rechercher contrat par ID et statut
+6. Utilisateur consulter rapport de société validé
 
 **Exigences Non Fonctionnelles :**
 
-1. La sécurité des documents est améliorée en rendant difficile la modification ou l'utilisation abusive des documents.
-2. Le système de gestion de statut des contrats permet une meilleure maîtrise et suivi du workflow.
-3. Les statistiques sur les contrats sont disponibles pour aider à la surveillance de leur distribution en fonction de leur statut actuel.
-
-J'ai respecté les règles suivantes :
-
-* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
-* Je n'ai conservé que les exigences claires et précises, en les reformulant pour qu'elles soient concises, distinctes et uniques.
-* J'ai évité les formulations vagues, générales ou passives.
-* Chaque exigence fonctionnelle décrit une action ou un effet initié ou observable par un utilisateur final.
-* Les tests peuvent être réalisés du point de vue de l’utilisateur, sans connaissance du fonctionnement interne.
+1. Système sécuriser documents
+2. Système suivre état des contrats
+3. Système fournir statistiques sur les contrats

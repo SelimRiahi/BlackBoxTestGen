@@ -1,25 +1,13 @@
-Voici les exigences fonctionnelles et non fonctionnelles extraites du texte fourni, reformulées pour être claires, concises, distinctes et uniques :
-
 **Exigences Fonctionnelles :**
 
-1. Un utilisateur peut signer des rapports directement dans l'application.
-2. Lorsqu'un rapport est signé, le statut de validation par la société est mis à jour automatiquement en "oui".
-3. Un utilisateur peut envoyer une alerte par email immédiatement après avoir signé un rapport.
-4. Un utilisateur peut consulter les rapports signés et visualiser la signature dans le coin inférieur droit du rapport téléchargé.
-5. Un utilisateur peut rechercher des rapports en utilisant l'ID du rapport ou le statut de validation.
+1. Utilisateur signe rapport.
+2. Rapport est validé automatiquement.
+3. Email est envoyé après signature.
+4. Signature est affichée dans le rapport téléchargé.
+5. Utilisateur recherche rapports par ID ou statut de validation.
+6. Système génère un résumé des rapports.
 
 **Exigences Non Fonctionnelles :**
 
-1. Le système doit supporter les besoins futurs de reporting et de dashboard.
-2. Le système doit mettre à jour automatiquement le statut de validation par la société lorsqu'un rapport est signé.
-
-J'ai appliqué les règles suivantes pour extraire ces exigences :
-
-* J'ai ignoré tout contenu narratif, descriptif ou stratégique qui ne correspond pas directement à une exigence technique précise.
-* J'ai supprimé les phrases génériques, vagues ou marketing si elles ne contenaient pas de critères mesurables ou d'indications claires.
-* J'ai reformulé les exigences avec un vocabulaire technique clair et précis, compréhensible par des développeurs.
-* J'ai utilisé un vocabulaire simple, standard et cohérent, compris de tous les membres de l'équipe (développeurs, testeurs, PO).
-* J'ai privilégié des verbes d'action usuels comme "consulter", "envoyer", "accéder" et évité les variations inutiles.
-* J'ai utilisé un vocabulaire standardisé et des formulations uniformes pour chaque exigence fonctionnelle.
-* J'ai découpé toute exigence composée en plusieurs exigences unitaires.
-* Chaque exigence doit pouvoir être transformée en tâche dans un backlog technique.
+1. Processus de validation du rapport prend en compte les besoins futurs.
+2. Application est compatible avec les futures fonctionnalités de reporting et de tableau de bord.

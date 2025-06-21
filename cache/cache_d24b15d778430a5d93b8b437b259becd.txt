@@ -1,0 +1,15 @@
+**Exigences Fonctionnelles :**
+
+1. Étudiant s'inscrire
+2. Utilisateur voir offres d'emploi
+3. Étudiant rechercher offres en fonction de ses compétences
+4. Utilisateur postuler pour un emploi
+5. Étudiant suivre les entreprises et les offres d'emploi
+6. Utilisateur recevoir des recommandations professionnelles
+7. Étudiant communiquer avec les recruteurs via le système de messagerie
+
+**Exigences Non Fonctionnelles :**
+
+1. Plateforme accessible uniquement pour les universités partenaires
+2. Interface non adaptée à la gestion structurée des applications
+3. Qualité variable des offres d'emploi sur Internships.com
