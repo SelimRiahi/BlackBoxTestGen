@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@playwright/test": "^1.53.0",
     "jest": "^30.0.0",
     "supertest": "^7.1.1"
   },

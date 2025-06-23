@@ -1,102 +1,77 @@
-import ollama
-import os
+import pdfplumber
+import subprocess
+from textwrap import dedent
+import time
 
-def load_docs():
-    """Load documentation files without any interpretation"""
-    with open("docs/api_docs.txt", "r", encoding='utf-8') as f:
-        api_docs = f.read()
-    with open("docs/requirements.txt", "r", encoding='utf-8') as f:
-        requirements = f.read()
-    return api_docs, requirements
-
-def generate_prompt(test_type, base_url, api_docs, requirements):
-    """Create prompt without any problematic string formatting"""
-    lang = "javascript" if test_type == "frontend" else "python"
-    imports = 'const { test, expect } = require("@playwright/test")' if test_type == "frontend" else 'import pytest\nimport requests'
-    
-    return f"""STRICT BLACKBOX TEST GENERATION:
-Create {test_type} tests using ONLY the documented behavior.
-Treat the system as a complete black box - no internal knowledge.
-
-DOCUMENTATION:
-{api_docs}
-
-REQUIREMENTS:
-{requirements}
-
-INSTRUCTIONS:
-1. Use BASE_URL = "{base_url}"
-2. Only test documented behavior
-3. No assumptions about implementation
-4. Each test must be completely independent
-5. Include both success and error cases
-
-OUTPUT FORMAT:
-```{lang}
-{imports}
-
-BASE_URL = "{base_url}"
-
-/* Independent test cases */
-```"""
-
-def generate_tests(test_type):
-    """Generate blackbox tests for specified type"""
-    api_docs, requirements = load_docs()
-    base_url = "http://localhost:3000" if test_type == "backend" else "http://localhost:3001"
-    
-    prompt = generate_prompt(test_type, base_url, api_docs, requirements)
-    
-    response = ollama.generate(
-        model="mistral",
-        prompt=prompt,
-        options={'temperature': 0.2, 'num_ctx': 8000}
-    )
-    
+def extract_text_from_pdf(file_path):
     try:
-        # Extract code block between triple backticks
-        parts = response['response'].split("```")
-        if len(parts) > 1:
-            code = parts[1].split("\n", 1)[1].strip()  # Remove language specifier
-        else:
-            raise ValueError("No code block found")
-    except Exception:
-        code = generate_fallback_test(test_type, base_url)
+        with pdfplumber.open(file_path) as pdf:
+            return "\n".join(page.extract_text() for page in pdf.pages)
+    except Exception as e:
+        print(f"Error extracting PDF: {e}")
+        return ""
+
+def generate_gherkin(pdf_path):
+    # 1. Extract text
+    print("Extracting text from PDF...")
+    text = extract_text_from_pdf(pdf_path)
+    if not text:
+        print("No text extracted from PDF")
+        return
     
-    save_test_file(test_type, code)
+    # 2. Prepare LLM prompt (limit size)
+    prompt = dedent(f"""
+    Extract test scenarios in Gherkin format from these requirements. 
+    Focus on:
+    - User actions
+    - System responses
+    - Validation rules
+    - Error conditions
+    
+    Generate ONLY scenarios without explanations.
+    
+    Requirements:
+    {text[:5000]}  # Reduced further to ensure prompt isn't too large
+    """)
+    
+    # 3. Run Mistral via Ollama with proper encoding
+    print("Generating test scenarios (this may take a few minutes)...")
+    try:
+        cmd = ['ollama', 'run', 'mistral', prompt]
+        
+        # Using Popen with explicit UTF-8 encoding
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+            encoding='utf-8',
+            errors='replace'  # Will replace undecodable bytes
+        )
+        
+        try:
+            stdout, stderr = process.communicate(timeout=300)  # 5 minute timeout
+        except subprocess.TimeoutExpired:
+            process.kill()
+            print("Command timed out after 5 minutes")
+            return
+            
+        if process.returncode != 0:
+            print(f"Ollama failed with error:\n{stderr}")
+            return
+            
+        # 4. Save output
+        with open("test_scenarios.feature", "w", encoding="utf-8") as f:
+            f.write(stdout)
+        print("Successfully generated test_scenarios.feature")
+        
+    except Exception as e:
+        print(f"Unexpected error: {e}")
 
-def generate_fallback_test(test_type, base_url):
-    """Minimal fallback tests"""
-    if test_type == "backend":
-        return f"""import pytest
-import requests
-
-BASE_URL = "{base_url}"
-
-def test_service_available():
-    response = requests.get(f"{base_url}/")
-    assert response.status_code != 404
-"""
-    else:
-        return f"""const {{ test, expect }} = require('@playwright/test');
-
-BASE_URL = "{base_url}";
-
-test('Page loads', async ({{ page }}) => {{
-  await page.goto('{base_url}');
-  await expect(page).not.toHaveTitle('404');
-}});
-"""
-
-def save_test_file(test_type, content):
-    """Save test file with proper encoding"""
-    os.makedirs("generated_tests", exist_ok=True)
-    ext = "js" if test_type == "frontend" else "py"
-    filename = f"test_{test_type}.{ext}"
-    with open(f"generated_tests/{filename}", "w", encoding='utf-8') as f:
-        f.write(content)
-    print(f"Successfully generated {filename}")
-
+# Execute
 if __name__ == "__main__":
-    generate_tests("backend")
-    generate_tests("frontend")
+    pdf_path = r"C:\Users\Selim\OneDrive\Bureau\ai test\docs\cahier1.pdf"
+    try:
+        generate_gherkin(pdf_path)
+    except Exception as e:
+        print(f"Script failed: {e}")
