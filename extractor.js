@@ -1,4 +1,3 @@
-// extractor.js
 const fs = require('fs');
 const Tesseract = require('tesseract.js');
 
@@ -19,20 +18,19 @@ async function extractViaScreenshot(page, screenshotPath = 'page-screenshot.png'
     ocrData = { text: '', words: [] };
   }
 
-  console.log('\n🔎 Getting accessibility snapshot...');
-  const a11ySnapshot = await page.accessibility.snapshot();
-
   console.log('📏 Extracting DOM element bounding boxes...');
-  const formElements = await page.$$eval('input, textarea, select', els =>
+  const formElements = await page.$$eval('input, textarea, select, button, a', els =>
     els.map(el => {
       const rect = el.getBoundingClientRect();
       return {
         tag: el.tagName.toLowerCase(),
+        role: el.getAttribute('role') || null,
         type: el.type || null,
         name: el.name || null,
         id: el.id || null,
         placeholder: el.placeholder || null,
         ariaLabel: el.getAttribute('aria-label') || null,
+        innerText: el.innerText?.trim() || null,
         boundingBox: {
           x: rect.x,
           y: rect.y,
@@ -54,7 +52,6 @@ async function extractViaScreenshot(page, screenshotPath = 'page-screenshot.png'
         confidence: w.confidence
       }))
     },
-    accessibility: a11ySnapshot,
     elements: formElements
   };
 
@@ -77,7 +74,7 @@ async function extractViaScreenshot(page, screenshotPath = 'page-screenshot.png'
   if (!isDuplicate) {
     allData.push(result);
     fs.writeFileSync(filePath, JSON.stringify(allData, null, 2));
-    console.log('\n✅ Appended OCR + Accessibility + DOM bounding boxes to ui-extracted.json');
+    console.log('\n✅ Appended OCR + DOM element data to ui-extracted.json');
   } else {
     console.log('\nℹ️ Duplicate entry detected, skipping append.');
   }
