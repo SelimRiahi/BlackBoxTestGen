@@ -1,0 +1,219 @@
+[
+  {
+    "url": "http://localhost:3001",
+    "timestamp": 1751242721947,
+    "ocr": {
+      "textBlocks": [
+        "Login/Register"
+      ],
+      "words": []
+    },
+    "accessibility": {
+      "role": "WebArea",
+      "name": "React App",
+      "children": [
+        {
+          "role": "heading",
+          "name": "Login/Register",
+          "level": 2
+        },
+        {
+          "role": "textbox",
+          "name": "Username"
+        },
+        {
+          "role": "textbox",
+          "name": "Password"
+        },
+        {
+          "role": "button",
+          "name": "Login"
+        },
+        {
+          "role": "button",
+          "name": "Register"
+        }
+      ]
+    },
+    "elements": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": null,
+        "id": null,
+        "placeholder": "Username",
+        "ariaLabel": null,
+        "boundingBox": {
+          "x": 261,
+          "y": 112.8125,
+          "width": 778,
+          "height": 35
+        }
+      },
+      {
+        "tag": "input",
+        "type": "password",
+        "name": null,
+        "id": null,
+        "placeholder": "Password",
+        "ariaLabel": null,
+        "boundingBox": {
+          "x": 261,
+          "y": 157.8125,
+          "width": 778,
+          "height": 35
+        }
+      }
+    ]
+  },
+  {
+    "url": "http://localhost:3001/",
+    "timestamp": 1751242736235,
+    "ocr": {
+      "textBlocks": [
+        "Create Task",
+        "4",
+        "Your Tasks",
+        "John's Story",
+        "This is a sample descriptio",
+        "Priority: medium",
+        "dsqd",
+        "qdsqdsqdsad",
+        "Priority: high"
+      ],
+      "words": []
+    },
+    "accessibility": {
+      "role": "WebArea",
+      "name": "React App",
+      "children": [
+        {
+          "role": "button",
+          "name": "Logout"
+        },
+        {
+          "role": "heading",
+          "name": "Create Task",
+          "level": 3
+        },
+        {
+          "role": "textbox",
+          "name": "Title"
+        },
+        {
+          "role": "textbox",
+          "name": "Description",
+          "multiline": true
+        },
+        {
+          "role": "combobox",
+          "name": "",
+          "haspopup": "menu",
+          "children": [
+            {
+              "role": "option",
+              "name": "low"
+            },
+            {
+              "role": "option",
+              "name": "medium",
+              "selected": true
+            },
+            {
+              "role": "option",
+              "name": "high"
+            }
+          ],
+          "value": "medium"
+        },
+        {
+          "role": "button",
+          "name": "Add Task"
+        },
+        {
+          "role": "heading",
+          "name": "Your Tasks",
+          "level": 3
+        },
+        {
+          "role": "heading",
+          "name": "John's Story",
+          "level": 4
+        },
+        {
+          "role": "text",
+          "name": "This is a sample descriptio"
+        },
+        {
+          "role": "text",
+          "name": "Priority: "
+        },
+        {
+          "role": "text",
+          "name": "medium"
+        },
+        {
+          "role": "heading",
+          "name": "dsqd",
+          "level": 4
+        },
+        {
+          "role": "text",
+          "name": "qdsqdsqdsqd"
+        },
+        {
+          "role": "text",
+          "name": "Priority: "
+        },
+        {
+          "role": "text",
+          "name": "high"
+        }
+      ]
+    },
+    "elements": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": null,
+        "id": null,
+        "placeholder": "Title",
+        "ariaLabel": null,
+        "boundingBox": {
+          "x": 261,
+          "y": 123.4375,
+          "width": 778,
+          "height": 35
+        }
+      },
+      {
+        "tag": "textarea",
+        "type": "textarea",
+        "name": null,
+        "id": null,
+        "placeholder": "Description",
+        "ariaLabel": null,
+        "boundingBox": {
+          "x": 261,
+          "y": 168.4375,
+          "width": 776,
+          "height": 118
+        }
+      },
+      {
+        "tag": "select",
+        "type": "select-one",
+        "name": null,
+        "id": null,
+        "placeholder": null,
+        "ariaLabel": null,
+        "boundingBox": {
+          "x": 261,
+          "y": 296.4375,
+          "width": 758,
+          "height": 35
+        }
+      }
+    ]
+  }
+]

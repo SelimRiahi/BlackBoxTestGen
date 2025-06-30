@@ -1,0 +1,343 @@
+[
+  {
+    "scenario_title": "Successful registration with valid credentials",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is on the login page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the registration form and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "example_user",
+            "email": "example@example.com",
+            "password": "strong_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "a success message is displayed and a JWT token is received",
+        "expected_output": {
+          "statusCode": 201,
+          "jsonResponse": {
+            "token": "{{JWT_TOKEN}}",
+            "message": "Registration successful"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Failed registration with invalid username",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is on the login page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the registration form with an invalid username and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "!@#$%^&*()",
+            "email": "example@example.com",
+            "password": "strong_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating an invalid username is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Invalid username",
+            "message": "Registration failed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Failed registration with weak password",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is on the login page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the registration form with a weak password and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "example_user",
+            "email": "example@example.com",
+            "password": "weak_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating a weak password is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Weak password",
+            "message": "Registration failed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Successful task creation with valid inputs",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is logged in and on the dashboard page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the task form with valid inputs and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/tasks",
+          "body": {
+            "title": "example_task",
+            "description": "example_description"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "the new task appears in the task list and a success notification is displayed",
+        "expected_output": {
+          "statusCode": 201,
+          "jsonResponse": {
+            "task_id": "{{TASK_ID}}",
+            "message": "Task created successfully"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Failed task creation with invalid title",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is logged in and on the dashboard page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the task form with an invalid title and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/tasks",
+          "body": {
+            "title": "!@#$%^&*()",
+            "description": "example_description"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating an invalid title is displayed and no new task appears in the task list",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Invalid title",
+            "message": "Task creation failed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Successful category creation with valid inputs",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is logged in and on the dashboard page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the category form with valid inputs and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/categories",
+          "body": {
+            "name": "example_category",
+            "description": "example_description"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "the new category appears in the category management panel and a success notification is displayed",
+        "expected_output": {
+          "statusCode": 201,
+          "jsonResponse": {
+            "category_id": "{{CATEGORY_ID}}",
+            "message": "Category created successfully"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Failed category creation with invalid name",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is logged in and on the dashboard page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user fills in the category form with an invalid name and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/categories",
+          "body": {
+            "name": "!@#$%^&*()",
+            "description": "example_description"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating an invalid name is displayed and no new category appears in the category management panel",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Invalid name",
+            "message": "Category creation failed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Username and email validation",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is on the registration page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user submits the form with a username containing special characters and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "!@#$%^&*()",
+            "email": "example@example.com",
+            "password": "strong_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating invalid username is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Invalid username",
+            "message": "Registration failed"
+          }
+        }
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user submits the form with an email containing special characters and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "example_user",
+            "email": "!@#$%^&*()@example.com",
+            "password": "strong_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating invalid email is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Invalid email",
+            "message": "Registration failed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "scenario_title": "Password validation",
+    "steps": [
+      {
+        "keyword": "Given",
+        "step_text": "the user is on the registration page"
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user submits the form with a weak password and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "example_user",
+            "email": "example@example.com",
+            "password": "weak_password"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating a weak password is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Weak password",
+            "message": "Registration failed"
+          }
+        }
+      },
+      {
+        "keyword": "When",
+        "step_text": "the user submits the form with a password containing special characters and submits it",
+        "input": {
+          "method": "POST",
+          "endpoint": "/register",
+          "body": {
+            "username": "example_user",
+            "email": "example@example.com",
+            "password": "!@#$%^&*()"
+          }
+        }
+      },
+      {
+        "keyword": "Then",
+        "step_text": "an error message indicating a password containing special characters is displayed and no JWT token is received",
+        "expected_output": {
+          "statusCode": 400,
+          "jsonResponse": {
+            "error": "Password with special characters not allowed",
+            "message": "Registration failed"
+          }
+        }
+      }
+    ]
+  }
+]
