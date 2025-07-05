@@ -1,0 +1,1136 @@
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 0,
+  "action": {
+    "action": "navigate",
+    "target": "http://localhost:3001/"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": ""
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 1,
+  "action": {
+    "action": "findElement",
+    "target": {
+      "type": "input",
+      "placeholder": "Username"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": ""
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 2,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "input",
+      "placeholder": "Username"
+    },
+    "value": "testuser"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": ""
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 3,
+  "action": {
+    "action": "findElement",
+    "target": {
+      "type": "input",
+      "placeholder": "Password"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": ""
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 4,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "input",
+      "placeholder": "Password"
+    },
+    "value": "testpassword"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 5,
+  "action": {
+    "action": "findElement",
+    "target": {
+      "type": "button",
+      "text": "Login"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 6,
+  "action": {
+    "action": "click",
+    "target": {
+      "type": "button",
+      "text": "Login"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 7,
+  "action": {
+    "action": "wait",
+    "seconds": 5
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 8,
+  "action": {
+    "action": "findElement",
+    "target": {
+      "type": "h1"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Log in an existing user",
+  "actionIdx": 9,
+  "action": {
+    "action": "verifyText",
+    "target": {
+      "type": "h1"
+    },
+    "text": "Dashboard"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Create a new task",
+  "actionIdx": 0,
+  "action": {
+    "action": "navigate",
+    "url": "http://localhost:3001/register"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Create a new task",
+  "actionIdx": 1,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "input",
+      "placeholder": "Username"
+    },
+    "value": "testuser"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Create a new task",
+  "actionIdx": 2,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "input",
+      "placeholder": "Password"
+    },
+    "value": "testpassword"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Login/Register"
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Register",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Username",
+        "label": "",
+        "value": "testuser"
+      },
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "password",
+        "placeholder": "Password",
+        "label": "",
+        "value": "testpassword"
+      }
+    ]
+  }
+},
+{
+  "scenario": "Create a new task",
+  "actionIdx": 3,
+  "action": {
+    "action": "click",
+    "target": {
+      "type": "button",
+      "text": "Register"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 0,
+  "action": {
+    "action": "navigate",
+    "target": "http://localhost:3001/dashboard"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 1,
+  "action": {
+    "action": "waitForElementVisible",
+    "target": ".YourTasks"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 2,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "input",
+      "placeholder": "Title"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 3,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "textarea",
+      "placeholder": "Description"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 4,
+  "action": {
+    "action": "fill",
+    "target": {
+      "type": "select",
+      "placeholder": ""
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 5,
+  "action": {
+    "action": "click",
+    "target": {
+      "type": "button",
+      "text": "View Tasks"
+    }
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
+{
+  "scenario": "View tasks",
+  "actionIdx": 6,
+  "action": {
+    "action": "waitForElementVisible",
+    "target": ".task-list"
+  },
+  "uiState": {
+    "url": "http://localhost:3001/",
+    "headings": [
+      "Create Task",
+      "Your Tasks"
+    ],
+    "buttons": [
+      {
+        "text": "Logout",
+        "id": "",
+        "name": ""
+      },
+      {
+        "text": "Add Task",
+        "id": "",
+        "name": ""
+      }
+    ],
+    "links": [],
+    "forms": [],
+    "allFields": [
+      {
+        "tag": "input",
+        "name": "",
+        "id": "",
+        "type": "text",
+        "placeholder": "Title",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "textarea",
+        "name": "",
+        "id": "",
+        "type": "textarea",
+        "placeholder": "Description",
+        "label": "",
+        "value": ""
+      },
+      {
+        "tag": "select",
+        "name": "",
+        "id": "",
+        "type": "select-one",
+        "placeholder": "",
+        "label": "",
+        "value": "medium"
+      }
+    ]
+  }
+},
