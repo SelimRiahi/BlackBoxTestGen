@@ -1,0 +1,50 @@
+# Functional Requirements (extracted from CahierGlovo.pdf)
+
+## 1. User Interface (Client)
+- Account creation, profile, and payment methods management.
+- Shopping journey: search, add to cart, place order.
+- Real-time order tracking (ETA, map).
+- Push notifications (confirmation, in progress, delivered).
+- Order history and ratings.
+
+## 2. Merchant / Restaurant Interface
+- Professional profile registration/validation.
+- Add/modify menus or products.
+- Receive and manage orders.
+- Sales statistics and payments.
+
+## 3. Courier Interface
+- Account registration and validation.
+- Access to available orders.
+- Accept, deliver, and provide proof of delivery.
+- Delivery history and earnings.
+
+## 4. Admin Interface
+- Manage users, merchants, and couriers.
+- Moderate reviews and products.
+- View global statistics.
+- Manage disputes and refunds.
+
+## 5. Technical Constraints
+- Backend: Node.js or Django REST Framework
+- Database: PostgreSQL + Redis (caching)
+- Services: Firebase (auth, notifications), Google Maps API
+- Payments: Stripe, PayPal, Paymee (Tunisian option)
+- Hosting: AWS/Azure with CI/CD
+- React Native (mobile), React.js (web)
+
+## 6. Performance
+- Responsiveness under 1.5 seconds.
+- Multi-region and timezone support.
+- 99.9% SLA availability.
+
+## 7. Security
+- Personal data encrypted (AES-256).
+- Optional 2FA authentication.
+- GDPR / CNIL compliance.
+- Fraud prevention and secure payments.
+
+## 8. Design & UX/UI
+- Multilingual interface (French, English, Arabic).
+- Responsive design and accessibility.
+- Ergonomics adapted to mobile context.

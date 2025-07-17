@@ -1,0 +1,14 @@
+{
+  "name": "blackbox-backend",
+  "version": "1.0.0",
+  "description": "Minimal Node.js + Express backend for BlackBoxTestGen",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.3.4",
+    "dotenv": "^16.4.5"
+  }
+}
