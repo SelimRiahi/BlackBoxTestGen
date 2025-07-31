@@ -1,56 +1,86 @@
-from behave import given, when, then
-import requests
+import asyncio
+from playwright.async_api import Playwright, Browser, Page
 
-@given("there is no authenticated user")
-def step_impl_there_is_no_authenticated_user(context):
-    pass  # TODO: Implement step logic
+FEATURES = [
+    "Feature: User Authentication",
+    "  Scenario: Register a new user",
+    "  Scenario: Log in an existing user",
+    "Feature: Task Management",
+    "  Scenario: Create a new task",
+    "  Scenario: View tasks"
+]
 
+LOGIN_CREDENTIALS = {"username": "samer", "password": "123123"}
 
-@when("the user navigates to registration page")
-def step_impl_the_user_navigates_to_registration_page(context):
-    pass  # TODO: Implement step logic
+TASK_INPUT_DATA = [
+    {"title": "Task 1", "description": "Description 1"},
+    {"title": "Task 2", "description": "Description 2"},
+    {"title": "Task 3", "description": "Description 3"}
+]
 
+async def register_user(browser, page):
+    await page.goto("http://localhost:3001/register")
+    await page.fill("#username", "new_user")
+    await page.fill("#password", "new_pass")
+    # Assuming no button for registering exists in the log, skip this action to avoid inventing or guessing selectors
+    pass
 
-@when("provides a valid username and password")
-def step_impl_provides_a_valid_username_and_password(context):
-    pass  # TODO: Implement step logic
+async def login(browser, page):
+    await page.goto("http://localhost:3001/login")
+    await page.fill("#username", LOGIN_CREDENTIALS["username"])
+    await page.fill("#password", LOGIN_CREDENTIALS["password"])
+    await page.click("#submit-button")
 
+async def create_task(browser, page):
+    await page.goto("http://localhost:3001/tasks/create")
+    await page.fill("#title", TASK_INPUT_DATA[0]["title"])
+    await page.fill("#description", TASK_INPUT_DATA[0]["description"])
+    await page.click("#submit-button")
 
-@when("provides an invalid username or password")
-def step_impl_provides_an_invalid_username_or_password(context):
-    pass  # TODO: Implement step logic
+async def view_tasks(browser, page):
+    await page.goto("http://localhost:3010/your-tasks")
 
+async def test_register_new_user():
+    async with Playwright().start() as p:
+        browser = p.chromium.launch(headless=False)
+        page = await browser.newPage()
+        await register_user(browser, page)
 
-@when("the system validates and stores the user's credentials securely")
-def step_impl_the_system_validates_and_stores_the_user_s_credentials_securely(context):
-    pass  # TODO: Implement step logic
+async def test_log_in_an_existing_user():
+    async with Playwright().start() as p:
+        browser = p.chromium.launch(headless=False)
+        page = await browser.newPage()
+        await login(browser, page)
 
+async def test_create_a_new_task():
+    async with Playwright().start() as p:
+        browser = p.chromium.launch(headless=False)
+        page = await browser.newPage()
+        await login(browser, page)
+        for data in TASK_INPUT_DATA:
+            await create_task(browser, page)
 
-@when("generates a JWT token")
-def step_impl_generates_a_jwt_token(context):
-    pass  # TODO: Implement step logic
+async def test_view_tasks():
+    async with Playwright().start() as p:
+        browser = p.chromium.launch(headless=False)
+        page = await browser.newPage()
+        await login(browser, page)
+        for _ in range(len(TASK_INPUT_DATA)):
+            await view_tasks(browser, page)
 
+async def main():
+    async with Playwright().start() as p:
+        browser = p.chromium.launch(headless=False)
+        for feature in FEATURES:
+            print(f"Running scenario: {feature}")
+            if "Register a new user" in feature:
+                await test_register_new_user()
+            elif "Log in an existing user" in feature:
+                await test_log_in_an_existing_user()
+            else:
+                await test_create_a_new_task()
+                await test_view_tasks()
+        await browser.close()
 
-@when("the user logs in with the registered username and password")
-def step_impl_the_user_logs_in_with_the_registered_username_and_password(context):
-    pass  # TODO: Implement step logic
-
-
-@when("the user logs in with invalid credentials")
-def step_impl_the_user_logs_in_with_invalid_credentials(context):
-    pass  # TODO: Implement step logic
-
-
-@given("there is a registered user who has successfully logged in")
-def step_impl_there_is_a_registered_user_who_has_successfully_logged_in(context):
-    pass  # TODO: Implement step logic
-
-
-@when("the frontend makes subsequent API requests including the JWT token")
-def step_impl_the_frontend_makes_subsequent_api_requests_including_the_jwt_token(context):
-    pass  # TODO: Implement step logic
-
-
-@when("the frontend stores the JWT token securely")
-def step_impl_the_frontend_stores_the_jwt_token_securely(context):
-    pass  # TODO: Implement step logic
+if __name__ == "__main__":
+    asyncio.run(main())
