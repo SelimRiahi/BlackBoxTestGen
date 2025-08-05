@@ -1,0 +1,296 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "SC-1",
+      "name": "Successful Registration",
+      "steps": [
+        {
+          "step_id": "SC-1-01",
+          "gherkin_text": "Given I navigate to the registration page",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-1-02",
+          "gherkin_text": "When I provide a unique username and a valid password with at least 8 characters",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-1-03",
+          "gherkin_text": "Then I should be able to submit the form and receive a success message, without any errors",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-2",
+      "name": "Invalid Username Length",
+      "steps": [
+        {
+          "step_id": "SC-2-01",
+          "gherkin_text": "Given I navigate to the registration page",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-2-02",
+          "gherkin_text": "When I provide a username shorter than 3 characters",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-2-03",
+          "gherkin_text": "Then I should see an error message prompting for a longer username",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-3",
+      "name": "Successful Login",
+      "steps": [
+        {
+          "step_id": "SC-3-01",
+          "gherkin_text": "Given I have a valid user account",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-3-02",
+          "gherkin_text": "When I provide my username and password on the login form",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-3-03",
+          "gherkin_text": "Then I should be able to log in, receive a success message, and automatically load my tasks",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-4",
+      "name": "Invalid Credentials or Nonexistent User",
+      "steps": [
+        {
+          "step_id": "SC-4-01",
+          "gherkin_text": "Given I try to log in with incorrect credentials or as a nonexistent user",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-4-02",
+          "gherkin_text": "When I submit the login form",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-4-03",
+          "gherkin_text": "Then I should see an error message and not be able to access the task management page",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-5",
+      "name": "Successful Logout",
+      "steps": [
+        {
+          "step_id": "SC-5-01",
+          "gherkin_text": "Given I am logged in",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-5-02",
+          "gherkin_text": "When I click on the logout button",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-5-03",
+          "gherkin_text": "Then I should be redirected to the login view, with all data cleared from the UI",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-6",
+      "name": "Valid Task Creation",
+      "steps": [
+        {
+          "step_id": "SC-6-01",
+          "gherkin_text": "Given I am logged in and navigate to the task creation page",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-6-02",
+          "gherkin_text": "When I fill out a valid title, provide optional description, select priority, category, and due date in the future",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-6-03",
+          "gherkin_text": "Then my new task should be created and added to my task list",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-7",
+      "name": "Missing Title or Invalid Due Date",
+      "steps": [
+        {
+          "step_id": "SC-7-01",
+          "gherkin_text": "Given I am logged in and attempt to create a task",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-7-02",
+          "gherkin_text": "When I submit the form without providing a title or with an invalid due date",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-7-03",
+          "gherkin_text": "Then I should see an error message and not be able to create the task",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-8",
+      "name": "Viewing Tasks",
+      "steps": [
+        {
+          "step_id": "SC-8-01",
+          "gherkin_text": "Given I am logged in",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-8-02",
+          "gherkin_text": "When I navigate to my task list page",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-8-03",
+          "gherkin_text": "Then I should see all of my tasks displayed as cards, with completion checkboxes and delete buttons",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-9",
+      "name": "Overdue Task Indicator",
+      "steps": [
+        {
+          "step_id": "SC-9-01",
+          "gherkin_text": "Given I have an overdue task",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-9-02",
+          "gherkin_text": "When I view the task list",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-9-03",
+          "gherkin_text": "Then I should see a red indicator next to the overdue task",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-10",
+      "name": "Successfully Completing a Task",
+      "steps": [
+        {
+          "step_id": "SC-10-01",
+          "gherkin_text": "Given I have a task in my task list",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-10-02",
+          "gherkin_text": "When I check the completion checkbox for that task",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-10-03",
+          "gherkin_text": "Then the task status should be updated, and it should appear with a green background in the task list",
+          "type": "API",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-11",
+      "name": "Confirming and Deleting a Task",
+      "steps": [
+        {
+          "step_id": "SC-11-01",
+          "gherkin_text": "Given I have a task in my task list",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-11-02",
+          "gherkin_text": "When I click on the delete button for that task",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-11-03",
+          "gherkin_text": "Then I should see a confirmation prompt asking if I want to delete the task, and upon confirming, the task should be permanently deleted from the list",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-12",
+      "name": "Failed Deletion Attempt (Task Not Found or Unauthorized)",
+      "steps": [
+        {
+          "step_id": "SC-12-01",
+          "gherkin_text": "Given I attempt to delete a non-existent task or while not being authorized to perform the action",
+          "type": "API",
+          "data": ""
+        },
+        {
+          "step_id": "SC-12-02",
+          "gherkin_text": "When I click on the delete button for that task",
+          "type": "UI",
+          "data": ""
+        },
+        {
+          "step_id": "SC-12-03",
+          "gherkin_text": "Then I should see an error message and the task should remain in the task list",
+          "type": "UI",
+          "data": ""
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "source_feature": "generated_tests.feature",
+    "generated_at": "2025-08-05T03:28:40.824Z"
+  }
+}
