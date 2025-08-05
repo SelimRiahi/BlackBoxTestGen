@@ -1,91 +1,88 @@
- Feature: User Authentication
-     Scenario: Register a new user
-       Given there is no authenticated user
-       When the user navigates to registration page
-       And provides a valid username and password
-       Then the system should return a success message
-       And store the user's credentials securely
-       And generate a JWT token
-     Scenario: Log in an existing user
-       Given there is a registered user with valid credentials
-       When the user navigates to login page
-       And enters their username and password
-       Then the system should verify the credentials
-       And return a JWT token if valid
-       And redirect the user to the dashboard
-     Scenario: Unauthorized API request
-       Given a user who is not authenticated
-       When they make an API request
-       Then the server should return an unauthorized error
+ Feature: User Registration and Authentication
+     Scenario: Register a new user with valid credentials
+       Given a new user wants to register
+       When they provide a username (3-30 characters) and password (minimum 8 characters)
+       And submit the registration form
+       Then the backend should validate the provided information
+       And store the credentials securely after hashing the password
+       And return a JWT token
+
+     Scenario: Failed user registration with invalid username or password length
+       Given a new user wants to register with an invalid username or password length
+       When they submit the registration form
+       Then the frontend should display validation errors for the input fields
+
+     Scenario: Login with valid credentials
+       Given a registered user has their credentials
+       When they enter the correct username and password
+       And submit the login form
+       Then the backend should validate the provided information
+       And return a JWT token
+
+     Scenario: Failed login with incorrect credentials
+       Given an unregistered or incorrect user enters their credentials
+       When they attempt to log in
+       Then the frontend should display validation errors for the input fields
 
    Feature: Task Management
      Scenario: Create a new task
-       Given a logged-in user
-       When the user navigates to task creation page
-       And fills out the task form with required fields
-       Then the system should validate the inputs
-       And store the task in the database
+       Given a logged-in user on the dashboard
+       When they provide task details and submit the form
+       And the frontend validates the inputs
+       Then the backend processes and stores the task ensuring ownership
+
      Scenario: View tasks
-       Given a logged-in user
-       When the user navigates to the dashboard or tasks page
-       Then the system should display the user's tasks
+       Given a logged-in user on the dashboard
+       Then the frontend should display their tasks from the /tasks endpoint
+
      Scenario: Edit a task
-       Given a logged-in user and an existing task
-       When the user navigates to edit the task
-       And updates the task with valid changes
-       Then the system should update the task in the database
+       Given a logged-in user with editable task on the dashboard
+       When they click to edit the task
+       And updates are sent via PATCH requests
+       Then the backend should process the partial updates and save changes
+
      Scenario: Delete a task
-       Given a logged-in user and an existing task
-       When the user initiates deletion of the task
-       And confirms the action in a dialog box
-       Then the system should delete the task from the database
-     Scenario: Search tasks
-       Given a logged-in user with multiple tasks
-       When the user searches for tasks by title, description, priority, or category
-       Then the system should return case-insensitive matches
+       Given a logged-in user with deletable task on the dashboard
+       When they confirm to delete the task
+       Then a DELETE request is sent to the backend
+
+     Scenario: Search tasks by title or keyword
+       Given a logged-in user on the dashboard
+       When they search for tasks using keywords
+       Then the frontend sends queries to the /tasks/search endpoint
+       And receives case-insensitive matches from the backend
 
    Feature: Category System
      Scenario: Create a new category
-       Given a logged-in user
-       When the user navigates to create a new category page
-       And provides a name and color (optional) for the category
-       Then the system should validate the inputs
-       And store the category in the database
-     Scenario: Display categories
-       Given a logged-in user with created categories
-       When the user navigates to the dashboard or tasks page
-       Then the system should display the created categories
+       Given a logged-in user on the dashboard
+       When they provide a name and optionally color for a new category
+       And submit the form to create the category
+       Then the backend validates and stores the new category
+
+     Scenario: Display categories in task forms and dashboard filters
+       Given a logged-in user on the dashboard
+       Then the frontend should pull categories from the /categories endpoint
+       And display them as options in the task form and filterable options for the task list
 
    Feature: System Performance
-     Scenario: Fast backend response time
-       Given any API request from the frontend
-       When the server processes the request
-       Then the response should be returned within 300ms
+     Scenario: Backend response time within 300ms
+       Given a request to the backend
+       When the request is processed
+       Then the backend should respond within 300ms
 
-     Scenario: Fast frontend rendering
-       Given a user who navigates to a page
-       When the frontend loads the data from the backend
-       Then the page should render in under 1 second
+     Scenario: Frontend rendering under 1 second
+       Given a loaded page on the frontend
+       When user actions trigger API calls or operations
+       Then the frontend should render in under 1 second
 
-   Feature: Real-time UI updates
-     Scenario: Update UI in real-time
-       Given a user interacting with the application
-       When any changes are made to the server
-       Then the frontend should update the UI accordingly via API polling or WebSockets
+   Feature: Real-Time UI Updates and Loading Indicators
+     Scenario: UI updates via API polling/WebSockets during operations
+       Given a user performing an action on the dashboard
+       When the backend processes the request
+       Then the frontend should update the UI in real-time using API polling or WebSockets
 
-   Feature: Security & Compatibility
-     Scenario: Protect against XSS/CSRF
-       Given a user who navigates to the application
-       When they make any requests or interact with forms
-       Then the system should protect against Cross-Site Scripting (XSS) and Cross-Site Request Forgery (CSRF) attacks
-
-     Scenario: Enforce ownership checks
-       Given a user who wants to perform an action on another user's task/category
-       When they attempt to do so without proper authorization
-       Then the system should return an error or deny the request
-
-     Scenario: Support modern browsers and devices
-       Given any user accessing the application
-       When they use popular modern browsers (Chrome, Firefox, Safari) or various devices (mobile/desktop)
-       Then the system should function properly without compatibility issues
+     Scenario: Loading indicators during API calls
+       Given a user initiating an action on the dashboard triggering an API call
+       When the call is being processed by the backend
+       Then the frontend should display loading spinners indicating ongoing operations
 

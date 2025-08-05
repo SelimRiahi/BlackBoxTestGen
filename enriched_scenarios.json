@@ -1,0 +1,65 @@
+{
+    "features": [
+        {
+            "feature_name": "User Authentication",
+            "scenarios": [
+                {
+                    "scenario_name": "Register a new user",
+                    "steps": [
+                        {
+                            "step": "Given there is no authenticated user",
+                            "input": "No user is present in the session or cookies",
+                            "output": "An unauthenticated response from the API",
+                            "type": "api"
+                        },
+                        {
+                            "step": "When the user navigates to registration page",
+                            "input": "User clicks on 'Register' button or navigates to the specified URL for registration",
+                            "output": "Rendering of the registration form",
+                            "type": "ui",
+                            "matched_elements": []
+                        },
+                        {
+                            "step": "And provides a valid username and password",
+                            "input": "Valid username and password in the login form",
+                            "output": "JWT token",
+                            "type": "ui",
+                            "matched_elements": [
+                                {
+                                    "id": "46df87fb-6e19-4973-b5b0-f7d6a0ef9d1f",
+                                    "tag": "input",
+                                    "placeholder": "Username",
+                                    "selector": "input[placeholder='Username']"
+                                },
+                                {
+                                    "id": "b152d03f-82d5-4fe7-a3d0-1a2a574e680f",
+                                    "tag": "input",
+                                    "placeholder": "Password",
+                                    "selector": "input[placeholder='Password']"
+                                }
+                            ]
+                        },
+                        {
+                            "step": "Then the system should return a success message",
+                            "input": "No explicit input provided in the documentation for this step. However, it could be triggered by a successful API request.",
+                            "output": "Success message",
+                            "type": "api"
+                        },
+                        {
+                            "step": "And store the user's credentials securely",
+                            "input": "Username and password entered during user registration via frontend form",
+                            "output": "Hashed credentials stored securely on the backend",
+                            "type": "api"
+                        },
+                        {
+                            "step": "And generate a JWT token",
+                            "input": "Valid username and password after user registration via frontend form",
+                            "output": "JWT token",
+                            "type": "api"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

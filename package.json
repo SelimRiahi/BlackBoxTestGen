@@ -1,8 +1,11 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.53.0",
+    "@types/node": "^24.1.0",
     "jest": "^30.0.0",
-    "supertest": "^7.1.1"
+    "supertest": "^7.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "scripts": {
     "test": "jest"
@@ -12,6 +15,7 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.15.2"
+    "mongoose": "^8.15.2",
+    "puppeteer": "^24.11.2"
   }
 }

@@ -9,16 +9,15 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001'], // Allow both ports
+  origin: ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
-app.options('*', cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI=mongodb://localhost:27017/taskdb', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/taskdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -135,7 +134,6 @@ const authenticate = async (req, res, next) => {
     req.token = token;
     next();
   } catch (err) {
-    console.error('Authentication error:', err);
     res.status(401).json({ error: 'Please authenticate' });
   }
 };
@@ -172,7 +170,6 @@ app.post('/register', async (req, res) => {
       token
     });
   } catch (err) {
-    console.error('Registration error:', err);
     res.status(400).json({ error: err.message });
   }
 });
@@ -208,38 +205,16 @@ app.post('/login', async (req, res) => {
       role: user.role
     });
   } catch (err) {
-    console.error('Login error:', err);
     res.status(400).json({ error: err.message });
   }
-});
-
-// User Routes
-app.get('/users/me', authenticate, async (req, res) => {
-  res.json({
-    _id: req.user._id,
-    username: req.user.username,
-    role: req.user.role
-  });
 });
 
 // Category Routes
-app.post('/categories', authenticate, async (req, res) => {
-  try {
-    const category = new Category(req.body);
-    await category.save();
-    res.status(201).json(category);
-  } catch (err) {
-    console.error('Category creation error:', err);
-    res.status(400).json({ error: err.message });
-  }
-});
-
 app.get('/categories', async (req, res) => {
   try {
     const categories = await Category.find();
     res.json(categories);
   } catch (err) {
-    console.error('Categories fetch error:', err);
     res.status(500).json({ error: 'Failed to fetch categories' });
   }
 });
@@ -255,7 +230,6 @@ app.post('/tasks', authenticate, async (req, res) => {
     await task.save();
     res.status(201).json(task);
   } catch (err) {
-    console.error('Task creation error:', err);
     res.status(400).json({ error: err.message });
   }
 });
@@ -268,36 +242,25 @@ app.get('/tasks', authenticate, async (req, res) => {
       
     res.json(tasks);
   } catch (err) {
-    console.error('Tasks fetch error:', err);
     res.status(500).json({ error: 'Failed to fetch tasks' });
-  }
-});
-
-app.get('/tasks/:id', authenticate, async (req, res) => {
-  try {
-    const task = await Task.findOne({
-      _id: req.params.id,
-      userId: req.user._id
-    }).populate('categoryId', 'name color');
-
-    if (!task) {
-      return res.status(404).json({ error: 'Task not found' });
-    }
-
-    res.json(task);
-  } catch (err) {
-    console.error('Task fetch error:', err);
-    res.status(400).json({ error: err.message });
   }
 });
 
 app.patch('/tasks/:id', authenticate, async (req, res) => {
   try {
+    const updates = Object.keys(req.body);
+    const allowedUpdates = ['title', 'description', 'priority', 'completed', 'dueDate', 'categoryId'];
+    const isValidOperation = updates.every(update => allowedUpdates.includes(update));
+
+    if (!isValidOperation) {
+      return res.status(400).json({ error: 'Invalid updates!' });
+    }
+
     const task = await Task.findOneAndUpdate(
       { _id: req.params.id, userId: req.user._id },
       req.body,
       { new: true, runValidators: true }
-    );
+    ).populate('categoryId', 'name color');
 
     if (!task) {
       return res.status(404).json({ error: 'Task not found' });
@@ -305,7 +268,6 @@ app.patch('/tasks/:id', authenticate, async (req, res) => {
 
     res.json(task);
   } catch (err) {
-    console.error('Task update error:', err);
     res.status(400).json({ error: err.message });
   }
 });
@@ -323,35 +285,8 @@ app.delete('/tasks/:id', authenticate, async (req, res) => {
 
     res.status(204).end();
   } catch (err) {
-    console.error('Task deletion error:', err);
     res.status(400).json({ error: err.message });
   }
-});
-
-app.get('/tasks/search', authenticate, async (req, res) => {
-  try {
-    const { q } = req.query;
-    
-    if (!q) {
-      return res.status(400).json({ error: 'Search query required' });
-    }
-
-    const tasks = await Task.find({
-      userId: req.user._id,
-      title: { $regex: q, $options: 'i' }
-    }).populate('categoryId', 'name color');
-
-    res.json(tasks);
-  } catch (err) {
-    console.error('Task search error:', err);
-    res.status(400).json({ error: err.message });
-  }
-});
-
-// Error Handling Middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).json({ error: 'Internal server error' });
 });
 
 // Start Server
