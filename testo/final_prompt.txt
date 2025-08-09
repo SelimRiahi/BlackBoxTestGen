@@ -1,0 +1,25 @@
+You are an expert test scenario generator. Based on the application analysis below, create comprehensive Gherkin scenarios for testing the discovered functionality.
+
+Application Analysis:
+The application appears to be a web-based task management system where users can create, view, update, and delete tasks. The system allows for categorizing tasks based on priority, due date, and category. Users can also interact with API endpoints for CRUD (Create, Read, Update, Delete) operations related to tasks and categories.
+
+UI Elements List:
+1. Login Form (Tag: form, Type: login, Id: login-form): This form allows users to authenticate themselves by providing their credentials.
+2. Task Creation Form (Tag: form, Type: task-creation, Id: new-task-form): This form is used to create a new task with properties like title, description, priority, due date, and category.
+3. Existing Task List (Tag: ul, Type: unordered list, Id: task-list): This list displays all the tasks created by the user, each represented as an individual li element.
+4. Single Task Item (Tag: li, Type: list item, Ids: <task_id>, Placeholder: task-item): Each task item in the list contains essential details like title, description, priority, due date, and category, along with options to mark a task as completed or delete it.
+5. API Endpoints:
+   - POST /login (Method: POST, Purpose: Authenticate user credentials and retrieve user data)
+   - GET /categories (Method: GET, Purpose: Retrieve all categories)
+   - POST /tasks (Method: POST, Purpose: Create a new task)
+   - GET /tasks (Method: GET, Purpose: Retrieve a list of tasks created by the user)
+   - DELETE /tasks/{task_id} (Method: DELETE, Purpose: Delete an existing task)
+
+Instructions for Gherkin Scenarios:
+- Create scenarios to test the login functionality with valid and invalid credentials.
+- Test creating a new task using the task creation form with all required fields and verify that the task is added to the task list correctly.
+- Test editing and updating an existing task's properties (title, description, priority, due date, category) through the task item itself.
+- Test marking a task as completed and verifying its status in the task list.
+- Test deleting a task from the task list and ensuring it is no longer visible.
+- Test retrieving all categories using the GET /categories endpoint.
+- Test creating, updating, and retrieving tasks via the API endpoints for CRUD operations (POST /tasks, GET /tasks, DELETE /tasks/{task_id}) while considering authentication and authorization.

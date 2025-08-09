@@ -1,0 +1,224 @@
+[
+  {
+    "title": "Scenario for POST /register",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/register"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "selim123"
+      },
+      {
+        "type": "input",
+        "target": "#password-input",
+        "value": "selim123"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 201
+      }
+    ]
+  },
+  {
+    "title": "Scenario for POST /login",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/login"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "selim123"
+      },
+      {
+        "type": "input",
+        "target": "#password-input",
+        "value": "selim123"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "title": "Scenario for GET /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "title": "Scenario for POST /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "input",
+        "target": "#task-title-input",
+        "value": "azerty"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "afzfzafz"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "high"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "684c57f32853b824df237f6f"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "2026-08-20"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 201
+      }
+    ]
+  },
+  {
+    "title": "Scenario for GET /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "title": "Scenario for POST /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "input",
+        "target": "#task-title-input",
+        "value": "azerty"
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": ""
+      },
+      {
+        "type": "input",
+        "target": "#username-input",
+        "value": "high"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 201
+      }
+    ]
+  },
+  {
+    "title": "Scenario for GET /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 200
+      }
+    ]
+  },
+  {
+    "title": "Scenario for DELETE /tasks/68915cf2479b2525cb69123e",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks/68915cf2479b2525cb69123e"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 204
+      }
+    ]
+  },
+  {
+    "title": "Scenario for GET /tasks",
+    "steps": [
+      {
+        "type": "navigate",
+        "target": "/tasks"
+      },
+      {
+        "type": "click",
+        "target": "#login-button"
+      },
+      {
+        "type": "assert",
+        "target": "response_status",
+        "value": 200
+      }
+    ]
+  }
+]

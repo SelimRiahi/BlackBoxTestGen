@@ -1,0 +1,198 @@
+You are an expert test automation engineer. Implement executable test code using the detailed mapping analysis below.
+
+## DETAILED STEP-BY-STEP MAPPING ANALYSIS:
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I navigate to the registration page | #register-button | #register-button | click | None | N/A | Page loads successfully, URL is http://localhost:3000/register |
+| When I provide a unique username and a valid password with at least 8 characters | #username-input, #password-input | #username-input, #password-input | type | None | "unique username", "valid password (min. 8 chars)" | Verified input values are entered correctly |
+| Then I should be able to submit the form and receive a success message, without any errors | #register-button | #register-button | click | Endpoint 1 | {} | Page reloads successfully, URL is http://localhost:3000/login, success message displayed |
+| And I navigate to the login page | #login-button | #login-button | click | None | N/A | Page loads successfully, URL is http://localhost:3000/login |
+| Given I try to log in with incorrect credentials or as a nonexistent user | #username-input, #password-input, #login-button | #username-input, #password-input, #login-button | type/click | Endpoint 2 | "incorrect username", "incorrect password" | Verified input values are entered correctly and an error message is displayed |
+| Given I navigate to the login page | #login-button | #login-button | click | None | N/A | Page loads successfully, URL is http://localhost:3000/login |
+| When I provide my username and password on the login form | #username-input, #password-input | #username-input, #password-input | type | Endpoint 2 | "valid username", "valid password" | Verified input values are entered correctly |
+| Then I should be able to log in, receive a success message, and automatically load my tasks | #login-button | #login-button | click | Endpoint 2 | {} | Page reloads successfully, URL is http://localhost:3000/tasks (or appropriate task management page), success message displayed |
+| Given I am logged in and navigate to the task creation page | #task-creation-link | #task-creation-link | click | None | N/A | Page loads successfully, URL is http://localhost:3000/tasks/new |
+| When I fill out a valid title, provide optional description, select priority, category, and due date in the future | #task-title-input, #task-description-input, #task-priority-select, #task-category-select, #task-due-date-input, #add-task-button | #task-title-input, #task-description-input, #task-priority-select, #task-category-select, #task-due-date-input, #add-task-button | type/click | Endpoint 5 | "valid title", "optional description", "selected priority", "selected category", "future date" | Verified input values are entered correctly |
+| Then my new task should be created and added to my task list | None | None | N/A | Endpoint 8 | {} | Page reloads successfully, URL is http://localhost:3000/tasks, a new task card is displayed |
+| And I attempt to create a task without providing a title or with an invalid due date | #task-title-input, #add-task-button, #task-due-date-input | #task-title-input, #add-task-button, #task-due-date-input | type/click | Endpoint 5 | "no title", "invalid due date" | Error message is displayed and task creation fails |
+| Given I am logged in and navigate to my task list page | None | None | N/A | Endpoint 8 | {} | Page reloads successfully, URL is http://localhost:3000/tasks, all tasks are displayed as cards |
+| When I view the task list | #tasks-list | #tasks-list | check visually | Endpoint 8 | All tasks in my list | Verified that all tasks are displayed correctly |
+| And I have an overdue task | #tasks-list | #tasks-list | check visually | Endpoint 8 | Overdue task with a red indicator | Verified that the overdue task has a red indicator |
+| Given I have a task in my task list | #task-completion-689677427b4829580fb2a593-checkbox | #task-completion-689677427b4829580fb2a593-checkbox | click | Endpoint 7 | {} | Task status is updated, task appears with a green background in the task list |
+| Given I have a task in my task list | #delete-task-689677427b4829580fb2a593-button | #delete-task-689677427b4829580fb2a593-button | click | Endpoint 9 | {} | Confirmation prompt is displayed, upon confirming, the task is deleted from the list |
+| Given I attempt to delete a non-existent task or while not being authorized to perform the action | #delete-task-689677427b4829580fb2a593-button | #delete-task-689677427b4829580fb2a593-button | click | Endpoint 9 | {} | Error message is displayed and the task remains in the task list |
+
+Verification Checklist:
+- All 12 scenarios are mapped
+- All 36 steps are included
+- Every Given step has URL specification
+- Only provided elements/endpoints used
+- No invented selectors or URLs
+
+## COMPLETION ATTEMPT 1:
+| Scenario            | Given                       | When                         | Then                                | And                        |
+|----------------------|-----------------------------|------------------------------|-----------------------------------|----------------------------|
+| Successful Registration | URL is http://localhost:3000/register  | I fill "#username-input" with "testuser" and fill "#password-input" with "password1234" | I click "#register-button" | I should see a success message without any errors |
+| Invalid Username Length     | URL is http://localhost:3000/register   | I fill "#username-input" with "te" and fill "#password-input" with "password1234"  | I click "#register-button" | I should see an error message prompting for a longer username |
+| Successful Login          | URL is http://localhost:3000/login    | I fill "#username-input" with "testuser" and fill "#password-input" with "password1234"  | I click "#login-button"  | I should be able to log in, receive a success message, and automatically load my tasks |
+| Invalid Credentials or Nonexistent User   | URL is http://localhost:3000/login    | I fill "#username-input" with "nonexistentuser" and fill "#password-input" with "wrongpass"  | I click "#login-button"  | I should see an error message and not be able to access the task management page |
+| Successful Logout         | URL is http://localhost:3000/tasks   | N/A                | N/A                              | I click "#logout-button" | I should be redirected to the login view, with all data cleared from the UI |
+| Valid Task Creation       | URL is http://localhost:3000/tasks/new | I fill "#task-title-input" with "Task1", fill "#task-description-input" with "Description1", select a priority, category and due date in the future, then click "#add-task-button"  | Task is created and added to my task list | N/A                              |
+| Missing Title or Invalid Due Date     | URL is http://localhost:3000/tasks/new | I fill "#task-title-input" with "" or provide an invalid due date, then click "#add-task-button"  | I should see an error message and not be able to create the task | N/A                              |
+| Viewing Tasks           | URL is http://localhost:3000/tasks   | N/A                | N/A                              | I should see all of my tasks displayed as cards, with completion checkboxes and delete buttons |
+| Overdue Task Indicator      | URL is http://localhost:3000/tasks   | Given I have an overdue task in the list  | I should see a red indicator next to the overdue task | N/A                              |
+| Successfully Completing a Task     | URL is http://localhost:3000/tasks   | Check "#task-completion-689677427b4829580fb2a593-checkbox"    | The task status should be updated, and it should appear with a green background in the task list  | N/A                              |
+| Confirming and Deleting a Task  | URL is http://localhost:3000/tasks   | Click "#delete-task-689677427b4829580fb2a593-button"    | I should see a confirmation prompt asking if I want to delete the task, and upon confirming, the task should be permanently deleted from the list  | N/A                              |
+| Failed Deletion Attempt (Task Not Found or Unauthorized)     | URL is http://localhost:3000/tasks   | Click "#delete-task-non-existent-id-button"    | I should see an error message and the task should remain in the task list  | N/A                              |
+
+For API Triggered, Expected Data, Validation Method and Expected Result fields, it depends on the specific step and cannot be provided without knowing more about the application's backend implementation. The tables above only cover the user interface interactions.
+
+## COMPLETION ATTEMPT 2:
+**Scenario: Successful Registration**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I navigate to the registration page | Element 1 | # | navigate | None | N/A | Page loads, URL is http://localhost:3000/register |
+| When I provide a unique username and a valid password with at least 8 characters | Element 1 | #username-input | type | Endpoint 1 | username (unique), password (valid) | Verify input fields are filled with correct data |
+| Then I should be able to submit the form and receive a success message, without any errors | None | N/A | verify | None | N/A | Message "Registration successful" is displayed |
+
+   **Scenario: Invalid Username Length**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I navigate to the registration page | Element 1 | # | navigate | None | N/A | Page loads, URL is http://localhost:3000/register |
+| When I provide a password and a username shorter than 3 characters | Element 1 | #username-input | type | Endpoint 1 | short_username, password | Verify input fields are filled with correct data |
+| Then I should see an error message prompting for a longer username | None | N/A | verify | None | Error message displayed | Error message contains "Username must be at least 3 characters" |
+
+   **Scenario: Successful Login**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I navigate to the login page | Element 1 | # | navigate | None | N/A | Page loads, URL is http://localhost:3000/login |
+| When I provide my username and password on the login form | Element 2 | #password-input, Element 1 | type | Endpoint 2 | username, password (valid) | Verify input fields are filled with correct data |
+| Then I should be able to log in, receive a success message, and automatically load my tasks | None | N/A | verify | Endpoint 6 | N/A | Message "Login successful" is displayed, URL is http://localhost:3000/tasks |
+
+   **Scenario: Invalid Credentials or Nonexistent User**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I try to log in with incorrect credentials or as a nonexistent user | Element 2, Element 1 | #password-input, #username-input | type | Endpoint 2 | invalid_credentials/nonexistent_user, password (invalid) | Verify input fields are filled with correct data |
+| When I submit the login form | None | N/A | verify | Endpoint 2 | N/A | Error message displayed "Invalid credentials" or "User not found" |
+
+   **Scenario: Successful Logout**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I am logged in | None | N/A | verify | Endpoint 6 | N/A | URL is http://localhost:3000/tasks, data loaded in UI |
+| When I click on the logout button | Element 5 | #logout-button | click | None | N/A | Redirected to login page, URL is http://localhost:3000/login |
+| Then I should be redirected to the login view, with all data cleared from the UI | None | N/A | verify | None | Data cleared from UI, URL is http://localhost:3000/login |
+
+   **Scenario: Valid Task Creation**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I am logged in and navigate to the task creation page | None | N/A | verify | Endpoint 6 | N/A | URL is http://localhost:3000/tasks/new |
+| When I fill out a valid title, provide optional description, select priority, category, and due date in the future | Element 6, Element 7, Element 8, Element 9, Element 10 | #task-title-input, #task-description-input, #task-priority-select, #task-category-select, #task-due-date-input | type/select | Endpoint 5 | title (valid), description (optional), priority (selected), category (selected), due date (in the future) | Verify input fields are filled with correct data |
+| Then my new task should be created and added to my task list | None | N/A | verify | Endpoint 6 | N/A | New task appears in task list, URL is http://localhost:3000/tasks |
+
+   **Scenario: Missing Title or Invalid Due Date**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I am logged in and attempt to create a task | None | N/A | verify | Endpoint 6 | N/A | URL is http://localhost:3000/tasks/new |
+| When I submit the form without providing a title or with an invalid due date | Element 6, Element 10 | #task-title-input, #task-due-date-input | type | Endpoint 5 | missing_title (if not provided), invalid_due_date (if not in future) | Error message displayed |
+| Then I should see an error message and not be able to create the task | None | N/A | verify | None | Error message displayed, URL is http://localhost:3000/tasks/new | Error message contains "Title cannot be blank" or "Invalid date" |
+
+   **Scenario: Viewing Tasks**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I am logged in | None | N/A | verify | Endpoint 6 | N/A | URL is http://localhost:3000/tasks |
+| When I navigate to my task list page | None | N/A | navigate | None | N/A | Tasks are displayed as cards |
+| Then I should see all of my tasks displayed as cards, with completion checkboxes and delete buttons | Element 12, Element 13 | #delete-task-*, #task-completion* | verify | Endpoint 6 | All tasks loaded in the task list | Tasks are visible on the page, completion checkboxes and delete buttons present |
+
+   **Scenario: Overdue Task Indicator**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I have an overdue task | None | N/A | verify | Endpoint 6 | overdue_task (exists) | N/A |
+| When I view the task list | Element 12, Element 13 | #delete-task-*, #task-completion* | verify | Endpoint 6 | All tasks loaded in the task list | Tasks are visible on the page, overdue task has a red indicator |
+| Then I should see a red indicator next to the overdue task | Element 12 | #delete-task-* | verify | None | Red indicator present next to overdue task | Red indicator is present |
+
+   **Scenario: Successfully Completing a Task**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I have a task in my list that is not completed | None | N/A | verify | Endpoint 6 | incomplete_task (exists) | N/A |
+| When I click on the completion checkbox of the task | Element 13 | #task-completion* | click | Endpoint 8 | incomplete_task (selected), completed (true) | Task status updated |
+| Then the task should be marked as completed and moved to the bottom of my list | None | N/A | verify | Endpoint 6 | Completed task appears at the bottom of the list | Task is moved to the bottom, status is "completed" |
+
+   **Scenario: Deleting a Task**
+
+| Step | Element(s) Used | Selector(s) | Action Type | API Triggered | Expected Data | Validation Method |
+|------|----------------|-------------|-------------|---------------|---------------|-------------------|
+| Given I have a task in my list that is not completed | None | N/A | verify | Endpoint 6 | incomplete_task (exists) | N/A |
+| When I click on the delete button of the task | Element 12 | #delete-task-* | click | Endpoint 8 | incomplete_task (selected), completed (false) | Task deleted from the list |
+| Then the task should be removed from my list and marked as deleted | None | N/A | verify | Endpoint 6 | Incomplete task is no longer present in the list, deleted (true) for that task | Task is removed from the list, deleted flag is set to true |
+
+## IMPLEMENTATION REQUIREMENTS:
+
+### Test Framework Setup:
+1. Use Selenium WebDriver for UI interactions
+2. Use RestAssured or OkHttp for API testing  
+3. Implement Page Object Pattern for UI elements
+4. Create API client classes for endpoint interactions
+5. Use TestNG or JUnit for test organization
+6. Include proper setup/teardown methods
+
+### For Each Mapped Step:
+1. **UI Actions**: Use exact selectors provided in the mapping
+2. **API Calls**: Use exact URLs and methods from the endpoint data
+3. **Data Handling**: Use the postData examples as test data templates
+4. **Validation**: Implement assertions based on responseBody examples
+5. **Error Handling**: Add try-catch blocks for robust execution
+6. **Waits**: Include explicit waits for element interactions
+
+### Code Structure Requirements:
+```java
+// Example structure - adapt to your language
+@Test
+public void testScenarioName() {
+    // Given steps - setup/navigation with URL verification
+    // When steps - user actions  
+    // Then steps - validation
+}
+```
+
+### URL Management (CRITICAL):
+- Every test must verify the correct URL after GIVEN steps
+- Use WebDriver getCurrentUrl() to validate page location
+- Navigate to specific pages as mapped in the analysis
+
+### Authentication Flow:
+- Use the authentication endpoints from the mapping
+- Store tokens/session data for subsequent requests
+- Handle login/logout flow as specified in scenarios
+
+### Data Management:
+- Create test data based on postData examples
+- Use different data sets for positive/negative scenarios
+- Handle dynamic IDs and responses appropriately
+
+## COVERAGE VERIFICATION:
+- Implementation must cover ALL 12 scenarios
+- Implementation must include ALL 36 steps
+- Every Given step must include URL verification
+- Use only the exact selectors and endpoints from the mapping
+
+## OUTPUT REQUIREMENTS:
+Generate complete, executable test code that:
+1. **Maps exactly to the analysis** - Follow the step mappings provided
+2. **Uses exact selectors and endpoints** - No invented elements
+3. **Includes ALL scenarios** - Complete implementation for EVERY mapped scenario
+4. **Handles URL verification** - Validate page URLs after navigation
+5. **Validates responses** - Assert against expected responseBody data
+6. **Error handling** - Comprehensive exception handling
+7. **Maintainable structure** - Clean, readable, maintainable code
+
+Generate the complete test implementation now.

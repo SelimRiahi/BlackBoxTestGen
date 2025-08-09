@@ -1,0 +1,308 @@
+(function () {
+  let scenarios = [];
+  let flowBuffer = [];
+  let scenarioCount = 0;
+
+  let lastFillBySelector = {};
+  let lastClickBySelector = {};
+
+  // Snapshot of key visible texts before scenario boundary
+  let snapshotBefore = new Set();
+
+  // Utility: get CSS selector path for element
+  function getCssPath(el) {
+    if (!el) return '';
+    if (el.id) return `#${el.id}`;
+    let path = [];
+    while (el && el.nodeType === 1 && el.tagName.toLowerCase() !== 'html') {
+      let selector = el.tagName.toLowerCase();
+      if (el.className) {
+        const classes = el.className.trim().split(/\s+/).filter(Boolean);
+        if (classes.length) selector += '.' + classes.join('.');
+      }
+      let siblingIndex = 1;
+      let sibling = el;
+      while ((sibling = sibling.previousElementSibling) != null) siblingIndex++;
+      selector += `:nth-child(${siblingIndex})`;
+      path.unshift(selector);
+      el = el.parentElement;
+    }
+    return path.join(" > ");
+  }
+
+  // Utility: get human-readable name for Gherkin steps
+  function getHumanName(el) {
+    if (!el) return "element";
+
+    let ariaLabel = el.getAttribute("aria-label");
+    if (ariaLabel) return ariaLabel.trim();
+
+    let ariaId = el.getAttribute("aria-labelledby");
+    if (ariaId) {
+      let labelled = document.getElementById(ariaId);
+      if (labelled) return labelled.textContent.trim();
+    }
+
+    if (el.id) {
+      let label = document.querySelector(`label[for="${el.id}"]`);
+      if (label) return label.textContent.trim();
+    }
+
+    let labelParent = el.closest("label");
+    if (labelParent) return labelParent.textContent.trim();
+
+    if (el.tagName === "BUTTON" || el.tagName === "A") {
+      let text = (el.innerText || el.textContent || "").trim();
+      if (text) return text;
+    }
+
+    if (el.tagName === "INPUT") {
+      let type = el.type.toLowerCase();
+      if (type === "submit" || type === "button") {
+        if (el.value) return el.value.trim();
+      }
+      if (type === "checkbox") {
+        if (el.id) {
+          let label = document.querySelector(`label[for="${el.id}"]`);
+          if (label) return label.textContent.trim();
+        }
+      }
+    }
+
+    if (el.placeholder) return el.placeholder.trim();
+    if (el.alt) return el.alt.trim();
+    if (el.title) return el.title.trim();
+
+    let tag = el.tagName.toLowerCase();
+    let classes = el.className ? el.className.trim().split(/\s+/).join(" ") : "";
+    return (tag + (classes ? " " + classes : "")).trim() || "element";
+  }
+
+  // Check if element is scenario boundary (usually buttons/submit)
+  function isScenarioBoundary(el) {
+    if (!el) return false;
+    const tag = el.tagName.toLowerCase();
+    if (tag === "button") return true;
+    if (tag === "input") {
+      const type = (el.type || "").toLowerCase();
+      if (["submit", "button", "reset"].includes(type)) return true;
+    }
+    return false;
+  }
+
+  // Utility: snapshot visible texts on page (limit length to avoid huge output)
+  function snapshotVisibleText() {
+    const allText = Array.from(document.body.querySelectorAll("*"))
+      .filter(el => el.offsetParent !== null) // visible only
+      .map(el => el.textContent.trim())
+      .filter(t => t.length > 2)
+      .join("\n");
+    return new Set(allText.split('\n').map(s => s.trim()).filter(Boolean));
+  }
+
+  // Generate generic Then text by diffing before/after texts
+  function generateThenText(before, after) {
+    // Find new texts appeared after action
+    const newTexts = [...after].filter(x => !before.has(x));
+    if (newTexts.length === 0) {
+      // fallback
+      return "I should see some expected result";
+    }
+    // Pick first meaningful new text (max length 100 chars)
+    let candidate = newTexts.find(t => t.length < 100);
+    if (!candidate) candidate = newTexts[0];
+    // Clean it a bit
+    candidate = candidate.replace(/\s+/g, " ").trim();
+    return `I should see "${candidate}"`;
+  }
+
+  // Flush scenario buffer and store scenario
+  function flushScenario(name, thenText) {
+    if (flowBuffer.length === 0) return;
+    scenarios.push({ name: name || `Scenario ${++scenarioCount}`, actions: flowBuffer, thenText });
+    flowBuffer = [];
+  }
+
+  // Clean input values for privacy
+  function cleanInputValue(value) {
+    if (!value) return value;
+    if (/^[a-f0-9]{16,}$/i.test(value)) return "<hidden value>";
+    if (/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value)) return "<hidden value>";
+    return value;
+  }
+
+  // Record action with debounce/deduplication
+  function recordAction(action) {
+    if (action.action === "fill") {
+      lastFillBySelector[action.selector] = action;
+    } else if (action.action === "click") {
+      if (isScenarioBoundary(action.el)) {
+        // Before flushing scenario, generate Then by snapshot diff
+        const snapshotAfter = snapshotVisibleText();
+        const thenText = generateThenText(snapshotBefore, snapshotAfter);
+
+        // Flush last fills and clicks before scenario boundary
+        Object.values(lastFillBySelector).forEach(fill => flowBuffer.push(fill));
+        Object.values(lastClickBySelector).forEach(click => flowBuffer.push(click));
+        lastFillBySelector = {};
+        lastClickBySelector = {};
+
+        flowBuffer.push(action);
+        const scenarioName = getHumanName(action.el) || `Scenario ${++scenarioCount}`;
+        flushScenario(scenarioName, thenText);
+
+        // Take snapshot after flushing
+        snapshotBefore = snapshotVisibleText();
+      } else {
+        // Deduplicate normal clicks
+        if (!lastClickBySelector[action.selector]) {
+          lastClickBySelector[action.selector] = action;
+        }
+      }
+    } else if (action.action === "check" || action.action === "uncheck") {
+      // Flush any pending fills/clicks to keep order
+      Object.values(lastFillBySelector).forEach(fill => flowBuffer.push(fill));
+      Object.values(lastClickBySelector).forEach(click => flowBuffer.push(click));
+      lastFillBySelector = {};
+      lastClickBySelector = {};
+
+      flowBuffer.push(action);
+    }
+  }
+
+  // Event handlers
+  document.addEventListener("click", (e) => {
+    const el = e.target;
+    const selector = getCssPath(el);
+    const humanName = getHumanName(el);
+    recordAction({ action: "click", selector, humanName, el });
+  }, true);
+
+  const inputValueBuffer = {};
+  document.addEventListener("input", (e) => {
+    const el = e.target;
+    if (!["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName)) return;
+    inputValueBuffer[getCssPath(el)] = el.value;
+  }, true);
+
+  document.addEventListener("blur", (e) => {
+    const el = e.target;
+    if (!["INPUT", "TEXTAREA", "SELECT"].includes(el.tagName)) return;
+
+    const selector = getCssPath(el);
+    if (inputValueBuffer[selector] !== undefined) {
+      const humanName = getHumanName(el);
+      recordAction({ action: "fill", selector, value: cleanInputValue(inputValueBuffer[selector]), humanName });
+      delete inputValueBuffer[selector];
+    }
+  }, true);
+
+  document.addEventListener("change", (e) => {
+    const el = e.target;
+    if (el.tagName !== "INPUT" || el.type.toLowerCase() !== "checkbox") return;
+    const selector = getCssPath(el);
+    const humanName = getHumanName(el);
+    if (el.checked) {
+      recordAction({ action: "check", selector, humanName });
+    } else {
+      recordAction({ action: "uncheck", selector, humanName });
+    }
+  }, true);
+
+  // Generate Gherkin feature text
+  function generateFeature() {
+    let feature = `Feature: User flows recorded on ${new Date().toLocaleString()}\n\n`;
+    scenarios.forEach(({ name, actions, thenText }) => {
+      feature += `Scenario: ${name}\n`;
+      feature += `  Given I am on the page "${location.origin}"\n`;
+      actions.forEach(a => {
+        if (a.action === "click") feature += `  And I click the "${a.humanName}"\n`;
+        else if (a.action === "fill") feature += `  When I enter "${a.value}" into the "${a.humanName}"\n`;
+        else if (a.action === "check") feature += `  And I check the "${a.humanName}"\n`;
+        else if (a.action === "uncheck") feature += `  And I uncheck the "${a.humanName}"\n`;
+      });
+      feature += `  Then ${thenText}\n\n`;
+    });
+    return feature;
+  }
+
+  // Generate Playwright test code with reusable Given, When, Then functions
+  function generateSpec() {
+    let code = `const { test, expect } = require('@playwright/test');\n\n` +
+      `async function Given(page, text, url) {\n` +
+      `  if(text === 'I am on the page') {\n` +
+      `    await page.goto(url);\n` +
+      `  }\n` +
+      `}\n\n` +
+
+      `async function When(page, action, selector, value) {\n` +
+      `  if (action === 'enter') await page.fill(selector, value);\n` +
+      `  else if (action === 'click') await page.click(selector);\n` +
+      `  else if (action === 'check') await page.check(selector);\n` +
+      `  else if (action === 'uncheck') await page.uncheck(selector);\n` +
+      `}\n\n` +
+
+      `async function Then(page, text) {\n` +
+      `  const cleanText = text.replace(/^I should see "/, '').replace(/"$/, '');\n` +
+      `  // Generic heuristic: check if text visible somewhere\n` +
+      `  await expect(page.locator('text=' + cleanText)).toBeVisible();\n` +
+      `}\n\n`;
+
+    scenarios.forEach(({ name, actions, thenText }) => {
+      code += `test('${name}', async ({ page }) => {\n`;
+      code += `  await Given(page, 'I am on the page', '${location.origin}');\n`;
+      actions.forEach(a => {
+        if (a.action === "click") code += `  await When(page, 'click', '${a.selector}');\n`;
+        else if (a.action === "fill") code += `  await When(page, 'enter', '${a.selector}', \`${a.value.replace(/`/g, "\\`")}\`);\n`;
+        else if (a.action === "check") code += `  await When(page, 'check', '${a.selector}');\n`;
+        else if (a.action === "uncheck") code += `  await When(page, 'uncheck', '${a.selector}');\n`;
+      });
+      code += `  await Then(page, \`${thenText}\`);\n`;
+      code += `});\n\n`;
+    });
+
+    return code;
+  }
+
+  // Stop recorder and export files
+  function stopRecorder() {
+    // Flush remaining fills and clicks
+    Object.values(lastFillBySelector).forEach(fill => flowBuffer.push(fill));
+    Object.values(lastClickBySelector).forEach(click => flowBuffer.push(click));
+    lastFillBySelector = {};
+    lastClickBySelector = {};
+
+    // Generate final then text by diff for remaining flowBuffer (if any)
+    if (flowBuffer.length) {
+      const snapshotAfter = snapshotVisibleText();
+      const thenText = generateThenText(snapshotBefore, snapshotAfter);
+      flushScenario(null, thenText);
+    }
+
+    if (scenarios.length === 0) {
+      console.warn("No scenarios recorded!");
+      return;
+    }
+
+    const featureText = generateFeature();
+    const specText = generateSpec();
+
+    function downloadFile(filename, content) {
+      const blob = new Blob([content], { type: "text/plain" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    downloadFile("recorded.feature", featureText);
+    downloadFile("recorded.spec.js", specText);
+    console.log("✅ Recording stopped and exported.");
+  }
+
+  window.stopRecorder = stopRecorder;
+  snapshotBefore = snapshotVisibleText();
+  console.log("▶️ Black-box test recorder started! Interact with the page, then call stopRecorder() to export.");
+})();

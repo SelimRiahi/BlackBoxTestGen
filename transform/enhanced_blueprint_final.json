@@ -1,0 +1,1101 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "SC-1",
+      "name": "Successful Registration",
+      "steps": [
+        {
+          "step_id": "SC-1-01",
+          "gherkin_text": "Given I navigate to the registration page",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#register-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "register-button",
+              "type": "submit",
+              "text": "Register"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-1-02",
+          "gherkin_text": "When I provide a unique username and a valid password with at least 8 characters",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-1-03",
+          "gherkin_text": "Then I should be able to submit the form and receive a success message, without any errors",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#register-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "register-button",
+              "type": "submit",
+              "text": "Register"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-2",
+      "name": "Invalid Username Length",
+      "steps": [
+        {
+          "step_id": "SC-2-01",
+          "gherkin_text": "Given I navigate to the registration page",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#register-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "register-button",
+              "type": "submit",
+              "text": "Register"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-2-02",
+          "gherkin_text": "When I provide a username shorter than 3 characters",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-2-03",
+          "gherkin_text": "Then I should see an error message prompting for a longer username",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-3",
+      "name": "Successful Login",
+      "steps": [
+        {
+          "step_id": "SC-3-01",
+          "gherkin_text": "Given I have a valid user account",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-3-02",
+          "gherkin_text": "When I provide my username and password on the login form",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-3-03",
+          "gherkin_text": "Then I should be able to log in, receive a success message, and automatically load my tasks",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-4",
+      "name": "Invalid Credentials or Nonexistent User",
+      "steps": [
+        {
+          "step_id": "SC-4-01",
+          "gherkin_text": "Given I try to log in with incorrect credentials or as a nonexistent user",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-4-02",
+          "gherkin_text": "When I submit the login form",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-4-03",
+          "gherkin_text": "Then I should see an error message and not be able to access the task management page",
+          "type": "UI",
+          "data": []
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-5",
+      "name": "Successful Logout",
+      "steps": [
+        {
+          "step_id": "SC-5-01",
+          "gherkin_text": "Given I am logged in",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-5-02",
+          "gherkin_text": "When I click on the logout button",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#logout-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "logout-button",
+              "type": "submit",
+              "text": "Logout"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-5-03",
+          "gherkin_text": "Then I should be redirected to the login view, with all data cleared from the UI",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#logout-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "logout-button",
+              "type": "submit",
+              "text": "Logout"
+            },
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-6",
+      "name": "Valid Task Creation",
+      "steps": [
+        {
+          "step_id": "SC-6-01",
+          "gherkin_text": "Given I am logged in and navigate to the task creation page",
+          "type": "UI",
+          "data": [
+            {
+              "url": "http://localhost:3000/tasks"
+            },
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-6-02",
+          "gherkin_text": "When I fill out a valid title, provide optional description, select priority, category, and due date in the future",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-title-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-title-input",
+              "type": "text",
+              "placeholder": "Title"
+            },
+            {
+              "tag": "textarea",
+              "selector": "#task-description-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-description-input",
+              "type": "textarea",
+              "placeholder": "Description"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-priority-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-priority-select",
+              "type": "select-one",
+              "value": "high",
+              "text": "Low\nMedium\nHigh"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-category-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-category-select",
+              "type": "select-one",
+              "text": "Select Category\nWork\nHacked"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-due-date-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-due-date-input",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-6-03",
+          "gherkin_text": "Then my new task should be created and added to my task list",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-title-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-title-input",
+              "type": "text",
+              "placeholder": "Title"
+            },
+            {
+              "tag": "textarea",
+              "selector": "#task-description-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-description-input",
+              "type": "textarea",
+              "placeholder": "Description"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-priority-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-priority-select",
+              "type": "select-one",
+              "value": "high",
+              "text": "Low\nMedium\nHigh"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-category-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-category-select",
+              "type": "select-one",
+              "text": "Select Category\nWork\nHacked"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-due-date-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-due-date-input",
+              "type": "date"
+            },
+            {
+              "tag": "button",
+              "selector": "#add-task-button",
+              "disabled": true,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "add-task-button",
+              "type": "submit",
+              "text": "Add Task"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-7",
+      "name": "Missing Title or Invalid Due Date",
+      "steps": [
+        {
+          "step_id": "SC-7-01",
+          "gherkin_text": "Given I am logged in and attempt to create a task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-7-02",
+          "gherkin_text": "When I submit the form without providing a title or with an invalid due date",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-title-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-title-input",
+              "type": "text",
+              "placeholder": "Title"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-due-date-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-due-date-input",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-7-03",
+          "gherkin_text": "Then I should see an error message and not be able to create the task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-title-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-title-input",
+              "type": "text",
+              "placeholder": "Title"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-due-date-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-due-date-input",
+              "type": "date"
+            },
+            {
+              "tag": "button",
+              "selector": "#add-task-button",
+              "disabled": true,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "add-task-button",
+              "type": "submit",
+              "text": "Add Task"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-8",
+      "name": "Viewing Tasks",
+      "steps": [
+        {
+          "step_id": "SC-8-01",
+          "gherkin_text": "Given I am logged in",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-8-02",
+          "gherkin_text": "When I navigate to my task list page",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#logout-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "logout-button",
+              "type": "submit",
+              "text": "Logout"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-8-03",
+          "gherkin_text": "Then I should see all of my tasks displayed as cards, with completion checkboxes and delete buttons",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-completion-68915cea479b2525cb691238-checkbox",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-completion-68915cea479b2525cb691238-checkbox",
+              "type": "checkbox",
+              "value": "on"
+            },
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cf2479b2525cb69123e-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:03.339Z",
+              "id": "delete-task-68915cf2479b2525cb69123e-button",
+              "type": "submit",
+              "text": "Delete"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-completion-68915cf2479b2525cb69123e-checkbox",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:03.339Z",
+              "id": "task-completion-68915cf2479b2525cb69123e-checkbox",
+              "type": "checkbox",
+              "value": "on"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-9",
+      "name": "Overdue Task Indicator",
+      "steps": [
+        {
+          "step_id": "SC-9-01",
+          "gherkin_text": "Given I have an overdue task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#username-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "username-input",
+              "type": "text",
+              "placeholder": "Username"
+            },
+            {
+              "tag": "input",
+              "selector": "#password-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "password-input",
+              "type": "password",
+              "placeholder": "Password"
+            },
+            {
+              "tag": "button",
+              "selector": "#login-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:08.373Z",
+              "id": "login-button",
+              "type": "submit",
+              "text": "Login"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-9-02",
+          "gherkin_text": "When I view the task list",
+          "type": "UI",
+          "data": []
+        },
+        {
+          "step_id": "SC-9-03",
+          "gherkin_text": "Then I should see a red indicator next to the overdue task",
+          "type": "UI",
+          "data": []
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-10",
+      "name": "Successfully Completing a Task",
+      "steps": [
+        {
+          "step_id": "SC-10-01",
+          "gherkin_text": "Given I have a task in my task list",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-completion-68915cea479b2525cb691238-checkbox",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-completion-68915cea479b2525cb691238-checkbox",
+              "type": "checkbox",
+              "value": "on"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-10-02",
+          "gherkin_text": "When I check the completion checkbox for that task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-completion-68915cea479b2525cb691238-checkbox",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-completion-68915cea479b2525cb691238-checkbox",
+              "type": "checkbox",
+              "value": "on"
+            },
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-10-03",
+          "gherkin_text": "Then the task status should be updated, and it should appear with a green background in the task list",
+          "type": "API",
+          "data": [
+            {
+              "url": "http://localhost:3000/tasks",
+              "method": "GET",
+              "postData": null,
+              "status": 200,
+              "responseBody": "[]",
+              "timestamp": "2025-08-05T01:22:30.828Z"
+            },
+            {
+              "url": "http://localhost:3000/categories",
+              "method": "GET",
+              "postData": null,
+              "status": 200,
+              "responseBody": "[{\"_id\":\"684c57f32853b824df237f6f\",\"name\":\"Work\",\"color\":\"#FF5733\",\"__v\":0},{\"_id\":\"684c58ae2853b824df237f7b\",\"name\":\"Hacked\",\"color\":\"#000000\",\"__v\":0}]",
+              "timestamp": "2025-08-05T01:22:30.831Z"
+            },
+            {
+              "url": "http://localhost:3000/tasks",
+              "method": "GET",
+              "postData": null,
+              "status": 200,
+              "responseBody": "[{\"_id\":\"68915cea479b2525cb691238\",\"title\":\"azerty\",\"description\":\"afzfzafz\",\"priority\":\"high\",\"completed\":false,\"dueDate\":\"2026-08-20T00:00:00.000Z\",\"userId\":\"68915ccf479b2525cb691231\",\"categoryId\":{\"_id\":\"684c57f32853b824df237f6f\",\"name\":\"Work\",\"color\":\"#FF5733\"},\"createdAt\":\"2025-08-05T01:22:50.783Z\",\"__v\":0}]",
+              "timestamp": "2025-08-05T01:22:50.808Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-11",
+      "name": "Confirming and Deleting a Task",
+      "steps": [
+        {
+          "step_id": "SC-11-01",
+          "gherkin_text": "Given I have a task in my task list",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "input",
+              "selector": "#task-title-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-title-input",
+              "type": "text",
+              "placeholder": "Title"
+            },
+            {
+              "tag": "textarea",
+              "selector": "#task-description-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-description-input",
+              "type": "textarea",
+              "placeholder": "Description"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-priority-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-priority-select",
+              "type": "select-one",
+              "value": "high",
+              "text": "Low\nMedium\nHigh"
+            },
+            {
+              "tag": "select",
+              "selector": "#task-category-select",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-category-select",
+              "type": "select-one",
+              "text": "Select Category\nWork\nHacked"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-due-date-input",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-due-date-input",
+              "type": "date"
+            },
+            {
+              "tag": "button",
+              "selector": "#add-task-button",
+              "disabled": true,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "add-task-button",
+              "type": "submit",
+              "text": "Add Task"
+            },
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            },
+            {
+              "tag": "input",
+              "selector": "#task-completion-68915cea479b2525cb691238-checkbox",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "task-completion-68915cea479b2525cb691238-checkbox",
+              "type": "checkbox",
+              "value": "on"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-11-02",
+          "gherkin_text": "When I click on the delete button for that task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-11-03",
+          "gherkin_text": "Then I should see a confirmation prompt asking if I want to delete the task, and upon confirming, the task should be permanently deleted from the list",
+          "type": "UI",
+          "data": []
+        }
+      ]
+    },
+    {
+      "scenario_id": "SC-12",
+      "name": "Failed Deletion Attempt (Task Not Found or Unauthorized)",
+      "steps": [
+        {
+          "step_id": "SC-12-01",
+          "gherkin_text": "Given I attempt to delete a non-existent task or while not being authorized to perform the action",
+          "type": "API",
+          "data": [
+            {
+              "url": "http://localhost:3000/tasks/68915cf2479b2525cb69123e",
+              "method": "DELETE",
+              "postData": null,
+              "status": 204,
+              "responseBody": "",
+              "timestamp": "2025-08-05T01:23:04.251Z"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-12-02",
+          "gherkin_text": "When I click on the delete button for that task",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            }
+          ]
+        },
+        {
+          "step_id": "SC-12-03",
+          "gherkin_text": "Then I should see an error message and the task should remain in the task list",
+          "type": "UI",
+          "data": [
+            {
+              "tag": "button",
+              "selector": "#delete-task-68915cea479b2525cb691238-button",
+              "disabled": false,
+              "visible": true,
+              "timestamp": "2025-08-05T01:23:06.362Z",
+              "id": "delete-task-68915cea479b2525cb691238-button",
+              "type": "submit",
+              "text": "Delete"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "source_feature": "generated_tests.feature",
+    "generated_at": "2025-08-05T03:28:40.824Z"
+  }
+}

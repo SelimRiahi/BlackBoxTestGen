@@ -7,13 +7,13 @@ Scenario: Successful Registration
 
 Scenario: Invalid Username Length
   Given I navigate to the registration page
-  When I provide a username shorter than 3 characters
+  When I provide a password and a username shorter  than 3 characters
   Then I should see an error message prompting for a longer username
 
 Feature: Login
 
 Scenario: Successful Login
-  Given I have a valid user account
+  Given I navigate to the login page
   When I provide my username and password on the login form
   Then I should be able to log in, receive a success message, and automatically load my tasks
 

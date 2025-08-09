@@ -4,7 +4,7 @@
     "selector": "#username-input",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:08.373Z",
+    "timestamp": "2025-08-08T22:16:49.515Z",
     "id": "username-input",
     "type": "text",
     "placeholder": "Username"
@@ -14,7 +14,7 @@
     "selector": "#password-input",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:08.373Z",
+    "timestamp": "2025-08-08T22:16:49.515Z",
     "id": "password-input",
     "type": "password",
     "placeholder": "Password"
@@ -24,7 +24,7 @@
     "selector": "#login-button",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:08.373Z",
+    "timestamp": "2025-08-08T22:16:49.515Z",
     "id": "login-button",
     "type": "submit",
     "text": "Login"
@@ -34,7 +34,7 @@
     "selector": "#register-button",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:08.373Z",
+    "timestamp": "2025-08-08T22:16:49.515Z",
     "id": "register-button",
     "type": "submit",
     "text": "Register"
@@ -44,7 +44,7 @@
     "selector": "#logout-button",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "logout-button",
     "type": "submit",
     "text": "Logout"
@@ -54,7 +54,7 @@
     "selector": "#task-title-input",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "task-title-input",
     "type": "text",
     "placeholder": "Title"
@@ -64,7 +64,7 @@
     "selector": "#task-description-input",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "task-description-input",
     "type": "textarea",
     "placeholder": "Description"
@@ -74,7 +74,7 @@
     "selector": "#task-priority-select",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "task-priority-select",
     "type": "select-one",
     "value": "high",
@@ -85,7 +85,7 @@
     "selector": "#task-category-select",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "task-category-select",
     "type": "select-one",
     "text": "Select Category\nWork\nHacked"
@@ -95,7 +95,7 @@
     "selector": "#task-due-date-input",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "task-due-date-input",
     "type": "date"
   },
@@ -104,48 +104,28 @@
     "selector": "#add-task-button",
     "disabled": true,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
+    "timestamp": "2025-08-08T22:16:44.474Z",
     "id": "add-task-button",
     "type": "submit",
     "text": "Add Task"
   },
   {
     "tag": "button",
-    "selector": "#delete-task-68915cea479b2525cb691238-button",
+    "selector": "#delete-task-689677427b4829580fb2a593-button",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
-    "id": "delete-task-68915cea479b2525cb691238-button",
+    "timestamp": "2025-08-08T22:16:41.448Z",
+    "id": "delete-task-689677427b4829580fb2a593-button",
     "type": "submit",
     "text": "Delete"
   },
   {
     "tag": "input",
-    "selector": "#task-completion-68915cea479b2525cb691238-checkbox",
+    "selector": "#task-completion-689677427b4829580fb2a593-checkbox",
     "disabled": false,
     "visible": true,
-    "timestamp": "2025-08-05T01:23:06.362Z",
-    "id": "task-completion-68915cea479b2525cb691238-checkbox",
-    "type": "checkbox",
-    "value": "on"
-  },
-  {
-    "tag": "button",
-    "selector": "#delete-task-68915cf2479b2525cb69123e-button",
-    "disabled": false,
-    "visible": true,
-    "timestamp": "2025-08-05T01:23:03.339Z",
-    "id": "delete-task-68915cf2479b2525cb69123e-button",
-    "type": "submit",
-    "text": "Delete"
-  },
-  {
-    "tag": "input",
-    "selector": "#task-completion-68915cf2479b2525cb69123e-checkbox",
-    "disabled": false,
-    "visible": true,
-    "timestamp": "2025-08-05T01:23:03.339Z",
-    "id": "task-completion-68915cf2479b2525cb69123e-checkbox",
+    "timestamp": "2025-08-08T22:16:41.448Z",
+    "id": "task-completion-689677427b4829580fb2a593-checkbox",
     "type": "checkbox",
     "value": "on"
   }

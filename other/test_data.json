@@ -1,0 +1,692 @@
+{
+  "metadata": {
+    "appUrl": "http://localhost:3001",
+    "captureStart": "2025-08-06T18:26:28.810Z",
+    "captureEnd": "2025-08-06T18:26:50.323Z",
+    "captureDuration": "21.513 seconds"
+  },
+  "apiCalls": [
+    {
+      "url": "http://localhost:3000/register",
+      "method": "POST",
+      "postData": "{\"username\":\"yas\",\"password\":\"yas\"}",
+      "status": 201,
+      "responseBody": "{\"_id\":\"68939e597a613e9474f67cfc\",\"username\":\"yas\",\"role\":\"user\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkzOWU1OTdhNjEzZTk0NzRmNjdjZmMiLCJpYXQiOjE3NTQ1MDQ3OTMsImV4cCI6MTc1NDUwODM5M30.AtFPslBPKLWXynf_oEN-DQo80tMXM66qMTUP8-n4U1o\"}",
+      "timestamp": "2025-08-06T18:26:33.155Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/login",
+      "method": "POST",
+      "postData": "{\"username\":\"yas\",\"password\":\"yas\"}",
+      "status": 200,
+      "responseBody": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODkzOWU1OTdhNjEzZTk0NzRmNjdjZmMiLCJpYXQiOjE3NTQ1MDQ3OTUsImV4cCI6MTc1NDUwODM5NX0.mh0_cevJ-RmjYh11zZk_m4CTwvPY-DFiLSFAaOADELc\",\"userId\":\"68939e597a613e9474f67cfc\",\"username\":\"yas\",\"role\":\"user\"}",
+      "timestamp": "2025-08-06T18:26:35.518Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/tasks",
+      "method": "GET",
+      "postData": null,
+      "status": 200,
+      "responseBody": "[]",
+      "timestamp": "2025-08-06T18:26:46.509Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button",
+        "#delete-task-68939e647a613e9474f67d03-button",
+        "#task-completion-68939e647a613e9474f67d03-checkbox"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/categories",
+      "method": "GET",
+      "postData": null,
+      "status": 200,
+      "responseBody": "[{\"_id\":\"684c57f32853b824df237f6f\",\"name\":\"Work\",\"color\":\"#FF5733\",\"__v\":0},{\"_id\":\"684c58ae2853b824df237f7b\",\"name\":\"Hacked\",\"color\":\"#000000\",\"__v\":0}]",
+      "timestamp": "2025-08-06T18:26:35.525Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/tasks",
+      "method": "POST",
+      "postData": "{\"title\":\"yas\",\"description\":\"yassssss\",\"priority\":\"high\",\"categoryId\":\"684c57f32853b824df237f6f\",\"dueDate\":\"2026-05-05\"}",
+      "status": 201,
+      "responseBody": "{\"title\":\"yas\",\"description\":\"yassssss\",\"priority\":\"high\",\"completed\":false,\"dueDate\":\"2026-05-05T00:00:00.000Z\",\"userId\":\"68939e597a613e9474f67cfc\",\"categoryId\":\"684c57f32853b824df237f6f\",\"_id\":\"68939e647a613e9474f67d03\",\"createdAt\":\"2025-08-06T18:26:44.367Z\",\"__v\":0}",
+      "timestamp": "2025-08-06T18:26:44.374Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/tasks/68939e647a613e9474f67d03",
+      "method": "PATCH",
+      "postData": "{\"completed\":true}",
+      "status": 200,
+      "responseBody": "{\"_id\":\"68939e647a613e9474f67d03\",\"title\":\"yas\",\"description\":\"yassssss\",\"priority\":\"high\",\"completed\":true,\"dueDate\":\"2026-05-05T00:00:00.000Z\",\"userId\":\"68939e597a613e9474f67cfc\",\"categoryId\":{\"_id\":\"684c57f32853b824df237f6f\",\"name\":\"Work\",\"color\":\"#FF5733\"},\"createdAt\":\"2025-08-06T18:26:44.367Z\",\"__v\":0}",
+      "timestamp": "2025-08-06T18:26:44.998Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ]
+    },
+    {
+      "url": "http://localhost:3000/tasks/68939e647a613e9474f67d03",
+      "method": "DELETE",
+      "postData": null,
+      "status": 204,
+      "responseBody": "",
+      "timestamp": "2025-08-06T18:26:46.504Z",
+      "pageContext": "http://localhost:3001/",
+      "uiStateBefore": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button",
+        "#delete-task-68939e647a613e9474f67d03-button",
+        "#task-completion-68939e647a613e9474f67d03-checkbox"
+      ]
+    }
+  ],
+  "uiElements": [
+    {
+      "tag": "input",
+      "selector": "#username-input",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#auth-section > input#username-input",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:49.414Z",
+      "id": "username-input",
+      "type": "text",
+      "placeholder": "Username",
+      "inputType": "text",
+      "checked": false
+    },
+    {
+      "tag": "input",
+      "selector": "#password-input",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#auth-section > input#password-input",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:49.414Z",
+      "id": "password-input",
+      "type": "password",
+      "placeholder": "Password",
+      "inputType": "password",
+      "checked": false
+    },
+    {
+      "tag": "button",
+      "selector": "#login-button",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#auth-section > button#login-button",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:49.414Z",
+      "id": "login-button",
+      "type": "submit",
+      "text": "Login"
+    },
+    {
+      "tag": "button",
+      "selector": "#register-button",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#auth-section > button#register-button",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:49.414Z",
+      "id": "register-button",
+      "type": "submit",
+      "text": "Register"
+    },
+    {
+      "tag": "button",
+      "selector": "#logout-button",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > button#logout-button",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "logout-button",
+      "type": "submit",
+      "text": "Logout"
+    },
+    {
+      "tag": "input",
+      "selector": "#task-title-input",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > input#task-title-input",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "task-title-input",
+      "type": "text",
+      "placeholder": "Title",
+      "inputType": "text",
+      "checked": false
+    },
+    {
+      "tag": "textarea",
+      "selector": "#task-description-input",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > textarea#task-description-input",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "task-description-input",
+      "type": "textarea",
+      "placeholder": "Description"
+    },
+    {
+      "tag": "select",
+      "selector": "#task-priority-select",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > select#task-priority-select",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "task-priority-select",
+      "type": "select-one",
+      "value": "high",
+      "text": "Low\nMedium\nHigh",
+      "options": [
+        {
+          "value": "low",
+          "text": "Low",
+          "selected": false
+        },
+        {
+          "value": "medium",
+          "text": "Medium",
+          "selected": false
+        },
+        {
+          "value": "high",
+          "text": "High",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "tag": "select",
+      "selector": "#task-category-select",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > select#task-category-select",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "task-category-select",
+      "type": "select-one",
+      "text": "Select Category\nWork\nHacked",
+      "options": [
+        {
+          "value": "",
+          "text": "Select Category",
+          "selected": true
+        },
+        {
+          "value": "684c57f32853b824df237f6f",
+          "text": "Work",
+          "selected": false
+        },
+        {
+          "value": "684c58ae2853b824df237f7b",
+          "text": "Hacked",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "tag": "input",
+      "selector": "#task-due-date-input",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > input#task-due-date-input",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "task-due-date-input",
+      "type": "date",
+      "inputType": "date",
+      "checked": false
+    },
+    {
+      "tag": "button",
+      "selector": "#add-task-button",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-form > button#add-task-button",
+      "disabled": true,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:48.406Z",
+      "id": "add-task-button",
+      "type": "submit",
+      "text": "Add Task"
+    },
+    {
+      "tag": "button",
+      "selector": "#delete-task-68939e647a613e9474f67d03-button",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-list > div#task-68939e647a613e9474f67d03 > button#delete-task-68939e647a613e9474f67d03-button",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:46.386Z",
+      "id": "delete-task-68939e647a613e9474f67d03-button",
+      "type": "submit",
+      "text": "Delete",
+      "dynamicProperties": {
+        "pattern": "task-{id}-button",
+        "exampleId": "68939e647a613e9474f67d03"
+      }
+    },
+    {
+      "tag": "input",
+      "selector": "#task-completion-68939e647a613e9474f67d03-checkbox",
+      "pageUrl": "http://localhost:3001/",
+      "elementPath": "div#app-container > div#task-list > div#task-68939e647a613e9474f67d03 > input#task-completion-68939e647a613e9474f67d03-checkbox",
+      "disabled": false,
+      "visible": true,
+      "timestamp": "2025-08-06T18:26:46.386Z",
+      "id": "task-completion-68939e647a613e9474f67d03-checkbox",
+      "type": "checkbox",
+      "value": "on",
+      "inputType": "checkbox",
+      "checked": true,
+      "dynamicProperties": {
+        "pattern": "completion-{id}-checkbox",
+        "exampleId": "68939e647a613e9474f67d03"
+      }
+    }
+  ],
+  "uiStateHistory": [
+    {
+      "trigger": "navigation",
+      "action": "NAVIGATION",
+      "visibleElements": [],
+      "timestamp": "2025-08-06T18:26:29.580Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "initial",
+      "action": "INITIAL_LOAD",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:29.711Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "INITIAL_LOAD",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:30.248Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "INITIAL_LOAD",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:31.259Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "INITIAL_LOAD",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:32.269Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_POST",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:33.271Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_POST",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:34.282Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_POST",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:35.297Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:36.310Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:37.319Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:38.326Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:39.337Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:40.350Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:41.360Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:42.370Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_GET",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:43.376Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_POST",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:44.377Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_PATCH",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button",
+        "#delete-task-68939e647a613e9474f67d03-button",
+        "#task-completion-68939e647a613e9474f67d03-checkbox"
+      ],
+      "timestamp": "2025-08-06T18:26:45.385Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_PATCH",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button",
+        "#delete-task-68939e647a613e9474f67d03-button",
+        "#task-completion-68939e647a613e9474f67d03-checkbox"
+      ],
+      "timestamp": "2025-08-06T18:26:46.388Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_DELETE",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:47.398Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_DELETE",
+      "visibleElements": [
+        "#logout-button",
+        "#task-title-input",
+        "#task-description-input",
+        "#task-priority-select",
+        "#task-category-select",
+        "#task-due-date-input",
+        "#add-task-button"
+      ],
+      "timestamp": "2025-08-06T18:26:48.407Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "trigger": "interval",
+      "action": "API_CALL_DELETE",
+      "visibleElements": [
+        "#username-input",
+        "#password-input",
+        "#login-button",
+        "#register-button"
+      ],
+      "timestamp": "2025-08-06T18:26:49.414Z",
+      "url": "http://localhost:3001/"
+    }
+  ],
+  "userFlow": [
+    {
+      "action": "NAVIGATION",
+      "timestamp": "2025-08-06T18:26:29.569Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "INITIAL_LOAD",
+      "timestamp": "2025-08-06T18:26:29.688Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_POST",
+      "timestamp": "2025-08-06T18:26:33.155Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_POST",
+      "timestamp": "2025-08-06T18:26:35.518Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_GET",
+      "timestamp": "2025-08-06T18:26:35.522Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_GET",
+      "timestamp": "2025-08-06T18:26:35.525Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_POST",
+      "timestamp": "2025-08-06T18:26:44.374Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_PATCH",
+      "timestamp": "2025-08-06T18:26:44.998Z",
+      "url": "http://localhost:3001/"
+    },
+    {
+      "action": "API_CALL_DELETE",
+      "timestamp": "2025-08-06T18:26:46.504Z",
+      "url": "http://localhost:3001/"
+    }
+  ]
+}
