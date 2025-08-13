@@ -17,9 +17,22 @@ function App() {
     dueDate: ''
   });
   const [error, setError] = useState('');
-  const [registrationSuccess, setRegistrationSuccess] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [updatingTasks, setUpdatingTasks] = useState({});
+
+  const showSuccess = (msg) => {
+    setSuccessMessage(msg);
+    setTimeout(() => setSuccessMessage(''), 3000);
+  };
+
+  const logout = useCallback(() => {
+    localStorage.removeItem('token');
+    setAuth(null);
+    setTasks([]);
+    setError('');
+    showSuccess('Logged out successfully.');
+  }, []);
 
   const loadData = useCallback(async () => {
     try {
@@ -40,7 +53,7 @@ function App() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [logout]);
 
   const fetchCategories = async () => {
     try {
@@ -63,25 +76,23 @@ function App() {
   const register = async () => {
     try {
       setError('');
-      const res = await axios.post(`${API_URL}/register`, {
+      await axios.post(`${API_URL}/register`, {
         username: formData.username,
         password: formData.password
       }, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true
       });
-      setRegistrationSuccess(true);
+      showSuccess('Registration successful! Please log in.');
       setFormData({ ...formData, username: '', password: '' });
     } catch (err) {
       setError(`Registration failed: ${err.response?.data?.error || err.message}`);
-      setRegistrationSuccess(false);
     }
   };
 
   const login = async () => {
     try {
       setError('');
-      setRegistrationSuccess(false);
       const res = await axios.post(`${API_URL}/login`, {
         username: formData.username,
         password: formData.password
@@ -91,17 +102,10 @@ function App() {
       setFormData({ ...formData, username: '', password: '' });
       await loadData();
       await fetchCategories();
+      showSuccess('Login successful!');
     } catch (err) {
       setError(err.response?.data?.error || err.message);
     }
-  };
-
-  const logout = () => {
-    localStorage.removeItem('token');
-    setAuth(null);
-    setTasks([]);
-    setRegistrationSuccess(false);
-    setError('');
   };
 
   const createTask = async () => {
@@ -127,6 +131,7 @@ function App() {
         dueDate: ''
       });
       await loadData();
+      showSuccess('Task created successfully!');
     } catch (err) {
       setError(err.response?.data?.error || err.message);
     }
@@ -136,7 +141,6 @@ function App() {
     if (!window.confirm('Are you sure you want to delete this task?')) {
       return;
     }
-    
     try {
       const token = localStorage.getItem('token');
       await axios.delete(`${API_URL}/tasks/${taskId}`, {
@@ -146,6 +150,7 @@ function App() {
         }
       });
       await loadData();
+      showSuccess('Task deleted successfully.');
     } catch (err) {
       setError(err.response?.data?.error || err.message);
     }
@@ -166,6 +171,7 @@ function App() {
         }
       );
       await loadData();
+      showSuccess(`Task marked as ${!currentStatus ? 'completed' : 'incomplete'}.`);
     } catch (err) {
       setError(err.response?.data?.error || err.message);
     } finally {
@@ -175,11 +181,15 @@ function App() {
 
   return (
     <div className="App" style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }} id="app-container">
+      {successMessage && (
+        <div style={{ background: '#d4edda', padding: '10px', marginBottom: '10px', borderRadius: '5px', color: '#155724' }}>
+          {successMessage}
+        </div>
+      )}
       {!auth ? (
         <div className="auth-section" style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '5px' }} id="auth-section">
           <h2 id="auth-heading">Login/Register</h2>
           {error && <p style={{ color: 'red' }} id="auth-error">{error}</p>}
-          {registrationSuccess && <p style={{ color: 'green' }} id="registration-success">Registration successful! Please login.</p>}
           <input
             id="username-input"
             style={{ display: 'block', margin: '10px 0', padding: '8px', width: '100%' }}
