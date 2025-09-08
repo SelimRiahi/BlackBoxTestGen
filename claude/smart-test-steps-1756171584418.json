@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "recordingDate": "2025-08-26T01:26:24.417Z",
+    "totalSteps": 34,
+    "startUrl": "http://localhost:3001/",
+    "settings": {
+      "smartMessages": true,
+      "captureContent": true,
+      "inputDelay": 1500
+    }
+  },
+  "testSteps": [
+    "await (page, 'navigate to', 'http://localhost:3001/');",
+    "await (page, 'should see content', `Login/Register`);",
+    "await (page, 'enter', '#username-input', `finalo`);",
+    "await (page, 'enter', '#password-input', `finalo`);",
+    "await (page, 'click', '#register-button');",
+    "await (page, 'should see message', `Registration successful! Please log in.`);",
+    "await (page, 'enter', '#username-input', `finalo`);",
+    "await (page, 'message should disappear', `Registration successful! Please log in.`);",
+    "await (page, 'enter', '#password-input', `finalo`);",
+    "await (page, 'click', '#login-button');",
+    "await (page, 'should see message', `Login successful!`);",
+    "await (page, 'should see content', `Create Task | Your Tasks | Logout | Add Task`);",
+    "await (page, 'message should disappear', `Login successful!`);",
+    "await (page, 'enter', '#task-title-input', `titloo`);",
+    "await (page, 'enter', '#task-description-input', `descriptt`);",
+    "await (page, 'select', '#task-priority-select', 'medium');",
+    "await (page, 'select', '#task-category-select', '684c58ae2853b824df237f7b');",
+    "await (page, 'enter', '#task-due-date-input', `2026-06-06`);",
+    "await (page, 'click', '#add-task-button');",
+    "await (page, 'should see message', `Task created successfully!`);",
+    "await (page, 'should see content', `Create Task | Your Tasks | Logout | Add Task | Delete`);",
+    "await (page, 'click', '#task-completion-68ad0d2f57ce8ad5b9251fa3-checkbox');",
+    "await (page, 'should see message', `Task marked as completed.`);",
+    "await (page, 'message should disappear', `Task created successfully!`);",
+    "await (page, 'enter', '#task-completion-68ad0d2f57ce8ad5b9251fa3-checkbox', `on`);",
+    "await (page, 'click', '#delete-task-68ad0d2f57ce8ad5b9251fa3-button');",
+    "await (page, 'message should disappear', `Task marked as completed.`);",
+    "await (page, 'should see message', `Task deleted successfully.`);",
+    "await (page, 'should see content', `Create Task | Your Tasks | Logout | Add Task`);",
+    "await (page, 'message should disappear', `Task deleted successfully.`);",
+    "await (page, 'click', '#logout-button');",
+    "await (page, 'should see message', `Logged out successfully.`);",
+    "await (page, 'should see content', `Login/Register`);",
+    "await (page, 'message should disappear', `Logged out successfully.`);"
+  ]
+}
